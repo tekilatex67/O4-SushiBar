@@ -1,8 +1,10 @@
+/* ----------- GENERAL -------------  */
+
 * {
     margin: 0;
     padding: 0;
     font-size: 15px;
-    font-family: 'Noto Sans', 'Nanum Brush Script', sans-serif;
+    font-family: 'Noto Sans', 'Ubuntu', 'Nanum Brush Script', sans-serif;
     color: #ffffff;
 }
 
@@ -24,33 +26,14 @@ h1 {
     width: 100vw;
 }
 
-.overlayBlack {
+.overlayBlue {
     background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
 }
 
-
-/*------  LOADING PAGE -------*/
-
-.bloc {
-    width: 100vw;
-    height: 50vh;
-    position: relative;
+.hidden {
+    display: none;
 }
 
-#top {
-    background-color: black;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-}
-
-#top img {
-    width: 50%;
-    border-radius: 50%;
-}
-
-#top img,
 #shark img {
     animation-name: ronde;
     animation-duration: 30s;
@@ -76,33 +59,18 @@ h1 {
     }
 }
 
-#bottom {
-    background-color: #F03F73;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
-}
-
-#quatre {
-    font-family: 'Caveat Brush', cursive;
-    font-size: 15rem;
-    line-height: 15rem;
-}
-
 
 /* ------ ACCEUIL ----- */
+
+#index header {
+    background-image: url(image/food/divers4.jpg);
+    background-position: 70%;
+    background-size: cover;
+}
 
 #acceuil {
     flex-direction: column;
     justify-content: space-around;
-}
-
-header {
-    background-image: url(image/food/divers4.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 
@@ -131,18 +99,22 @@ header {
 
 #title p {
     font-size: 2.5rem;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 
 /*   OPTION */
 
+#option {
+    justify-content: space-around;
+}
+
 #option p {
     border: 1px solid #ffffff;
-    padding: 0.5rem 1rem;
-    background-color: rgba(240, 63, 115, 0.2);
     border-radius: 5px;
-    margin: 1rem;
-    flex: 1;
+    padding: 0.5rem;
+    width: 30%;
     text-align: center;
     opacity: 0.8;
 }
@@ -159,7 +131,7 @@ header {
 }
 
 #down img {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     opacity: 0.5;
     width: 100%;
@@ -169,29 +141,16 @@ header {
 /* -------------------------- MEDIA QUERIES -------------------------- */
 
 @media (orientation: landscape) {
-    /* ------ LOADINGPAGE ------ */
-    .conteneur {
-        display: flex;
+    /* ---------- ACCEUIL --------- */
+    header {
+        background-image: url(image/food/divers4pay.jpg );
+        background-position: left 30%;
+        background-size: cover;
     }
-    .bloc {
-        width: 50vw;
-        height: 100vh;
+    #shark img {
+        width: 40%;
     }
-    #bottom {
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        align-items: start;
-        padding-left: 1rem;
-    }
-    #top {
-        justify-content: space-evenly;
-        align-items: flex-end;
-    }
-    .loadingPage h1 {
-        font-size: 5rem;
-        padding: 1rem;
-    }
-    #quatre {
-        font-size: 13rem;
+    #down a {
+        width: 6%;
     }
 }
