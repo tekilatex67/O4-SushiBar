@@ -1,16 +1,40 @@
 /* ----------- GENERAL -------------  */
 
+:root {
+    --main-theme-color: rgb(240, 63, 115);
+    --main-bg-color: linear-gradient(150deg, hsl(0, 0%, 0%), #434343, #000000);
+    --overlay-black: rgba(0, 0, 0, 0.7);
+    --overlay-blue: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
+    --overlay-gradient-black: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    --write-size: 15px;
+    --normal-font: 'Noto Sans';
+    --special-font: 'Nanum Brush Script';
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-size: 15px;
-    font-family: 'Noto Sans', 'Ubuntu', 'Nanum Brush Script', sans-serif;
+    font-size: var(--write-size);
+    font-family: var(--normal-font), var(--special-font), sans-serif;
     color: #ffffff;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--main-bg-color);
 }
 
 h1 {
     font-size: 5rem;
-    font-family: 'Nanum Brush Script';
+    font-family: var(--special-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+.themeColor {
+    color: var(--main-theme-color);
 }
 
 .upercase {
@@ -27,114 +51,15 @@ h1 {
 }
 
 .overlayBlue {
-    background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
+    background: var(--overlay-blue);
 }
 
-.hidden {
-    display: none;
+.overlayBlackGradient {
+    background: var(--overlay-gradient-black);
 }
 
-#shark img {
-    animation-name: ronde;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes ronde {
-    0% {
-        transform: rotate(360deg);
-    }
-    25% {
-        transform: rotate(270deg);
-    }
-    50% {
-        transform: rotate(180%deg);
-    }
-    75% {
-        transform: rotate(90deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-/* ------ ACCEUIL ----- */
-
-#index header {
-    background-image: url(image/food/divers4.jpg);
-    background-position: 70%;
-    background-size: cover;
-}
-
-#acceuil {
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-
-/*   LOGO */
-
-#title {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#shark {
-    flex: 1 50%;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#shark img {
-    width: 70%;
-    height: auto;
-}
-
-#title h1 {
-    font-size: 10rem;
-    flex: 1 50%;
-}
-
-#title p {
-    font-size: 2.5rem;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-
-
-/*   OPTION */
-
-#option {
-    justify-content: space-around;
-}
-
-#option p {
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 0.5rem;
-    width: 30%;
-    text-align: center;
-    opacity: 0.8;
-}
-
-
-/* FLECHE DOWN */
-
-#down {
-    justify-content: center;
-}
-
-#down a {
-    width: 12%;
-}
-
-#down img {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    opacity: 0.5;
-    width: 100%;
+.overlayBlack {
+    background: var(--overlay-black);
 }
 
 
@@ -142,7 +67,7 @@ h1 {
 
 @media (orientation: landscape) {
     /* ---------- ACCEUIL --------- */
-    header {
+    #index header {
         background-image: url(image/food/divers4pay.jpg );
         background-position: left 30%;
         background-size: cover;

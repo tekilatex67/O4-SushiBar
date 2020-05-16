@@ -1,52 +1,10 @@
-/* ----------- GENERAL -------------  */
-
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    font-family: 'Noto Sans', 'Nanum Brush Script', sans-serif;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 5rem;
-    font-family: 'Nanum Brush Script';
-}
-
-.themeColor {
-    color: rgb(240, 63, 115);
-}
-
-.upercase {
-    text-transform: uppercase
-}
-
-.flex {
-    display: flex;
-}
-
-.window {
-    height: 100vh;
-    width: 100vw;
-}
-
-.overlayBlue {
-    background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
-}
-
-.overlayBlack {
-    background-color: rgb(0, 0, 0, 0.7);
-}
-
-
 /* ----------- ACTU -------------  */
 
 #actualites {
     line-height: 18px;
     letter-spacing: 1.5px;
-    font-family: 'Ubuntu';
-    background: -webkit-linear-gradient(90deg, #000000, #434343);
-    background: linear-gradient(150deg, #000000, #434343);
+    background: var(--main-bg-color);
+    padding: 10% 0;
 }
 
 
@@ -54,14 +12,12 @@ h1 {
 
 #logoO4 {
     width: 70%;
-    margin: 0 auto;
-    margin-top: 10%;
-    text-align: center;
     padding: 3%;
+    text-align: center;
     font-size: 1.5rem;
     border-bottom: 1px solid #ffffff;
     border-top: 1px solid #ffffff;
-    /*background: black;*/
+    margin: auto;
 }
 
 #logoO4 img {
@@ -73,17 +29,13 @@ h1 {
 /* ARTICLE */
 
 article {
-    width: 100vw;
     margin: 20% 0;
-    height: auto;
     position: relative;
 }
 
 article img {
     width: 80%;
     margin: 0 10%;
-    height: auto;
-    border: 2px solid rgb(240, 63, 115);
 }
 
 article .background {
@@ -91,8 +43,8 @@ article .background {
     height: 20%;
     position: absolute;
     text-align: center;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     top: 40%;
     bottom: 60%;
     transition: all 0.3s;
@@ -101,25 +53,53 @@ article .background {
     flex-direction: column;
 }
 
+
+/* H3 ANIMATION TITRE ARTICLE */
+
 article h3 {
     font-size: 1.5rem;
     padding: 3%;
+    animation-name: defil;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes defil {
+    0% {
+        transform: translateX(-150%);
+    }
+    25% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    75% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(150%);
+    }
 }
 
 article span {
-    color: rgb(240, 63, 115);
+    color: var(--main-theme-color);
     font-size: 1.5rem;
 }
 
 .texte {
-    padding: 1%;
+    padding: 2%;
     display: none;
 }
 
 .background.read {
-    top: 0;
-    bottom: 0;
     height: 100%;
+    top: 0;
+}
+
+.read h3 {
+    animation: none;
 }
 
 .background.read .texte {
@@ -132,13 +112,12 @@ article span {
 
 nav ul {
     background: rgba(255, 255, 255, 0.7);
-    /*background: rgba(255, 255, 255, 0.5);*/
     justify-content: space-around;
     list-style: none;
     padding: 0.5rem 0;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     box-shadow: inset 1px 1px 13px 0 black, 0 16px 8px 0 black;
 }
 
