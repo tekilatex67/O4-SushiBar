@@ -17,6 +17,9 @@ function toggleActive(e) {
     if (!this.classList.contains('open') && this.classList.contains('active')) {
         this.classList.remove('active');
     };
+    if (this.classList.contains('open') && !this.classList.contains('active')) {
+        this.classList.remove('open');
+    }
 }
 
 pages.forEach(page => page.addEventListener('click', toggleOpen));

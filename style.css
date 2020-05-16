@@ -24,6 +24,11 @@ html {
     background: var(--main-bg-color);
 }
 
+section {
+    padding-bottom: 50px;
+    /*Pour la barre Nav */
+}
+
 h1 {
     font-size: 5rem;
     font-family: var(--special-font);
@@ -60,6 +65,31 @@ a {
 
 .overlayBlack {
     background: var(--overlay-black);
+}
+
+
+/* NAV */
+
+nav ul {
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    box-shadow: inset 1px 1px 13px 0 black, 0 16px 8px 0 black;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+}
+
+nav img {
+    width: 50%;
+    height: auto;
 }
 
 
