@@ -32,9 +32,13 @@ div.contain {
 
 /* PARTIE IMAGE */
 
-.exemples {
+.page h3 {
     position: absolute;
-    align-items: flex-end;
+    top: 10%;
+}
+
+.exemples {
+    display: none;
 }
 
 .exemples>* {
@@ -45,7 +49,7 @@ div.contain {
 }
 
 figure.fromLeft {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
 }
 
 figure.fromBottom {
@@ -106,8 +110,8 @@ figcaption {
 
 div.lienCarte {
     transform: scale(0);
-    align-items: flex-end;
-    margin-bottom: 10%;
+    position: absolute;
+    bottom: 10%;
 }
 
 
@@ -115,6 +119,11 @@ div.lienCarte {
 
 .page.open {
     flex: 3;
+}
+
+.open .exemples {
+    position: absolute;
+    display: flex;
 }
 
 .open figcaption {

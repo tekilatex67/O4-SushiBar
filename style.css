@@ -38,6 +38,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 .themeColor {
     color: var(--main-theme-color);
 }
@@ -107,5 +111,15 @@ nav img {
     }
     #down a {
         width: 6%;
+    }
+    /* ---------- CARTE ----------*/
+    .page h3 {
+        z-index: 5;
+    }
+    /*Rolls*/
+    .wrapperTabs {
+        padding: 0 10%;
+        position: relative;
+        height: auto;
     }
 }

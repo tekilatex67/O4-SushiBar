@@ -1,0 +1,201 @@
+    section.Page_Menu {
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    header.selection {
+        min-height: 20vh;
+        position: absolute;
+        height: 20vh;
+        width: 100vw;
+    }
+    
+    .cadre {
+        position: absolute;
+        border: 2px solid var(--main-theme-color);
+        width: 20%;
+        height: 50%;
+        left: 40%;
+        top: 25%;
+        z-index: -1;
+    }
+    
+    .tabs {
+        width: 100%;
+    }
+    
+    .tabs h3 {
+        width: 100%;
+    }
+    
+    .tab-content,
+    .tabs>li {
+        display: none;
+    }
+    /* DIV ITEM */
+    
+    .item {
+        flex: 1;
+        min-height: 20vh;
+        position: relative;
+    }
+    
+    .itemImg {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .itemImg img {
+        width: 70%;
+    }
+    
+    .itemType {
+        flex: 2;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .prix {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    /*class ACTIVE*/
+    
+    .tab-content.active,
+    .tabs li.active {
+        display: flex;
+        height: 100%;
+    }
+    
+    .tabs li.active {
+        z-index: 3;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .tabs li.active a.fleche_D {
+        position: absolute;
+        top: 40%;
+        left: 80%;
+    }
+    
+    .tabs li.active a.fleche_G {
+        position: absolute;
+        top: 40%;
+        left: 20%;
+    }
+    
+    .tab-content.active {
+        flex-direction: column;
+        min-height: 80vh;
+        padding-top: 20vh;
+    }
+    /* PLUS ET PLUS OPEN CONTENUE (plateaux) */
+    
+    .itemType span {
+        padding: 5%;
+        width: auto;
+        background-color: rgba(240, 63, 115, 0.6);
+        box-shadow: 3px 3px 0px #ffffff;
+        width: 75%;
+        /* SI pas de width, bug taille apres changement de tabs et retour*/
+    }
+    
+    .plus {
+        display: none;
+    }
+    
+    .open .plus {
+        display: flex;
+        background: rgba(240, 63, 115, 0.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .open .itemType span {
+        color: black;
+        background: none;
+        box-shadow: 0 0 0;
+    }
+    /* SUPLEMENT (Pour temaki, rolls, nigiri, chirashi, tartare) */
+    
+    .Supplements {
+        position: fixed;
+        padding: 1%;
+        left: 25%;
+        min-width: 50%;
+        text-align: center;
+        background: rgba(240, 63, 115, 0.8);
+        box-shadow: 3px 3px 0px #ffffff;
+        z-index: 3;
+    }
+    
+    .supStyle {
+        display: none;
+    }
+    
+    .open .supStyle {
+        display: block;
+    }
+    /* SUPLEMENT ROLLS*/
+    
+    .wrapperTabs .Supplements {
+        position: absolute;
+        top: 0;
+    }
+    /* SECTION ROLLS */
+    
+    .wrapperTabs {
+        padding: 0 10%;
+        height: 91vh;
+    }
+    
+    .rollstype li {
+        flex: 1;
+        margin: 1%;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
+    
+    .rollstype a {
+        display: block;
+        text-align: center;
+        height: 90px;
+        line-height: 90px;
+    }
+    
+    .rollstype> :nth-child(1) {
+        background-image: url(image/maki.png);
+    }
+    
+    .rollstype> :nth-child(2) {
+        background-image: url(image/spring-saumon.png);
+    }
+    
+    .rollstype> :nth-child(3) {
+        background-image: url(image/california.png);
+    }
+    
+    .liste-rolls {
+        position: relative;
+        padding-top: 10%;
+        line-height: 1.5rem;
+    }
+    
+    .rolls-content {
+        display: none;
+    }
+    
+    .rolls-content.index {
+        display: flex;
+        justify-content: space-between;
+    }
