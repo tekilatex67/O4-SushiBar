@@ -1,0 +1,252 @@
+/*GENERALE*/
+
+.fonte {
+    font-family: 'Caveat', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Indie Flower', cursive;
+}
+
+#home {
+    background-color: #fff;
+}
+
+.conteneur {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+    background-position: bottom 50px right;
+}
+
+.overlay,
+.clearOverlay {
+    border-bottom: 2px solid var(--main-theme-color);
+    position: relative;
+}
+
+h3 {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.over,
+.under {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 10%;
+}
+
+
+/* EN TETE TITRE O4 SUSHIBAR */
+
+#home h2 {
+    position: absolute;
+    font-size: 3rem;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    z-index: 1;
+}
+
+#home h2 img {
+    width: 30%;
+}
+
+
+/* ARTICLE ADRESSE*/
+
+.conteneur {
+    background-size: cover;
+    background-position: bottom;
+}
+
+#adresse .conteneur {
+    background-image: url(image/devanture.jpg);
+}
+
+#adresse .over {
+    top: 35%;
+}
+
+#adresse .under {
+    top: 70%;
+}
+
+#adresse .over img {
+    width: 10%;
+}
+
+
+/* ARTICLE 2 SALLE*/
+
+#salle .conteneur {
+    background-image: url(image/sallePortrait.jpg);
+}
+
+#salle .over {
+    top: 35%;
+}
+
+#salle .under {
+    top: 65%;
+}
+
+
+/* ARTICLE Cuisine*/
+
+#cuisine .conteneur {
+    background-image: url(image/chef5.jpg);
+}
+
+#cuisine .over {
+    top: 25%;
+}
+
+#cuisine .under {
+    top: 75%;
+}
+
+
+/* ENGAGEMENT */
+
+#engagement *,
+#satisfaction * {
+    color: #444;
+    text-align: center;
+}
+
+#engagement .conteneur,
+#satisfaction .conteneur {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#engagement p {
+    font-size: 0.8rem;
+}
+
+#engagement h3,
+#satisfaction h3 {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--main-theme-color);
+    width: 25%;
+    margin: 10% auto;
+}
+
+.blocTitre img {
+    width: 20%;
+}
+
+.floatLeft {
+    width: 25%;
+    height: 50px;
+    display: block;
+    float: left;
+    padding: 1%;
+    margin-right: 10px;
+    background-color: black;
+    border-top-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+}
+
+.floatLeft img {
+    width: 100%;
+}
+
+
+/*  SLIDES */
+
+.slides {
+    width: 100vw;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.slides img {
+    width: 10%;
+    margin: 3%;
+    opacity: 0.3;
+}
+
+.slideLeft {
+    transform: translateX(-150%);
+}
+
+
+/* AVIS */
+
+#satisfaction h3 {
+    margin-top: 10%;
+}
+
+.avisContent {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avis {
+    width: 70%;
+    background: white;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1% 2% 1% 15%;
+    background: -webkit-gradient(linear, 0 1, 0 100%, from(#d9eaf3), color-stop(5%, #fff)) 0 4px;
+    background-size: 100% 1.5rem;
+    position: relative;
+}
+
+.avis:before {
+    /*ligne marge*/
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    left: 15%;
+    border: 1px solid;
+    border-color: transparent #efe4e4;
+}
+
+.avis p,
+.avis a {
+    font-family: 'Indie Flower', cursive;
+    font-size: 0.8rem;
+}
+
+.autheur span {
+    color: #fff;
+    font-size: 0.8;
+}
+
+.autheur {
+    width: 70%;
+    height: 20%;
+    transform: rotate(7deg);
+    align-self: center;
+}
+
+.autheur img {
+    width: 20%;
+}
+
+.autheur .note {
+    width: 40%;
+}
+
+.commentaire {
+    transform: rotate(-4deg);
+}

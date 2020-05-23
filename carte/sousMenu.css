@@ -101,6 +101,9 @@
         background-color: rgba(240, 63, 115, 0.6);
         box-shadow: 3px 3px 0px #ffffff;
         width: 75%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        text-align: center;
         /* SI pas de width, bug taille apres changement de tabs et retour*/
     }
     

@@ -34,8 +34,7 @@ article {
 }
 
 article img {
-    width: 80%;
-    margin: 0 10%;
+    display: block;
 }
 
 article .background {

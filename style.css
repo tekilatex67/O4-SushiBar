@@ -9,6 +9,7 @@
     --write-size: 15px;
     --normal-font: 'Noto Sans';
     --special-font: 'Nanum Brush Script';
+    --color-font-black: #444;
 }
 
 * {
@@ -42,6 +43,15 @@ ul {
     list-style: none;
 }
 
+.marginCenter {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .themeColor {
     color: var(--main-theme-color);
 }
@@ -69,6 +79,10 @@ ul {
 
 .overlayBlack {
     background: var(--overlay-black);
+}
+
+.colorFontB {
+    color: var(--color-font-black);
 }
 
 

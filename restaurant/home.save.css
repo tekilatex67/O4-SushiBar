@@ -1,0 +1,160 @@
+#home {
+    background-color: aliceblue;
+}
+
+.defil {
+    width: 100vw;
+    height: 30vh;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.defil img {
+    width: 10%;
+    height: 15%;
+    margin: 3%;
+}
+
+#home .conteneur {
+    background-image: url(../image/other/devanture.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom 50px right;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+#home .content {
+    width: 100%;
+    height: 100%;
+}
+
+#home h3 {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    border-bottom: 2px solid var(--main-theme-color);
+}
+
+.clearoverlay {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/*----------------------------------------------- OU ----------------------------------------------- */
+
+#home .conteneur {
+    background-image: url(../image/other/devanture.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom 50px right;
+    background-size: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#home h2 {
+    font-size: 4rem;
+    position: fixed;
+    width: 100vw;
+    z-index: 4;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home h2 img {
+    width: 30%;
+}
+
+#home .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#home h3 {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    border-bottom: 2px solid var(--main-theme-color);
+}
+
+.clearoverlay {
+    height: 100vh;
+    width: 100vw;
+}
+
+.exter {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/*---------------------------3 eme V------------------------*/
+
+#home .conteneur {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+#home h2 {
+    font-size: 4rem;
+    width: 100vw;
+    z-index: 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex-grow: 2;
+}
+
+#home h2 img {
+    width: 30%;
+}
+
+.content {
+    position: relative;
+}
+
+.content img {
+    width: 100vw;
+}
+
+.content h3 {
+    position: absolute;
+    width: 50vw;
+    left: 25%;
+    top: 50%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#rideau {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.second {
+    width: 100vw;
+    height: 100vh;
+}
