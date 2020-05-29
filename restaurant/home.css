@@ -12,10 +12,10 @@
 
 .conteneur {
     background-repeat: no-repeat;
-    background-size: 100%;
     background-attachment: fixed;
     position: relative;
-    background-position: bottom 50px right;
+    background-size: cover;
+    background-position: top center;
 }
 
 .overlay,
@@ -26,9 +26,9 @@
 
 h3 {
     position: absolute;
-    width: 50%;
+    width: 70%;
     top: 50%;
-    left: 25%;
+    left: 15%;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -40,6 +40,16 @@ h3 {
     width: 80%;
     text-align: center;
     left: 10%;
+}
+
+#home .line {
+    margin: 10% auto;
+}
+
+#cuisine p,
+#salle p,
+#adresse p {
+    line-height: 2rem;
 }
 
 
@@ -62,13 +72,8 @@ h3 {
 
 /* ARTICLE ADRESSE*/
 
-.conteneur {
-    background-size: cover;
-    background-position: bottom;
-}
-
 #adresse .conteneur {
-    background-image: url(image/devanture.jpg);
+    background-image: url(image/vitrine1.JPG);
 }
 
 #adresse .over {
@@ -84,18 +89,18 @@ h3 {
 }
 
 
-/* ARTICLE 2 SALLE*/
+/*SALLE*/
 
 #salle .conteneur {
     background-image: url(image/sallePortrait.jpg);
 }
 
 #salle .over {
-    top: 35%;
+    top: 25%;
 }
 
 #salle .under {
-    top: 65%;
+    top: 75%;
 }
 
 
@@ -106,11 +111,11 @@ h3 {
 }
 
 #cuisine .over {
-    top: 25%;
+    top: 15%;
 }
 
 #cuisine .under {
-    top: 75%;
+    top: 65%;
 }
 
 
@@ -139,13 +144,7 @@ h3 {
     top: auto;
     left: auto;
     width: auto;
-}
-
-.line {
-    height: 1px;
-    background-color: var(--main-theme-color);
-    width: 25%;
-    margin: 10% auto;
+    text-shadow: 4px 3px 3px grey;
 }
 
 .blocTitre img {

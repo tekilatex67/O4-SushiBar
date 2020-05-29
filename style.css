@@ -52,6 +52,12 @@ ul {
     margin: 0 auto;
 }
 
+.line {
+    height: 1px;
+    background-color: var(--main-theme-color);
+    width: 25%;
+}
+
 .themeColor {
     color: var(--main-theme-color);
 }
@@ -135,5 +141,22 @@ nav img {
         padding: 0 10%;
         position: relative;
         height: auto;
+    }
+    /*  ---------- HOME ----------*/
+    #home .overlay,
+    #home .clearOverlay,
+    #home .conteneur,
+    #home #engagement {
+        width: 100vw;
+        min-height: 600px;
+    }
+    #adresse .conteneur {
+        background-image: url(restaurant/image/devanture1.jpg);
+    }
+    #salle .conteneur {
+        background-image: url(restaurant/image/sallepays.jpeg);
+    }
+    #cuisine .conteneur {
+        background-image: url(restaurant/image/fun.jpeg);
     }
 }

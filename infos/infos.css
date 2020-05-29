@@ -1,0 +1,380 @@
+        #infos .line {
+            margin: 0 auto;
+        }
+        /* ARTICLE 1 TELEPHONE */
+        
+        #infos .titre {
+            position: relative;
+            width: 100vw;
+            height: 30vh;
+            background-image: url(images/promo.jpg);
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+        
+        #infos .titre h2 {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            top: 35%;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        #infos .titre h2 img {
+            width: 15%;
+        }
+        
+        #infos .titre:before,
+        #adresse:before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+        }
+        
+        #infos .conteneur {
+            height: 60vh;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .lienTel {
+            width: 70vw;
+            height: 50px;
+            border-radius: 50px;
+            justify-content: center;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .call img {
+            height: 90%;
+            position: absolute;
+            left: 2%;
+            top: 5%;
+        }
+        
+        #infos .lienTel a {
+            font-size: 1.2rem;
+            line-height: 50px;
+            color: #071307;
+            padding: 2%;
+        }
+        
+        #infos .outer {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #infos .inner {
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            transform: skew(-30deg, 0deg);
+            border-bottom: 2px solid rgb(240, 63, 115);
+            background-color: #fff;
+        }
+        
+        .inner.left {
+            margin-left: -10%;
+            border-right: 7px solid rgb(240, 63, 115);
+        }
+        
+        .inner.right {
+            right: 0;
+            top: 0;
+            margin-right: -10%;
+            border-left: 7px solid rgb(240, 63, 115);
+        }
+        /* ARTICLE 2 ADRESSE */
+        
+        #adresse {
+            background-image: url(images/adresse.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 40vh;
+            position: relative;
+        }
+        
+        #adresse .parent {
+            position: relative;
+            height: 70px;
+            width: 90%;
+            margin-left: -10%;
+            top: 10%;
+            background-color: rgba(240, 63, 115, 0.3);
+            transform: skew(-30deg, 0deg);
+            z-index: 2;
+        }
+        
+        #adresse .child {
+            margin-bottom: 2%;
+            position: absolute;
+            width: 95%;
+            height: 90%;
+            top: 0;
+        }
+        
+        #adresse p {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            position: absolute;
+            left: 15%;
+            text-align: center;
+            transform: skew(30deg, 0deg);
+        }
+        /* ARTICLE 3 HORRAIRE */
+        
+        #horaire {
+            text-align: center;
+        }
+        
+        #horaire ul {
+            background-color: #fff;
+            padding: 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #horaire li {
+            color: #444;
+            font-size: 0.8rem;
+        }
+        
+        #horaire span {
+            font-size: 0.8rem;
+            color: red;
+        }
+        /* -----------------------  ANIMATION HORAIRE ----------------------------------- */
+        
+        #horaire ul img {
+            width: 10%;
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        #riz {
+            animation: riz 30s linear infinite;
+        }
+        
+        #sushi {
+            animation: sushi 30s linear infinite;
+        }
+        
+        #sushiBaguettes {
+            animation: sushiBaguettes 30s linear infinite;
+        }
+        
+        #nigiriClair {
+            animation: nigiriClair 30s linear infinite;
+        }
+        
+        #onigri {
+            animation: onigri 30s linear infinite;
+        }
+        
+        #nigiBlack {
+            animation: nigiBlack 30s linear infinite;
+        }
+        
+        #baguettes {
+            animation: baguettes 30s linear infinite;
+        }
+        /*BOL DE RIZ IMG1*/
+        
+        @keyframes riz {
+            0% {
+                bottom: 5%;
+                right: 5%;
+                transform: rotate(60deg);
+            }
+            40% {
+                bottom: 75%;
+                right: 90%;
+                transform: rotate(390deg);
+            }
+            50% {
+                bottom: 90%;
+                right: 75%;
+            }
+            97% {
+                bottom: 0%;
+                right: 0%;
+                transform: rotate(40deg);
+            }
+            100% {
+                bottom: 5%;
+                right: 5%;
+                transform: rotate(60deg);
+            }
+        }
+        /*sushi IMG2*/
+        
+        @keyframes sushi {
+            0% {
+                left: 5%;
+                top: 15%;
+                transform: rotate(10deg);
+            }
+            30% {
+                left: 50%;
+                top: -3%;
+                transform: rotate(-110deg);
+            }
+            50% {
+                left: 90%;
+                top: 35%;
+                transform: rotate(-280deg);
+            }
+            97% {
+                left: 0%;
+                top: 20%;
+                transform: rotate(30deg);
+            }
+            100% {
+                left: 5%;
+                top: 15%;
+                transform: rotate(10deg);
+            }
+        }
+        /*sushiBaguettes IMG3*/
+        
+        @keyframes sushiBaguettes {
+            0% {
+                top: 0%;
+                right: 40%;
+            }
+            25% {
+                top: 40%;
+                right: 0%;
+                transform: rotate(-110deg);
+            }
+            50% {
+                top: 90%;
+                right: 50%;
+                transform: rotate(-280deg);
+            }
+            75% {
+                top: 40%;
+                right: 90%;
+                transform: rotate(30deg);
+            }
+            100% {
+                top: 0%;
+                right: 40%;
+            }
+        }
+        /*nigiriClair IMG4*/
+        
+        @keyframes nigiriClair {
+            0% {
+                bottom: -2%;
+                left: 5%;
+                transform: rotate(20deg);
+            }
+            35% {
+                bottom: 20%;
+                left: 90%;
+                transform: rotate(-110deg);
+            }
+            55% {
+                bottom: 90%;
+                left: 60%;
+                transform: rotate(-280deg);
+            }
+            85% {
+                bottom: 30%;
+                left: 0%;
+                transform: rotate(160deg);
+            }
+            100% {
+                bottom: -2%;
+                left: 5%;
+                transform: rotate(20deg);
+            }
+        }
+        /*BOL DE ONIGRI IMG5*/
+        
+        @keyframes onigri {
+            0% {
+                right: 0%;
+                top: 30%;
+            }
+            35% {
+                right: 90%;
+                top: 55%;
+                transform: rotate(80deg);
+            }
+            55% {
+                right: 60%;
+                top: 90%;
+                transform: rotate(-280deg);
+            }
+            85% {
+                right: 30%;
+                top: 0%;
+                transform: rotate(160deg);
+            }
+            100% {
+                right: 0%;
+                top: 30%;
+                transform: rotate(80deg);
+            }
+        }
+        /*BOL DE NIGIBLACK IMG6*/
+        
+        @keyframes nigiBlack {
+            0% {
+                bottom: 15%;
+                left: 25%;
+            }
+            45% {
+                bottom: 90%;
+                left: 30%;
+                transform: rotate(160deg);
+            }
+            70% {
+                bottom: 40%;
+                left: 0%;
+                transform: rotate(-280deg);
+            }
+            90% {
+                bottom: 0%;
+                left: 23%;
+                transform: rotate(30deg);
+            }
+            100% {
+                bottom: 15%;
+                left: 25%;
+            }
+        }
+        /*BOL DE NIGIBLACK IMG7*/
+        
+        @keyframes baguettes {
+            0% {
+                bottom: 0%;
+                right: 30%;
+            }
+            55% {
+                bottom: 90%;
+                right: 20%;
+                transform: rotate(160deg);
+            }
+            75% {
+                bottom: 40%;
+                right: 0%;
+                transform: rotate(-280deg);
+            }
+            100% {
+                bottom: 0%;
+                right: 30%;
+            }
+        }

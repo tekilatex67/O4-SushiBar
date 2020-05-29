@@ -1,0 +1,63 @@
+* ARTICLE 3 HORRAIRE */ #horaire {
+    text-align: center;
+}
+
+#horaire .outer {
+    position: relative;
+    height: 35px;
+    overflow: hidden;
+}
+
+#horaire .inner {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    transform: skew(-30deg, 0deg);
+    border-bottom: 2px solid rgb(240, 63, 115);
+    background-color: #fff;
+}
+
+.inner.left {
+    margin-left: -10%;
+    border-right: 7px solid rgb(240, 63, 115);
+}
+
+.inner.right {
+    right: 0;
+    top: 0;
+    margin-right: -10%;
+    border-left: 7px solid rgb(240, 63, 115);
+}
+
+#horaire h3 {
+    font-size: 1.5rem;
+    height: 50%;
+}
+
+
+/*
+#horaire li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+}
+
+#horaire li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
+}*/
+
+#horaire ul {
+    width: 80%;
+    position: relative;
+}
+
+#horaire li {
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 5%;
+}
+
+#horaire span {
+    font-size: 0.8rem;
+    color: red;
+}
