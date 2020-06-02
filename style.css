@@ -1,156 +1,202 @@
-/* ----------- GENERAL -------------  */
-
-* {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    font-family: 'Noto Sans', 'Ubuntu', 'Nanum Brush Script', sans-serif;
-    color: #ffffff;
-}
-
-h1 {
-    font-size: 5rem;
-    font-family: 'Nanum Brush Script';
-}
-
-.upercase {
-    text-transform: uppercase
-}
-
-.flex {
-    display: flex;
-}
-
-.window {
-    height: 100vh;
-    width: 100vw;
-}
-
-.overlayBlue {
-    background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
-}
-
-.hidden {
-    display: none;
-}
-
-#shark img {
-    animation-name: ronde;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes ronde {
-    0% {
-        transform: rotate(360deg);
+    /* ----------- GENERAL -------------  */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        font-family: 'Noto Sans', 'Ubuntu', 'Nanum Brush Script', sans-serif;
+        color: #ffffff;
     }
-    25% {
-        transform: rotate(270deg);
+    
+    h1 {
+        font-size: 5rem;
+        font-family: 'Nanum Brush Script';
     }
-    50% {
-        transform: rotate(180%deg);
+    
+    .upercase {
+        text-transform: uppercase
     }
-    75% {
-        transform: rotate(90deg);
+    
+    .flex {
+        display: flex;
     }
-    100% {
-        transform: rotate(0deg);
+    
+    .window {
+        height: 100vh;
+        width: 100vw;
     }
-}
-
-
-/* ------ ACCEUIL ----- */
-
-#index header {
-    background-image: url(image/food/divers4.jpg);
-    background-position: 70%;
-    background-size: cover;
-}
-
-#acceuil {
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-
-/*   LOGO */
-
-#title {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#shark {
-    flex: 1 50%;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#shark img {
-    width: 70%;
-    height: auto;
-}
-
-#title h1 {
-    font-size: 10rem;
-    flex: 1 50%;
-}
-
-#title p {
-    font-size: 2.5rem;
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-}
-
-
-/*   OPTION */
-
-#option {
-    justify-content: space-around;
-}
-
-#option p {
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 0.5rem;
-    width: 30%;
-    text-align: center;
-    opacity: 0.8;
-}
-
-
-/* FLECHE DOWN */
-
-#down {
-    justify-content: center;
-}
-
-#down a {
-    width: 12%;
-}
-
-#down img {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    opacity: 0.5;
-    width: 100%;
-}
-
-
-/* -------------------------- MEDIA QUERIES -------------------------- */
-
-@media (orientation: landscape) {
-    /* ---------- ACCEUIL --------- */
-    header {
-        background-image: url(image/food/divers4pay.jpg );
-        background-position: left 30%;
+    
+    .overlayBlue {
+        background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    #shark img {
+        animation-name: ronde;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes ronde {
+        0% {
+            transform: rotate(360deg);
+        }
+        25% {
+            transform: rotate(270deg);
+        }
+        50% {
+            transform: rotate(180%deg);
+        }
+        75% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    /* ------ ACCEUIL ----- */
+    
+    #index header {
+        background-image: url(image/food/divers4.jpg);
+        background-position: 70%;
         background-size: cover;
     }
+    
+    #acceuil {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    /*   LOGO */
+    
+    #title {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #shark {
+        flex: 1 50%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
     #shark img {
-        width: 40%;
+        width: 70%;
+        height: auto;
     }
+    
+    #title h1 {
+        font-size: 10rem;
+        flex: 1 50%;
+    }
+    
+    overlayBlue {
+        background: var(--overlayBlue);
+    }
+    
+    .overlayBlackGradient {
+        background: var(--overlayBlackGradient);
+    }
+    
+    .overlayBlack {
+        background: var(--overlayBlack);
+    }
+    
+    #title p {
+        font-size: 2.5rem;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+    }
+    /*   OPTION */
+    
+    #option {
+        justify-content: space-around;
+        list-style: none;
+        padding: 0.5rem 0;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 50px;
+        box-shadow: inset 1px 1px 13px 0 black, 0 16px 8px 0 black;
+        z-index: 1000;
+    }
+    
+    #option p {
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        padding: 0.5rem;
+        width: 30%;
+        text-align: center;
+        opacity: 0.8;
+    }
+    /* FLECHE DOWN */
+    
+    #down {
+        justify-content: center;
+    }
+    
     #down a {
-        width: 6%;
+        width: 12%;
     }
-}
+    
+    #down img {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        opacity: 0.5;
+        width: 100%;
+    }
+    /* FOOTER */
+    
+    footer {
+        background-color: rgb(240, 63, 115);
+        border-top: 2px solid #fff;
+    }
+    
+    footer #overlayFooter {
+        height: 100%;
+        width: 100%;
+        background: var(--overlayTheme);
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    
+    footer #services {
+        text-align: center;
+        margin: 2% 0;
+    }
+    
+    footer #sociaux {
+        text-align: center;
+        opacity: 0.8;
+    }
+    
+    footer #sociaux img {
+        width: 10%;
+        margin: 4%;
+    }
+    
+    #mentions,
+    #mentions * {
+        font-size: 0.8rem;
+        font-family: 'Krub';
+        text-align: center;
+    }
+    /* -------------------------- MEDIA QUERIES -------------------------- */
+    
+    @media (orientation: landscape) {
+        /* ---------- ACCEUIL --------- */
+        header {
+            background-image: url(image/food/divers4pay.jpg );
+            background-position: left 30%;
+            background-size: cover;
+        }
+        #shark img {
+            width: 40%;
+        }
+        #down a {
+            width: 6%;
+        }
+    }

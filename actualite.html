@@ -12,10 +12,12 @@
     <title>Actualités</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/other/shark.jpg" />
     <link rel="stylesheet" href="actualite.css">
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat+Brush&family=Julee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -23,25 +25,72 @@
     <section id="actualites">
 
         <header class="flex">
-            <h2 id="logoO4"><img src="image/other/logoO4.jpg" alt="A">ctualités</h2>
+            <img src="image/logo1.png" alt="A">
+            <h2 id="logoO4">ctualités</h2>
         </header>
 
-        <article class="infos">
-            <img src="image/other/salleNeuve.jpg" alt="decoration salle">
-            <div class="background overlayBlack flex">
-                <h3>Le <span class="themeColor">O</span>'4 fait peau neuve.</h3>
-                <p class="texte">
-                    Après plus de 7 ans de présence et suite un confinement de plus de 2 mois, nous en avons profiter pour crée une nouvelle ambiance au sein de notre salle. En effet le décor et le mobilier on été totalement changer afin de vous faire voyager. Nous sommes
-                    impatient de pouvoir vous y acceuillir pour déguster nos sushi.
-                </p>
+        <article id="mosaique" class="flex">
+
+            <p class="defile">
+                Retrouver toute notre actualité, nos événements, nos recettes du moments, nos jeux concours, nos offres d'emploi et restez conecter avec votre Sushi Bar.
+            </p>
+
+            <div class="flex mosaique">
+                <img src="image/images.jpeg" alt="carte visite">
+                <img src="image/pokesushi.jpg" alt="pokesushi" data-image="1" data-text="actualités" data-background="overlayTheme">
+                <img src="image/salmonRolls.jpg" alt="salmonRolls" data-image="4" data-text="nouveauté" data-background="overlayBlue">
+                <img src="image/trefle.jpg" alt="trefle" data-image="2" data-text="recrutement" data-background="overlayBlue">
+                <img src="image/padThaicrevette.jpg" alt="padThaicrevette" data-image="6" data-text="recettes du moment" data-background="overlayBlue">
+                <img src="image/autre.jpg" alt="autre" data-image="3" data-text="événements" data-background="overlayTheme">
+                <img src="image/chef3.jpg" alt="intenable" data-image="5" data-text="jeux concours" data-background="overlayTheme">
+                <img src="image/concour.jpg" alt="concour" data-image="7" data-text="infos" data-background="overlayTheme">
+                <img src="image/promo.jpg" alt="promo">
+                <div class=" mosaiqueAnim flex">
+                    <p></p>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="actu">
+
+            <div class="conteneurImg">
+                <img src="image/salleNeuve.jpg" alt="decoration salle">
+            </div>
+
+            <div class="article">
+                <div class="flex blocTitre">
+                    <h3>Le <span class="themeColor">O</span>'4 sushi bar <br>fait peau neuve.</h3>
+                    <p class="lire openClose">lire</p>
+                    <p class="fermer openClose">fermer</p>
+
+                </div>
+
+                <div class="blocParagraphe toggle">
+                    <p>
+                        Après plus de 7 ans de présence et suite à un confinement de plus de 2 mois, nous en avons profiter pour crée une nouvelle ambiance au sein de notre salle.<br> <br>En effet le décor et le mobilier on été totalement changer afin
+                        de vous faire voyager.<br><br> Nous sommes impatient de pouvoir vous y acceuillir pour déguster nos sushi.
+                    </p>
+                </div>
+
             </div>
         </article>
 
-        <article class="infos">
-            <img src="image/other/sushiValentine.jpg" alt="St-valentin">
-            <div class="background overlayBlack flex">
-                <h3>Menu saint Valentin.</h3>
-                <div class="texte">
+        <article class="actu">
+
+            <div class="conteneurImg">
+                <img src="image/sushiValentine.jpg" alt="St-valentin">
+            </div>
+
+            <div class="article">
+
+                <div class="flex blocTitre">
+                    <h3>Menu <br>saint Valentin.</h3>
+                    <p class="lire openClose">lire</p>
+                    <p class="fermer openClose">fermer</p>
+                </div>
+
+                <div class="toggle blocParagraphe">
                     <p>
                         Pour 2 personnes, spécial amoureux a partager :
                     </p>
@@ -59,14 +108,33 @@
                         <li class="themeColor">--</li>
                         <li>1 Bouteille de Champagne Veuve Pelletier & Fils 37,5cl</li>
                         <li class="themeColor">--</li>
-                        <li> Dessert : -Jardin des Amoureux (crée par Macarons et Inspirations® )-base de biscuit macaron -ganache â la vanille -chantilly à la pure pâte de pistache -framboises et groseilles -pistaches fraîches
+                        <li> Dessert : <br>-Jardin des Amoureux <br>(crée par Macarons et Inspirations® )<br>
+                            <span>-base de biscuit macaron <br>-ganache â la vanille <br>-chantilly à la pure pâte de pistache <br>-framboises et groseilles <br>-pistaches fraîches</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </article>
 
+        <article class="actu">
 
+            <div class="conteneurImg">
+                <img src="image/grey.jpg" alt="50 nuance de sushi">
+            </div>
+
+            <div class="article">
+                <div class="flex blocTitre">
+                    <h3><span class="themeColor">O</span>'4 <br>nuances de g<span class="themeColor">riz</span></h3>
+                    <p class="lire openClose">lire</p>
+                    <p class="fermer openClose">fermer</p>
+                </div>
+                <div class="blocParagraphe toggle">
+                    <p>
+                        A l'occasion de la sortie du dernier épisode de la saga "50 nuances", nous serons présent au cinéma du trèfle de molsheim pour vous faire découvrir nos nuances de riz.
+                    </p>
+                </div>
+            </div>
+        </article>
 
         <div>
             <nav>
@@ -91,6 +159,46 @@
         </div>
 
     </section>
+    <div class="barNav">
+        <nav>
+            <ul class="flex">
+                <li>
+                    <a href="../actualites/actualite.html"><img src="../image/other/actu.png" alt="logo_actualite"></a>
+                </li>
+
+                <li>
+                    <a href="../carte/carte.html"><img src="../image/other/carte1.png" alt="logo_carte"></a>
+                </li>
+
+                <li>
+                    <a href="../restaurant/home.html"><img src="../image/other/restau.png" alt="logo_restaurant"> </a>
+                </li>
+
+                <li>
+                    <a href="../infos/infos.html"><img src="../image/other/contact.png" alt="logo_contact"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <div id="overlayFooter" class="flex">
+            <p id="services">
+                Sur place | A emporter | Traiteur
+            </p>
+
+            <div id="sociaux">
+                <a href="https://www.facebook.com/pages/category/Sushi-Restaurant/O4-Sushi-Bar-289513441154965/"><img src="../image/other/facebook.png" alt="facebook"></a>
+                <a href="https://www.tripadvisor.fr/Restaurant_Review-g196497-d5800635-Reviews-O_4_Sushi_Bar-Obernai_Bas_Rhin_Grand_Est.html"><img src="../image/other/tripad.png" alt="tripAdvisor"></a>
+            </div>
+
+            <p id="mentions">
+                Copyright © 2014 O'4 Sushi Bar - Tous droits réservés<br> <a href="#">Mentions légales</a><br> Site développé par <strong>Splinter prog</strong>
+            </p>
+            </a>
+    </footer>
+
+    <script src="actualite.js"></script>
 </body>
 
 </html>
