@@ -1,16 +1,70 @@
     /* ----------- GENERAL -------------  */
     
+    :root {
+        --main-theme-color: rgb(240, 63, 115);
+        --main-bg-color: linear-gradient(150deg, hsl(0, 0%, 0%), #434343, #000000);
+        --overlayTheme: linear-gradient(45deg, rgba(240, 63, 115, 0.5), rgba(0, 0, 0, 0.7));
+        --overlayBlack: rgba(0, 0, 0, 0.7);
+        --overlayBlue: linear-gradient(45deg, rgba(0, 65, 106, 0.5), rgba(228, 229, 230, 0.5));
+        --overlayBlackGradient: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+        /*font*/
+        --color-font-black: #444;
+        --write-size: 13px;
+        --normal-font: 'Syncopate', 'Julius Sans One', 'Krub', 'Noto Sans', 'Montserrat Alternates', 'Raleway Dots', sans-serif;
+        --special-font: 'Lobster Two', 'Playball', 'Lobster', cursive;
+        --hand-font: 'Fredericka the Great', 'Vast Shadow', 'Nanum Brush Script', cursive;
+        --modern-font: 'Audiowide', 'Megrim', cursive;
+        --defil-font: 'Codystar';
+    }
+    
     * {
         margin: 0;
         padding: 0;
-        font-size: 15px;
-        font-family: 'Noto Sans', 'Ubuntu', 'Nanum Brush Script', sans-serif;
+        font-size: var(--write-size);
+        font-family: var(--normal-font), var(--special-font), sans-serif;
         color: #ffffff;
+        box-sizing: border-box;
+    }
+    
+    html {
+        background: var(--main-bg-color);
+    }
+    
+    section {
+        padding-bottom: 50px;
+        /*Pour la barre Nav */
     }
     
     h1 {
         font-size: 5rem;
-        font-family: 'Nanum Brush Script';
+        font-family: var(--special-font);
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .marginCenter {
+        margin: 0 auto;
+    }
+    
+    .wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .line {
+        height: 1px;
+        background-color: var(--main-theme-color);
+        width: 25%;
+    }
+    
+    .themeColor {
+        color: var(--main-theme-color);
     }
     
     .upercase {
@@ -27,11 +81,19 @@
     }
     
     .overlayBlue {
-        background: linear-gradient(45deg, rgba(15, 32, 39, 0.8), rgba(32, 58, 67, 0.6), rgba(15, 32, 39, 0.9));
+        background: var(--overlayBlue);
     }
     
-    .hidden {
-        display: none;
+    .overlayBlackGradient {
+        background: var(--overlayBlackGradient);
+    }
+    
+    .overlayBlack {
+        background: var(--overlayBlack);
+    }
+    
+    .colorFontB {
+        color: var(--color-font-black);
     }
     
     #shark img {
@@ -58,61 +120,10 @@
             transform: rotate(0deg);
         }
     }
-    /* ------ ACCEUIL ----- */
+    /* NAV */
     
-    #index header {
-        background-image: url(image/food/divers4.jpg);
-        background-position: 70%;
-        background-size: cover;
-    }
-    
-    #acceuil {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    /*   LOGO */
-    
-    #title {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    #shark {
-        flex: 1 50%;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    
-    #shark img {
-        width: 70%;
-        height: auto;
-    }
-    
-    #title h1 {
-        font-size: 10rem;
-        flex: 1 50%;
-    }
-    
-    overlayBlue {
-        background: var(--overlayBlue);
-    }
-    
-    .overlayBlackGradient {
-        background: var(--overlayBlackGradient);
-    }
-    
-    .overlayBlack {
-        background: var(--overlayBlack);
-    }
-    
-    #title p {
-        font-size: 2.5rem;
-        border-top: 1px solid #ffffff;
-        border-bottom: 1px solid #ffffff;
-    }
-    /*   OPTION */
-    
-    #option {
+    nav ul {
+        background: rgba(255, 255, 255, 0.7);
         justify-content: space-around;
         list-style: none;
         padding: 0.5rem 0;
@@ -124,29 +135,14 @@
         z-index: 1000;
     }
     
-    #option p {
-        border: 1px solid #ffffff;
-        border-radius: 5px;
-        padding: 0.5rem;
-        width: 30%;
+    nav a {
+        display: block;
         text-align: center;
-        opacity: 0.8;
-    }
-    /* FLECHE DOWN */
-    
-    #down {
-        justify-content: center;
     }
     
-    #down a {
-        width: 12%;
-    }
-    
-    #down img {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 50%;
-        opacity: 0.5;
-        width: 100%;
+    nav img {
+        width: 50%;
+        height: auto;
     }
     /* FOOTER */
     
@@ -188,15 +184,123 @@
     
     @media (orientation: landscape) {
         /* ---------- ACCEUIL --------- */
-        header {
-            background-image: url(image/food/divers4pay.jpg );
-            background-position: left 30%;
+        #index header {
+            background-image: url(image/food/divers4.jpg);
+            background-position: 70%;
             background-size: cover;
         }
+        #acceuil {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        /*   LOGO */
+        #title {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #shark {
+            flex: 1 50%;
+            justify-content: flex-end;
+            align-items: center;
+        }
         #shark img {
-            width: 40%;
+            width: 70%;
+            height: auto;
+        }
+        #title h1 {
+            font-size: 10rem;
+            flex: 1 50%;
+        }
+        .overlayBlue {
+            background: var(--overlayBlue);
+        }
+        .overlayBlackGradient {
+            background: var(--overlayBlackGradient);
+        }
+        .overlayBlack {
+            background: var(--overlayBlack);
+        }
+        #title p {
+            font-size: 2.5rem;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+        /*   OPTION */
+        #option {
+            justify-content: space-around;
+            list-style: none;
+            padding: 0.5rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            height: 50px;
+            box-shadow: inset 1px 1px 13px 0 black, 0 16px 8px 0 black;
+            z-index: 1000;
+        }
+        #option p {
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            padding: 0.5rem;
+            width: 30%;
+            text-align: center;
+            opacity: 0.8;
+        }
+        /* FLECHE DOWN */
+        #down {
+            justify-content: center;
         }
         #down a {
-            width: 6%;
+            width: 12%;
+        }
+        #down img {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 0.5;
+            width: 100%;
+        }
+        /* FOOTER */
+        footer {
+            background-color: rgb(240, 63, 115);
+            border-top: 2px solid #fff;
+        }
+        footer #overlayFooter {
+            height: 100%;
+            width: 100%;
+            background: var(--overlayTheme);
+            flex-direction: column;
+            padding-bottom: 70px;
+        }
+        footer #services {
+            text-align: center;
+            margin: 2% 0;
+        }
+        footer #sociaux {
+            text-align: center;
+            opacity: 0.8;
+        }
+        footer #sociaux img {
+            width: 10%;
+            margin: 4%;
+        }
+        #mentions,
+        #mentions * {
+            font-size: 0.8rem;
+            font-family: 'Krub';
+            text-align: center;
+        }
+        /* -------------------------- MEDIA QUERIES -------------------------- */
+        @media (orientation: landscape) {
+            /* ---------- ACCEUIL --------- */
+            header {
+                background-image: url(image/food/divers4pay.jpg );
+                background-position: left 30%;
+                background-size: cover;
+            }
+            #shark img {
+                width: 40%;
+            }
+            #down a {
+                width: 6%;
+            }
         }
     }
