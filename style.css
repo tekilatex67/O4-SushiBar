@@ -1,6 +1,6 @@
     /* ----------- GENERAL -------------  */
     
-    :root {
+     :root {
         --main-theme-color: rgb(240, 63, 115);
         --main-bg-color: linear-gradient(150deg, hsl(0, 0%, 0%), #434343, #000000);
         --overlayTheme: linear-gradient(45deg, rgba(240, 63, 115, 0.5), rgba(0, 0, 0, 0.7));
