@@ -1,9 +1,10 @@
 /* ------ ACCEUIL ----- */
 
-#index header {
+#index {
     background-image: url(image/divers4.jpg);
     background-position: 70%;
     background-size: cover;
+    padding: 0;
 }
 
 #acceuil {
@@ -17,31 +18,22 @@
 #title {
     flex-wrap: wrap;
     justify-content: center;
+    width: 80%;
 }
 
-#shark {
-    flex: 1 50%;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#shark img {
-    width: 70%;
+#o4 img {
+    width: 50%;
     height: auto;
 }
 
-#title h1 {
-    font-size: 10rem;
-    flex: 1 50%;
-}
-
 #title p {
+    margin-top: 5%;
     font-size: 2.5rem;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
 }
 
-#shark img {
+#shark {
     animation-name: ronde;
     animation-duration: 30s;
     animation-iteration-count: infinite;
