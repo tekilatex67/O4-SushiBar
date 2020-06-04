@@ -1,8 +1,8 @@
 /* ------ ACCEUIL ----- */
 
 #index {
-    background-image: url(image/divers4.jpg);
-    background-position: 70%;
+    background-image: url(image/salle1.jpg);
+    background-position: center;
     background-size: cover;
     padding: 0;
 }
@@ -26,16 +26,31 @@
     height: auto;
 }
 
-#title p {
-    margin-top: 5%;
+#title p,
+#title span {
     font-size: 2.5rem;
+}
+
+.border {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+#title p {
+    margin-top: -100px;
+    padding: 2% 0;
+    transition: margin-top 0.5s linear;
+}
+
+#title p.open {
+    margin-top: 0;
 }
 
 #shark {
     animation-name: ronde;
-    animation-duration: 30s;
+    animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -59,35 +74,33 @@
 }
 
 
+/* COORDONEES */
+
+#coordonees p {
+    text-align: center;
+    padding: 2%;
+    letter-spacing: 0.1rem;
+}
+
+#coordonees :first-child {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-family: 'Audiowide';
+}
+
+#coordonees :last-child {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+
 /*   OPTION */
 
-#option {
-    justify-content: space-around;
-}
-
 #option p {
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 0.5rem;
-    width: 35%;
     text-align: center;
     opacity: 0.8;
+    line-height: 2rem;
 }
 
 
-/* FLECHE DOWN */
-
-#down {
-    justify-content: center;
-}
-
-#down a {
-    width: 12%;
-}
-
-#down img {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    opacity: 0.5;
-    width: 100%;
-}
+/* ENTRER */
