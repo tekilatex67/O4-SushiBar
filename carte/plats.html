@@ -12,10 +12,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="../image/other/shark.jpg" />
     <link rel="stylesheet" href="sousMenu.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat+Brush&family=Julee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,8 +25,8 @@
         <header class="selection flex">
             <div class="cadre"></div>
             <ul class="tabs">
-                <li class="active ">
-                    <h3>Plats</h3>
+                <li class="active" id="platsBack">
+                    <h3 class="marginCenter">Plats</h3>
                 </li>
 
             </ul>
@@ -39,37 +39,49 @@
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/PADsaumon.png" alt="PAD Thaï Saumon"></div>
-                    <p class="itemType flex">PAD Thaï Saumon</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">PAD Thaï Saumon</p>
+                    </div>
                     <p class="prix flex">12,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/PadPoulet.png" alt="PAD Thaï Poulet"></div>
-                    <p class="itemType flex">PAD Thaï Poulet</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">PAD Thaï Poulet</p>
+                    </div>
                     <p class="prix flex">12,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/PADcrevettes.png" alt="PAD Thaï Crevettes"></div>
-                    <p class="itemType flex">PAD Thaï Crevettes</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">PAD Thaï Crevettes</p>
+                    </div>
                     <p class="prix flex">13,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/ramen.png" alt="Ramen Porc"></div>
-                    <p class="itemType flex">Ramen Porc</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Ramen Porc</p>
+                    </div>
                     <p class="prix flex">13,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/boBun.png" alt="Bo bun"></div>
-                    <p class="itemType flex">Bo bun</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Bo bun</p>
+                    </div>
                     <p class="prix flex">13,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/katsundo.png" alt="Katsudon Poulet"></div>
-                    <p class="itemType flex">Katsudon Poulet</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Katsudon Poulet</p>
+                    </div>
                     <p class="prix flex">13,90€</p>
                 </div>
 
@@ -77,33 +89,43 @@
 
     </section>
 
-    <div class="barNav">
-        <nav>
+    <div id="roundNav">
+        <div class="btnContainer flex">
+            <p class="menuBtn">+</p>
+        </div>
+
+        <div class="menu marginCenter">
             <ul class="flex">
-                <li>
-                    <a href="../actualites/actualite.html"><img src="../image/other/actu.png" alt="logo_actualite"></a>
-                </li>
 
-                <li>
-                    <a href="../carte/carte.html"><img src="../image/other/carte1.png" alt="logo_carte"></a>
+                <li id="actuLink">
+                    <a href="../actualites/actualite.html" class="curentPage">
+                        <img class="noCurent" src="../image/other/newsR.png" alt="logo_actualite">
+                        <img class="curent" src="../image/other/newsW.png" alt="logo_actualite">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../restaurant/home.html"><img src="../image/other/restau.png" alt="logo_restaurant"> </a>
+                <li id="carteLink">
+                    <a href="../carte/carte.html">
+                        <img class="noCurent" src="../image/other/sushiR.png" alt="logo_carte">
+                        <img class="curent" src="../image/other/sushiW.png" alt="logo_carte">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../infos/infos.html"><img src="../image/other/contact.png" alt="logo_contact"></a>
+                <li id="restoLink">
+                    <a href="../restaurant/home.html">
+                        <img class="noCurent" src="../image/other/homeR.png" alt="logo_restaurant">
+                        <img class="curent" src="../image/other/homeW.png" alt="logo_restaurant">
+                    </a>
+                </li>
+                <li id="infosLink">
+                    <a href="../infos/infos.html">
+                        <img class="noCurent" src="../image/other/infoR.png" alt="logo_contact">
+                        <img class="curent" src="../image/other/infoW.png" alt="logo_contact">
+                    </a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-
-
-
-
-
+    <script src="../general.js"></script>
     <script src="sousMenu.js"></script>
 </body>
 

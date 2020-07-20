@@ -1,11 +1,5 @@
 /*GENERALE*/
 
-.fonte {
-    font-family: 'Caveat', cursive;
-    font-family: 'Gloria Hallelujah', cursive;
-    font-family: 'Indie Flower', cursive;
-}
-
 #home {
     background-color: #fff;
 }
@@ -18,20 +12,65 @@
     background-position: top center;
 }
 
+#home .overlay {
+    border-bottom: 2px solid rgb(240, 63, 115);
+    border-top: 2px solid rgb(240, 63, 115);
+}
+
 .overlay,
 .clearOverlay {
-    border-bottom: 2px solid var(--main-theme-color);
     position: relative;
 }
 
-h3 {
-    position: absolute;
-    width: 70%;
-    top: 50%;
-    left: 15%;
-    text-align: center;
+.conteneur>div {
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home h3 p {
+    font-size: 2rem;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    text-align: center;
+    transition: transform .5s .3s;
+    font-family: var(--modern-font);
+}
+
+#home h3 div {
+    overflow: hidden;
+}
+
+#home h3 .mirror p {
+    color: rgba(240, 63, 115, 0.9);
+    transform: translateY(200%);
+}
+
+.lineBottom {
+    transform: scaleX(0);
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: transform .7s;
+}
+
+.actif .lineBottom {
+    transform: scaleX(1);
+}
+
+#home h3.actif p {
+    transform: translateY(0);
+}
+
+.mirrorText p {
+    transform: translateY(200%);
+    color: transparent;
+    line-height: 1em;
+    background: linear-gradient(0deg, #fff 0, transparent 130%);
+    -webkit-background-clip: text;
+    opacity: 0.4;
+}
+
+#home h3 .mirrorText {
+    transform: rotateX(180deg);
 }
 
 .over,
@@ -43,41 +82,78 @@ h3 {
 }
 
 #home .line {
-    margin: 10% auto;
+    margin: 5% auto;
 }
 
 #cuisine p,
 #salle p,
-#adresse p {
+#adresse p,
+#engagement p {
     line-height: 2rem;
+    font-size: 0.8rem;
+}
+
+.topPage {
+    position: fixed;
+    z-index: 10000;
+    bottom: 10%;
+    transform: translateY(500%);
+    transition: transform .5s;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(240, 63, 115, .5);
+    border-radius: 5%;
+    border: 1px solid #fff;
+}
+
+.topPage img {
+    width: 100%;
 }
 
 
-/* EN TETE TITRE O4 SUSHIBAR */
+/* ---------------------------------------------------- EN TETE TITRE O4 SUSHIBAR ---------------------------------------------------- */
 
-#home h2 {
+#home header {
     position: absolute;
-    font-size: 3rem;
     width: 100vw;
     flex-direction: column;
     align-items: center;
     padding: 5%;
     z-index: 1;
+    text-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
+    color: #00FFFC;
 }
 
-#home h2 img {
-    width: 30%;
+#home header img {
+    width: 50%;
+    margin: 2%;
+}
+
+#home h2 {
+    font-size: 3rem;
+    padding: 2%;
+    text-align: center;
+}
+
+#home h2 span {
+    font-size: 3rem;
+}
+
+#home h2 span.light {
+    color: #1C2827;
+    text-shadow: 0 0 0 transparent;
 }
 
 
-/* ARTICLE ADRESSE*/
+/* ---------------------------------------------------- ARTICLE ADRESSE ----------------------------------------------------*/
 
 #adresse .conteneur {
     background-image: url(image/vitrine1.JPG);
 }
 
 #adresse .over {
-    top: 35%;
+    top: 30%;
 }
 
 #adresse .under {
@@ -85,7 +161,7 @@ h3 {
 }
 
 #adresse .over img {
-    width: 10%;
+    width: 20%;
 }
 
 
@@ -104,7 +180,7 @@ h3 {
 }
 
 
-/* ARTICLE Cuisine*/
+/* ---------------------------------------------------- ARTICLE Cuisine ------------------------------------------------------ */
 
 #cuisine .conteneur {
     background-image: url(image/chef5.jpg);
@@ -119,10 +195,59 @@ h3 {
 }
 
 
-/* ENGAGEMENT */
+/* ---------------------------------------------------- ENGAGEMENT ---------------------------------------------------- */
+
+#engagement h3:after,
+#satisfaction h3:after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-bottom: 1px solid rgb(240, 63, 115);
+    border-left: 1px solid rgb(240, 63, 115);
+    opacity: 0;
+    transition: all 0.7s .5s;
+}
+
+#engagement h3.actif:after,
+#satisfaction h3.actif:after,
+#engagement h3.actif:before,
+#satisfaction h3.actif:before {
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+}
+
+#engagement h3:before,
+#satisfaction h3:before {
+    content: "";
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-top: 1px solid rgb(240, 63, 115);
+    border-right: 1px solid rgb(240, 63, 115);
+    opacity: 0;
+    transition: all 0.7s .5s;
+}
+
+#engagement h3,
+#satisfaction h3 {
+    font-family: var(--modern-font);
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 4px 3px 3px grey;
+    position: relative;
+    padding: 5% 0;
+}
 
 #engagement *,
-#satisfaction * {
+#satisfaction *,
+#engagement h3,
+#satisfaction h3 {
     color: #444;
     text-align: center;
 }
@@ -136,39 +261,32 @@ h3 {
 
 #engagement p {
     font-size: 0.8rem;
+    transform: translateX(-90%);
+    opacity: 0;
+    transition: transform 0.7s, opacity .9s;
 }
 
-#engagement h3,
-#satisfaction h3 {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: auto;
-    text-shadow: 4px 3px 3px grey;
+#engagement p.actif {
+    transform: translateX(0);
+    opacity: 1;
 }
 
-.blocTitre img {
-    width: 20%;
+.line {
+    height: 1px;
+    background-color: var(--main-theme-color);
+    width: 40%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .7s, opacity .9s;
 }
 
-.floatLeft {
-    width: 25%;
-    height: 50px;
-    display: block;
-    float: left;
-    padding: 1%;
-    margin-right: 10px;
-    background-color: black;
-    border-top-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-}
-
-.floatLeft img {
-    width: 100%;
+.line.actif {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 
-/*  SLIDES */
+/* ---------------------------------------------------- SLIDES ---------------------------------------------------- */
 
 .slides {
     width: 100vw;
@@ -190,12 +308,15 @@ h3 {
 /* AVIS */
 
 #satisfaction h3 {
-    margin-top: 10%;
+    margin: 10% 0;
 }
 
 .avisContent {
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    padding-bottom: 5%;
+    margin: 5%;
 }
 
 .avis {
@@ -232,10 +353,16 @@ h3 {
 }
 
 .autheur {
-    width: 70%;
+    width: 90%;
     height: 20%;
-    transform: rotate(7deg);
+    transform: rotate(0deg) translate(50%);
     align-self: center;
+    transition: all 1s;
+}
+
+.autheur.actif {
+    transform: rotate(7deg);
+    width: 70%;
 }
 
 .autheur img {
@@ -247,5 +374,262 @@ h3 {
 }
 
 .commentaire {
-    transform: rotate(-4deg);
+    transform: rotate(0deg) translate(-50%) scale(1.3);
+    margin-top: 3%;
+}
+
+.commentaire.actif {
+    transform: rotate(-4deg) scale(1) translate(0);
+    transition: all 1s;
+}
+
+
+/* ---------------------------------------------------- ARTICLE 3 BOX ---------------------------------------------------- */
+
+#box {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 20vh;
+}
+
+
+/* ---------------------------------------------------- ANIMATION BOX ----------------------------------------------------*/
+
+#box img {
+    width: 10%;
+    opacity: .3;
+    position: absolute;
+}
+
+#riz {
+    animation: riz 20s linear infinite;
+}
+
+#sushi {
+    animation: sushi 20s linear infinite;
+}
+
+#sushiBaguettes {
+    animation: sushiBaguettes 20s linear infinite;
+}
+
+#nigiriClair {
+    animation: nigiriClair 20s linear infinite;
+}
+
+#onigri {
+    animation: onigri 20s linear infinite;
+}
+
+#nigiBlack {
+    animation: nigiBlack 20s linear infinite;
+}
+
+#baguettes {
+    animation: baguettes 20s linear infinite;
+}
+
+
+/*BOL DE RIZ IMG1*/
+
+@keyframes riz {
+    0% {
+        bottom: 5%;
+        right: 5%;
+        transform: rotate(60deg);
+    }
+    40% {
+        bottom: 75%;
+        right: 90%;
+        transform: rotate(390deg);
+    }
+    50% {
+        bottom: 80%;
+        right: 75%;
+    }
+    97% {
+        bottom: 0%;
+        right: 5%;
+        transform: rotate(40deg);
+    }
+    100% {
+        bottom: 5%;
+        right: 5%;
+        transform: rotate(60deg);
+    }
+}
+
+
+/*sushi IMG2*/
+
+@keyframes sushi {
+    0% {
+        left: 5%;
+        top: 15%;
+        transform: rotate(10deg);
+    }
+    30% {
+        left: 50%;
+        top: 0%;
+        transform: rotate(-110deg);
+    }
+    50% {
+        left: 90%;
+        top: 35%;
+        transform: rotate(-280deg);
+    }
+    97% {
+        left: 0%;
+        top: 20%;
+        transform: rotate(30deg);
+    }
+    100% {
+        left: 5%;
+        top: 15%;
+        transform: rotate(10deg);
+    }
+}
+
+
+/*sushiBaguettes IMG3*/
+
+@keyframes sushiBaguettes {
+    0% {
+        top: 0%;
+        right: 40%;
+    }
+    25% {
+        top: 40%;
+        right: 0%;
+        transform: rotate(-110deg);
+    }
+    50% {
+        top: 80%;
+        right: 50%;
+        transform: rotate(-280deg);
+    }
+    75% {
+        top: 40%;
+        right: 90%;
+        transform: rotate(30deg);
+    }
+    100% {
+        top: 0%;
+        right: 40%;
+    }
+}
+
+
+/*nigiriClair IMG4*/
+
+@keyframes nigiriClair {
+    0% {
+        bottom: -2%;
+        left: 5%;
+        transform: rotate(20deg);
+    }
+    35% {
+        bottom: 20%;
+        left: 90%;
+        transform: rotate(-110deg);
+    }
+    55% {
+        bottom: 80%;
+        left: 60%;
+        transform: rotate(-280deg);
+    }
+    85% {
+        bottom: 30%;
+        left: 0%;
+        transform: rotate(160deg);
+    }
+    100% {
+        bottom: -2%;
+        left: 5%;
+        transform: rotate(20deg);
+    }
+}
+
+
+/*BOL DE ONIGRI IMG5*/
+
+@keyframes onigri {
+    0% {
+        right: 0%;
+        top: 30%;
+    }
+    35% {
+        right: 90%;
+        top: 55%;
+        transform: rotate(80deg);
+    }
+    55% {
+        right: 60%;
+        top: 80%;
+        transform: rotate(-280deg);
+    }
+    85% {
+        right: 30%;
+        top: 0%;
+        transform: rotate(160deg);
+    }
+    100% {
+        right: 0%;
+        top: 30%;
+        transform: rotate(80deg);
+    }
+}
+
+
+/*BOL DE NIGIBLACK IMG6*/
+
+@keyframes nigiBlack {
+    0% {
+        bottom: 15%;
+        left: 25%;
+    }
+    45% {
+        bottom: 80%;
+        left: 30%;
+        transform: rotate(160deg);
+    }
+    70% {
+        bottom: 40%;
+        left: 0%;
+        transform: rotate(-280deg);
+    }
+    90% {
+        bottom: 0%;
+        left: 23%;
+        transform: rotate(30deg);
+    }
+    100% {
+        bottom: 15%;
+        left: 25%;
+    }
+}
+
+
+/*BAGUETTES IMG7*/
+
+@keyframes baguettes {
+    0% {
+        bottom: 0%;
+        right: 30%;
+    }
+    55% {
+        bottom: 80%;
+        right: 20%;
+        transform: rotate(160deg);
+    }
+    75% {
+        bottom: 40%;
+        right: 0%;
+        transform: rotate(-280deg);
+    }
+    100% {
+        bottom: 0%;
+        right: 30%;
+    }
 }

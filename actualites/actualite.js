@@ -1,10 +1,11 @@
-// ANIMATION MOSAIQUE 
-
+let actu = document.querySelector('#actualites');
 let div = document.querySelector('.mosaiqueAnim');
 let text = document.querySelector('.mosaiqueAnim p');
 let cpt = 0;
 let img = document.querySelector(`img[data-image=""]`);
 
+
+// ANIMATION MOSAIQUE 
 function sizeDiv() {
     let img = document.querySelector(`img[data-image="${cpt}"]`);
     let imgAtt = img.getBoundingClientRect();
@@ -35,7 +36,7 @@ function mosaiqueAnimation() {
 }
 
 window.addEventListener('resize', sizeDiv);
-mosaiqueAnimation();
+setTimeout(mosaiqueAnimation, 1000);
 let compteur = setInterval(mosaiqueAnimation, 2000)
 
 
@@ -60,3 +61,9 @@ function toggleRead(e) {
 
 
 lires.forEach(lire => lire.addEventListener('click', toggleRead));
+
+//ANIMATION ONLOAD
+
+setTimeout(function() {
+    actu.classList.add('open');
+}, 0010);

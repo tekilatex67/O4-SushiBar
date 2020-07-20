@@ -12,26 +12,25 @@
     <link rel="shortcut icon" type="image/x-icon" href="../image/other/shark.jpg" />
     <link rel="stylesheet" href="sousMenu.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat+Brush&family=Julee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 
-    <section class=" flex Page_Menu">
+    <section class=" flex Page_Menu sup">
         <header class="selection flex">
-            <div class="cadre"></div>
             <ul class="tabs">
-                <li class="active ">
-                    <h3>Temaki</h3>
-                    <a href="#gunkan" class="fleche_D">></a>
+                <li class="active " id="temakiBack">
+                    <h3 class="marginCenter">Temaki</h3>
+                    <a href="#gunkan" class="fleche_D"><img src="image/rightWhite.png" alt="next"></a>
                 </li>
-                <li class="">
-                    <h3>Gunkan</h3>
-                    <a href="#temaki" class="fleche_G"> &lt;</a>
+                <li id="gunkanBack">
+                    <h3 class="marginCenter">Gunkan</h3>
+                    <a href="#temaki" class="fleche_G"><img src="image/leftWhite.png" alt="previous"></a>
                 </li>
             </ul>
         </header>
@@ -40,115 +39,145 @@
 
         <div class="tabs-content items ">
             <article class="tab-content active" id="temaki">
-                <aside class="Supplements">
-                    <div>
-                        <p>0,20€ Suppléments :</p>
-                        <ul class="supStyle">
-                            <li>Cheese</li>
-                            <li>Spicy</li>
-                            <li>Avocat</li>
-                            <li>Sriracha</li>
-                            <li>Ciboulette</li>
-                            <li>Salade d'algue</li>
-                            <li>Concombre</li>
-                            <li>Mayonaise japonaise</li>
-                            <li>Mayonaise pimentée</li>
-                            <li>Crème de truffe (0,50€)</li>
-                        </ul>
-                    </div>
-                </aside>
+                <div class="supplements marginCenter" data-offset="10" data-sticky>
+                    <p>Suppléments <span>&#x25BD;</span> </p>
+                    <ul class="supStyle">
+                        <li><span>0,20€</span></li>
+                        <li>Cheese</li>
+                        <li>Spicy</li>
+                        <li>Avocat</li>
+                        <li>Sriracha</li>
+                        <li>Ciboulette</li>
+                        <li>Salade d'algue</li>
+                        <li>Concombre</li>
+                        <li>Mayonaise japonaise</li>
+                        <li>Mayonaise pimentée</li>
+                        <li><span>0,50€</span></li>
+                        <li>Crème de truffe</li>
+                    </ul>
+                </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki saumon"></div>
-                    <p class="itemType flex">Saumon</p>
-                    <p class="prix flex">4,90€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Saumon</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,90€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki thon"></div>
-                    <p class="itemType flex">Thon</p>
-                    <p class="prix flex">5,40€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Thon</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 5,40€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Dorade Royale"></div>
-                    <p class="itemType flex">Dorade Royale</p>
-                    <p class="prix flex">5,40€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Dorade Royale</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 5,40€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Thon cuit"></div>
-                    <p class="itemType flex">Thon cuit</p>
-                    <p class="prix flex">4,80€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Thon cuit</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,80€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Vegetarien"></div>
-                    <p class="itemType flex">Vegetarien</p>
-                    <p class="prix flex">4,50€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Vegetarien</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,50€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Anguille"></div>
-                    <p class="itemType flex">Anguille</p>
-                    <p class="prix flex">7,70€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Anguille</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 7,70€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Poulet"></div>
-                    <p class="itemType flex">Poulet</p>
-                    <p class="prix flex">6,10€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Poulet</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 6,10€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki crevettes"></div>
-                    <p class="itemType flex">Crevettes</p>
-                    <p class="prix flex">6,10€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Crevettes</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 6,10€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Crevettes Tempura"></div>
-                    <p class="itemType flex">Crevettes Tempura</p>
-                    <p class="prix flex">6,10€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Crevettes Tempura</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 6,10€</p>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/temaki1.png" alt="temaki Crabe"></div>
-                    <p class="itemType flex">Crabe</p>
-                    <p class="prix flex">6,10€</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Crabe</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 6,10€</p>
                 </div>
 
             </article>
 
             <article class="tab-content " id="gunkan">
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/gunkan.png" alt="Gunkan Oeufs de saumon"></div>
-                    <p class="itemType flex">Oeufs de Saumon</p>
-                    <p class="prix flex">3,70€</p>
+                    <div class="itemImg flex "><img src="image/gunkan1.png" alt="Gunkan Oeufs de saumon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Oeufs de Saumon</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 3,70€</p>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/gunkan.png" alt="gunkan Chair de crabe"></div>
-                    <p class="itemType flex">Chair de Crabe</p>
-                    <p class="prix flex">4,10€</p>
+                    <div class="itemImg flex "><img src="image/gunkan1.png" alt="gunkan Chair de crabe"></div>
+                    <div class="typePrice flex ">
+                        <p class="itemType flex">Chair de Crabe</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,10€</p>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/gunkan.png " alt="gunkan Tartare de saumon"></div>
-                    <p class="itemType flex">Tartare de Saumon</p>
-                    <p class="prix flex">4,10€</p>
+                    <div class="itemImg flex "><img src="image/gunkan1.png " alt="gunkan Tartare de saumon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Tartare de Saumon</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,10€</p>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"> <img src="image/gunkan.png" alt="gunkan Tartare de thon"></div>
-                    <p class="itemType flex">Tartare de Thon</p>
-                    <p class="prix flex">4,40€</p>
+                    <div class="itemImg flex "> <img src="image/gunkan1.png" alt="gunkan Tartare de thon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Tartare de Thon</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 4,40€</p>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/gunkan.png " alt="gunkan Salade d'Algue"></div>
-                    <p class="itemType flex">Salade d'Algue</p>
-                    <p class="prix flex">3,70€</p>
+                    <div class="itemImg flex "><img src="image/gunkan1.png " alt="gunkan Salade d'Algue"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Salade d'Algue</p>
+                    </div>
+                    <p class="prix flex"><span>1 pièces</span> 3,70€</p>
                 </div>
 
             </article>
@@ -157,33 +186,43 @@
 
     </section>
 
-    <div class="barNav">
-        <nav>
+    <div id="roundNav">
+        <div class="btnContainer flex">
+            <p class="menuBtn">+</p>
+        </div>
+
+        <div class="menu marginCenter">
             <ul class="flex">
-                <li>
-                    <a href="../actualites/actualite.html"><img src="../image/other/actu.png" alt="logo_actualite"></a>
-                </li>
 
-                <li>
-                    <a href="../carte/carte.html"><img src="../image/other/carte1.png" alt="logo_carte"></a>
+                <li id="actuLink">
+                    <a href="../actualites/actualite.html" class="curentPage">
+                        <img class="noCurent" src="../image/other/newsR.png" alt="logo_actualite">
+                        <img class="curent" src="../image/other/newsW.png" alt="logo_actualite">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../restaurant/home.html"><img src="../image/other/restau.png" alt="logo_restaurant"> </a>
+                <li id="carteLink">
+                    <a href="../carte/carte.html">
+                        <img class="noCurent" src="../image/other/sushiR.png" alt="logo_carte">
+                        <img class="curent" src="../image/other/sushiW.png" alt="logo_carte">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../infos/infos.html"><img src="../image/other/contact.png" alt="logo_contact"></a>
+                <li id="restoLink">
+                    <a href="../restaurant/home.html">
+                        <img class="noCurent" src="../image/other/homeR.png" alt="logo_restaurant">
+                        <img class="curent" src="../image/other/homeW.png" alt="logo_restaurant">
+                    </a>
+                </li>
+                <li id="infosLink">
+                    <a href="../infos/infos.html">
+                        <img class="noCurent" src="../image/other/infoR.png" alt="logo_contact">
+                        <img class="curent" src="../image/other/infoW.png" alt="logo_contact">
+                    </a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
 
-
-
-
-
-
+    <script src="../general.js"></script>
     <script src="sousMenu.js"></script>
 </body>
 

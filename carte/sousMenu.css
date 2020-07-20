@@ -1,204 +1,482 @@
-    section.Page_Menu {
-        flex-direction: column;
-        min-height: 100vh;
-        position: relative;
-    }
-    
-    header.selection {
-        min-height: 20vh;
-        position: absolute;
-        height: 20vh;
-        width: 100vw;
-    }
-    
-    .cadre {
-        position: absolute;
-        border: 2px solid var(--main-theme-color);
-        width: 20%;
-        height: 50%;
-        left: 40%;
-        top: 25%;
-        z-index: -1;
-    }
-    
-    .tabs {
-        width: 100%;
-    }
-    
-    .tabs h3 {
-        width: 100%;
-    }
-    
-    .tab-content,
-    .tabs>li {
-        display: none;
-    }
-    /* DIV ITEM */
-    
-    .item {
-        flex: 1;
-        min-height: 20vh;
-        position: relative;
-    }
-    
-    .itemImg {
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .itemImg img {
-        width: 70%;
-    }
-    
-    .itemType {
-        flex: 2;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .prix {
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-    }
-    /*class ACTIVE*/
-    
-    .tab-content.active,
-    .tabs li.active {
-        display: flex;
-        height: 100%;
-    }
-    
-    .tabs li.active {
-        z-index: 3;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .tabs li.active a.fleche_D {
-        position: absolute;
-        top: 40%;
-        left: 80%;
-    }
-    
-    .tabs li.active a.fleche_G {
-        position: absolute;
-        top: 40%;
-        left: 20%;
-    }
-    
-    .tab-content.active {
-        flex-direction: column;
-        min-height: 80vh;
-        padding-top: 20vh;
-    }
-    /* PLUS ET PLUS OPEN CONTENUE (plateaux) */
-    
-    .itemType span {
-        padding: 5%;
-        width: auto;
-        background-color: rgba(240, 63, 115, 0.6);
-        box-shadow: 3px 3px 0px #ffffff;
-        width: 75%;
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-        text-align: center;
-        /* SI pas de width, bug taille apres changement de tabs et retour*/
-    }
-    
-    .plus {
-        display: none;
-    }
-    
-    .open .plus {
-        display: flex;
-        background: rgba(240, 63, 115, 0.6);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .open .itemType span {
-        color: black;
-        background: none;
-        box-shadow: 0 0 0;
-    }
-    /* SUPLEMENT (Pour temaki, rolls, nigiri, chirashi, tartare) */
-    
-    .Supplements {
-        position: fixed;
-        padding: 1%;
-        left: 25%;
-        min-width: 50%;
-        text-align: center;
-        background: rgba(240, 63, 115, 0.8);
-        box-shadow: 3px 3px 0px #ffffff;
-        z-index: 3;
-    }
-    
-    .supStyle {
-        display: none;
-    }
-    
-    .open .supStyle {
-        display: block;
-    }
-    /* SUPLEMENT ROLLS*/
-    
-    .wrapperTabs .Supplements {
-        position: absolute;
-        top: 0;
-    }
-    /* SECTION ROLLS */
-    
-    .wrapperTabs {
-        padding: 0 10%;
-        height: 91vh;
-    }
-    
-    .rollstype li {
-        flex: 1;
-        margin: 1%;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
-    }
-    
-    .rollstype a {
-        display: block;
-        text-align: center;
-        height: 90px;
-        line-height: 90px;
-    }
-    
-    .rollstype> :nth-child(1) {
-        background-image: url(image/maki.png);
-    }
-    
-    .rollstype> :nth-child(2) {
-        background-image: url(image/spring-saumon.png);
-    }
-    
-    .rollstype> :nth-child(3) {
-        background-image: url(image/california.png);
-    }
-    
-    .liste-rolls {
-        position: relative;
-        padding-top: 10%;
-        line-height: 1.5rem;
-    }
-    
-    .rolls-content {
-        display: none;
-    }
-    
-    .rolls-content.index {
-        display: flex;
-        justify-content: space-between;
-    }
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+section.Page_Menu {
+    flex-direction: column;
+    min-height: 100vh;
+    /*background-image: url("../infos/images/background1.jpg");*/
+    background-color: #2d3436;
+    background-image: linear-gradient(400deg, #2d3436 20%, #000000 74%);
+}
+
+header.selection {
+    min-height: 20vh;
+    position: absolute;
+    width: 100vw;
+}
+
+
+/*----------------------------------------------- BACKGROUND HEADER -----------------------------------------------*/
+
+.tabs li {
+    background-size: cover;
+    background-position: center;
+}
+
+#miseEnBouche {
+    background-image: url(image/tempura1.jpg);
+}
+
+#yaki {
+    background-image: url(image/yakitori1.jpg);
+}
+
+#rollsBack {
+    background-image: url(image/rolls1.jpg);
+}
+
+#temakiBack {
+    background-image: url(image/temaki-de-salmao.jpg);
+}
+
+#gunkanBack {
+    background-image: url(image/gunkan.jpg);
+}
+
+#chirasiBack {
+    background-image: url(image/chirashi-saumon.jpeg);
+}
+
+#sashimiBack {
+    background-image: url(image/sashimi-thon-saumon-2.jpg);
+}
+
+#tartareBack {
+    background-image: url(image/Tartare-thon.jpg);
+}
+
+#accompBack {
+    background-image: url(image/saladeAsiat.jpg);
+}
+
+#platsBack {
+    background-image: url(image/padTai.jpg);
+}
+
+#plateauBack {
+    background-image: url(image/plateaux2.jpg);
+}
+
+#chefBack {
+    background-image: url(image/sushi-chef.jpg);
+}
+
+#dessertBack {
+    background-image: url(image/dessushis.jpg);
+}
+
+#nigiriBack {
+    background-image: url(image/nigiri4.jpg);
+}
+
+.tabs li:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) -13%, rgba(28, 37, 44, .53) 45%, black 100%), linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+}
+
+.tabs {
+    width: 100%;
+}
+
+.tabs h3 {
+    font-family: var(--modern-font);
+    font-size: 2rem;
+    z-index: 4;
+    border-top: 1px solid rgb(240, 63, 115);
+    border-bottom: 1px solid rgb(240, 63, 115);
+}
+
+.tab-content,
+.tabs>li {
+    display: none;
+}
+
+
+/*----------------------------------------------- class ACTIVE -----------------------------------------------*/
+
+.tab-content.active,
+.tabs li.active {
+    display: flex;
+    height: 100%;
+    opacity: 0;
+}
+
+.tab-content.active.in,
+.tabs li.active.in {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.tabs li.active {
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.tabs li.active a {
+    position: absolute;
+    z-index: 4;
+    width: 20%;
+}
+
+.tabs li.active a img {
+    width: 40%;
+}
+
+.tabs li.active a.fleche_D {
+    top: 40;
+    right: 0;
+}
+
+.tabs li.active a.fleche_G {
+    top: 40%;
+    left: 0%;
+}
+
+.tab-content.active {
+    flex-direction: column;
+    min-height: 80vh;
+    padding-top: 20vh;
+}
+
+
+/* ----------------------------------------------- ITEM -----------------------------------------------*/
+
+.item {
+    position: relative;
+    min-height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(0.8);
+}
+
+.itemImg {
+    position: absolute;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    left: 5%;
+    z-index: 5;
+}
+
+.itemImg img {
+    width: 100%;
+}
+
+#nigiri .itemImg,
+#meb .itemImg,
+#plats .itemImg {
+    width: 35%;
+}
+
+.plateaux,
+.riz,
+#chirashi .itemImg,
+#tartare .itemImg {
+    width: 30%;
+}
+
+.chefS,
+#yakitori .itemImg,
+#gunkan .itemImg {
+    width: 25%;
+}
+
+.typePrice {
+    width: 100%;
+    padding: 1%;
+    border-radius: 5px;
+    background: rgba(240, 63, 115, 0.5);
+    box-shadow: 0px 0px 0px 0px #fff;
+    justify-content: flex-end;
+    margin-bottom: 5%;
+    transform: translateX(-200%);
+    transition: transform .3s, box-shadow .3s .3s;
+}
+
+.active.in .typePrice {
+    box-shadow: 0px 0px 10px 2px #fff;
+    transform: translate(0);
+}
+
+.itemType {
+    width: 50%;
+}
+
+.prix {
+    justify-content: space-between;
+    margin-left: 50%;
+    padding-right: 2%;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.active.in .prix {
+    opacity: 1;
+}
+
+
+/*----------------------------------------------- PLUS ET PLUS OPEN CONTENUE (plateaux) -----------------------------------------------*/
+
+.plateauContent {
+    background: linear-gradient(45deg, #252323 50%, #302c2c 50%);
+    bottom: 0;
+    height: auto;
+    left: 35%;
+    width: 35%;
+    z-index: 10;
+    box-shadow: 0 0 20px #fff;
+    border-radius: 25px;
+    transition: all .2s;
+}
+
+.plateauContent>* {
+    text-align: center;
+    overflow: hidden;
+    color: #444;
+}
+
+.plateauContent,
+.plus {
+    position: absolute;
+}
+
+.plus {
+    opacity: 0;
+    width: 0;
+    transition: all 0.1s;
+}
+
+.plateauContent p {
+    padding: 2%;
+    color: #fff;
+    visibility: visible;
+    position: relative;
+}
+
+.plus li {
+    padding: 1%;
+    white-space: nowrap;
+    color: #444;
+    opacity: 0;
+}
+
+
+/* Open */
+
+.open.plateauContent {
+    width: 100%;
+    height: auto;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 1px 2px 5px 1px #444;
+}
+
+.open .plus {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    position: relative;
+    padding: 2%;
+    transition: all 0.3s;
+}
+
+.open.plateauContent p {
+    visibility: hidden;
+    padding: 0;
+    height: 0;
+}
+
+.open .plus li {
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+/*----------------------------------------------- SUPLEMENT (Pour temaki, rolls, nigiri, chirashi, tartare) -----------------------------------------------*/
+
+.supplements {
+    left: 20%;
+    position: static;
+    width: 60%;
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #252323 50%, #302c2c 50%);
+    box-shadow: 0 0 20px rgb(240, 63, 115);
+    z-index: 3330;
+    transition: all linear .2s;
+}
+
+.supplements p,
+.supplements span {
+    color: rgb(240, 63, 115);
+}
+
+.supplements.open p {
+    color: #fff;
+}
+
+.supStyle {
+    display: none;
+}
+
+.supplements.open {
+    box-shadow: 0 0 20px #fff;
+    max-height: 80vh;
+    overflow: scroll;
+}
+
+.open .supStyle {
+    display: block;
+    line-height: 1.5rem;
+    padding: 2% 1%;
+}
+
+.open .supStyle li {
+    padding-top: 2%;
+}
+
+.open .supStyle li.tiret {
+    line-height: 0.5rem;
+    color: rgb(240, 63, 115);
+}
+
+
+/* SUPLEMENT ROLLS*/
+
+
+/* SECTION ROLLS */
+
+.rollstype li {
+    flex: 1;
+    min-height: 10vh;
+    margin: 5% 1%;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: relative;
+}
+
+.rollstype li>span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    z-index: 44;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.rollstype li.index>span {
+    transform: translateY(-350%);
+    border-bottom: 1px solid rgb(240, 63, 115);
+    opacity: 1;
+}
+
+.rollstype li:after {
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--overlayBlackGradient);
+    opacity: 1;
+    transition: all .3s;
+}
+
+.rollstype li.index:after {
+    opacity: 0;
+}
+
+.rollstype> :nth-child(1) {
+    background-image: url(image/maki.png);
+}
+
+.rollstype> :nth-child(2) {
+    background-image: url(image/spring-saumon.png);
+}
+
+.rollstype> :nth-child(3) {
+    background-image: url(image/california.png);
+}
+
+.rollstype .liste-rolls {
+    position: relative;
+    padding-top: 10%;
+    line-height: 1.5rem;
+}
+
+.rolls-content {
+    display: none;
+}
+
+.rolls-content.index {
+    display: flex;
+    opacity: 1;
+    padding: 10% 0;
+}
+
+.rolls-content ul {
+    width: 80%;
+}
+
+.rolls-content ul li {
+    padding: 2%;
+    margin: 10% 0;
+    position: relative;
+    z-index: 5;
+}
+
+.rolls-content ul li:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 70%;
+    border-bottom: 1px solid rgba(240, 63, 115, 0.5);
+}
+
+.rolls-content ul li span {
+    position: absolute;
+    font-size: 0.7rem;
+    text-align: center;
+    top: -10%;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    background: #252828;
+    border: 2px solid rgba(240, 63, 115, 0.5);
+    box-shadow: 0px 0px 0px 0px #fff;
+    transform: rotate(0deg) scale(0.6);
+    transition: transform .3s, box-shadow .3s .1s;
+}
+
+.rolls-content.index.in span {
+    box-shadow: 0px 0px 6px 1px #fff;
+    transform: rotate(10deg) scale(0.9);
+}

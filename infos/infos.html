@@ -12,10 +12,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="../image/other/shark.jpg" />
     <link rel="stylesheet" href="infos.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat+Brush&family=Julee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
     <!--Handwrite-->
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Gloria+Hallelujah&family=Indie+Flower&display=swap" rel="stylesheet">
 
@@ -24,62 +23,111 @@
 <body>
     <section id="infos">
 
-        <article id="telephone" class="window">
-            <div class="titre">
-                <h2>Inf<img src="images/shark2.png" alt="shark">rmations</h2>
+        <header class="titre">
+            <h2>Inf<img src="images/shark2.png" alt="shark">rmations</h2>
+        </header>
+
+        <article id="localisation">
+
+            <div class="option">
+                <p class="upercase">sur plaçe | à emporter | traiteur</p>
             </div>
 
-            <div class="conteneur flex">
-                <div class="lienTel marginCenter flex">
-                    <div class="call"><img src="images/call.png" alt="bouton appeler"></div>
-                    <p><a href="tel:+33388202718">O3.88.20.27.18</a></p>
-                </div>
+            <div id="coordonees" class="flex">
 
-                <p>Réservation</p>
-                <div class="line"></div>
-                <p>Commandes à emporter</p>
-                <div class="line"></div>
-                <p>Traiteur</p>
+                <h3 class="coordContent"><span>O'4 Sushi Bar</span></h3>
 
-            </div>
-        </article>
-
-        <article id="horaire">
-
-            <ul class="marginCenter">
-
-                <img src="images/icon4.png" alt="icon" id="riz">
-                <img src="images/icon8.png" alt="icon" id="sushi">
-                <img src="images/icon9.png" alt="icon" id="sushiBaguettes">
-                <img src="images/icon11.png" alt="icon" id="nigiriClair">
-                <img src="images/icon14.png" alt="icon" id="onigri">
-                <img src="images/icon16.png" alt="icon" id="nigiBlack">
-                <img src="images/icon1.png" alt="icon" id="baguettes">
-
-                <li>Lundi :<br>11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Mardi :<br>11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Merdcredi :<br> 11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Jeudi :<br> 11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Vendredi :<br> 11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Samedi :<br> 11h45 - 14h00 / 18h30 - 22h00</li>
-                <li>Dimanche :<br> <span>Fermer le midi</span> / 18h30 - 22h00</li>
-            </ul>
-
-        </article>
-
-        <article id="adresse">
-            <div class="parent ">
-                <div class="child overlayBlackGradient">
+                <div class="flex coordContent ">
+                    <button data-open="adressW1" data-close="adressR1"><img src="images/adressR1.png" alt="adresseIcon"></button>
                     <p>4 rue des pelerins<br> 67210 obernai</p>
+                    <div id="map" class="marginCenter">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d661.4273050465633!2d7.480174109117669!3d48.46210846377317!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47914d58bb024829%3A0x40d098deee98962b!2s4%20Rue%20des%20P%C3%A8lerins%2C%2067210%20Obernai!5e0!3m2!1sfr!2sfr!4v1593438309543!5m2!1sfr!2sfr"
+                            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
                 </div>
-            </div>
 
+                <div class="flex coordContent link">
+                    <button data-open="telephoneW1" data-close="telephoneR1"><a href="tel:+33388202718"><img src="images/telephoneR1.png" alt="phoneIcone"></a></button>
+                    <p>O3.88.20.27.18</p>
+                </div>
+
+                <div class="flex coordContent ">
+                    <button data-open="openW" data-close="openR"><img src="images/openR.png" alt="horaireIcone"></button>
+                    <p>Horaire d'ouverture</p>
+                    <div id="horaire">
+
+                        <ul class="overlayBlack flex">
+                            <h4>horaire</h4>
+                            <li>Du Lundi au Samedi :</li>
+                            <li>11h45 - 14h00 <br> 18h30 - 22h00 </li>
+                            <li>Dimanche :</li>
+                            <li><strong>Fermer le midi</strong> <br> 18h30 - 22h00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex coordContent link">
+                    <button data-open="facebookW" data-close="facebookR"><a href="https://www.facebook.com/pages/category/Sushi-Restaurant/O4-Sushi-Bar-289513441154965/" target="_blank"><img src="images/facebookR.png" alt="facebookIcone"></a></button>
+                    <p>Facebook</p>
+                </div>
+
+                <div class="flex coordContent ">
+                    <button data-open="friendsW" data-close="friendsR"><img src="images/friendsR.png" alt="friendsIcon"></button>
+                    <p>Partenaires</p>
+                    <div id="friends">
+                        <ul>
+                            <h4>Nos partenaires</h4>
+                            <li><span>+</span><a href="https://o101-pizzeria.fr/"> O'101 pizzeria</a></li>
+                            <li><span>+</span><a href="http://www.elisabeth-biscarrat.com/boutique/">  Macarons & Inspirations®</a></li>
+                            <li><span>+</span><a href="https://barlintenable.business.site/">  Bar l'Intenable</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </article>
 
+        <footer>
+
+            <div id="footerBackground">
+                <h1>O'4 <br>sushi bar</h1>
+            </div>
+
+            <div class="footConteneur flex">
+
+                <div class="logosSociaux flex">
+                    <img src="../image/other/faceStars.png" alt="facebook" id="face"> <img src="../image/other/tripAdvNote.png" alt="tripAdvisor" id="trip">
+                </div>
+
+                <div class="wordslider ">
+                    <div class='frame '>
+                        <div class='fancyHeader '>Les meilleurs</div>
+                        <div class='carousel'>
+                            <div class='changeInner'>
+                                <span class="itemSlide">Sushi</span>
+                                <span class="itemSlide">Nigiri</span>
+                                <span class="itemSlide">Temaki</span>
+                                <span class="itemSlide">Sashimi</span>
+                                <span class="itemSlide">Chirashi</span>
+                                <span class="itemSlide">Yakitori</span>
+                                <span class="itemSlide">Sushi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>d'Obernai</div>
+                </div>
+
+                <p id="mentions">
+                    <a href="#">Mentions légales</a><br>Site développé par Splinter prog<br> Copyright © 2014 O'4 Sushi Bar - Tous droits réservés
+                </p>
+            </div>
 
 
+
+        </footer>
     </section>
 
+    <!--
     <div class="barNav">
         <nav>
             <ul class="flex">
@@ -101,7 +149,46 @@
             </ul>
         </nav>
     </div>
+-->
 
+    <div id="roundNav">
+        <div class="btnContainer flex">
+            <p class="menuBtn">+</p>
+        </div>
+
+        <div class="menu marginCenter">
+            <ul class="flex">
+
+                <li id="actuLink">
+                    <a href="../actualites/actualite.html" class="curentPage">
+                        <img class="noCurent" src="../image/other/newsR.png" alt="logo_actualite">
+                        <img class="curent" src="../image/other/newsW.png" alt="logo_actualite">
+                    </a>
+                </li>
+                <li id="carteLink">
+                    <a href="../carte/carte.html">
+                        <img class="noCurent" src="../image/other/sushiR.png" alt="logo_carte">
+                        <img class="curent" src="../image/other/sushiW.png" alt="logo_carte">
+                    </a>
+                </li>
+                <li id="restoLink">
+                    <a href="../restaurant/home.html">
+                        <img class="noCurent" src="../image/other/homeR.png" alt="logo_restaurant">
+                        <img class="curent" src="../image/other/homeW.png" alt="logo_restaurant">
+                    </a>
+                </li>
+                <li id="infosLink">
+                    <a href="../infos/infos.html">
+                        <img class="noCurent" src="../image/other/infoR.png" alt="logo_contact">
+                        <img class="curent" src="../image/other/infoW.png" alt="logo_contact">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="infos.js"></script>
+    <script src="../general.js"></script>
 
 </body>
 

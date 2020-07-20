@@ -12,10 +12,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="../image/other/shark.jpg" />
     <link rel="stylesheet" href="sousMenu.css">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat+Brush&family=Julee&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=La+Belle+Aurore&family=Nanum+Brush+Script&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,13 +24,13 @@
         <header class="selection flex">
             <div class="cadre"></div>
             <ul class="tabs">
-                <li class="active ">
-                    <h3>Plateaux</h3>
-                    <a href="#chef" class="fleche_D">></a>
+                <li class="active" id="plateauBack">
+                    <h3 class="marginCenter">Plateaux</h3>
+                    <a href="#chef" class="fleche_D"><img src="image/rightWhite.png" alt="next"></a>
                 </li>
-                <li class="">
-                    <h3>Selection du Chef</h3>
-                    <a href="#plateaux" class="fleche_G"> &lt;</a>
+                <li class="" id="chefBack">
+                    <h3 class="marginCenter">Selection du Chef</h3>
+                    <a href="#plateaux" class="fleche_G"><img src="image/leftWhite.png" alt="previous"></a>
                 </li>
             </ul>
         </header>
@@ -40,134 +40,184 @@
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/plateaux3.png" alt="plateaux Végétarien"></div>
-                    <p class="itemType flex">
-                        <span>Végétarien</span>
+                    <div class="typePrice flex ">
+                        <p class="itemType flex">Végétarien</p>
+                    </div>
+                    <p class="prix">11,50€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
                             <li>2 Nigiri Avocat</li>
                             <li>8 Maki Radis japonais</li>
                             <li>8 California Concombre Wakame</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">11,50€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/plateaux3.png" alt="plateaux Découverte"></div>
-                    <p class="itemType flex">
-                        <span>Découverte</span>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Découverte</p>
+                    </div>
+                    <p class="prix">13,90€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
-                            <li>1 Nigiri Saumon, 1 Nigiri Thon</li>
-                            <li>1 Nigiri Crevette, 1 Nigiri Omelette</li>
+                            <li>1 Nigiri Saumon </li>
+                            <li>1 Nigiri Thon</li>
+                            <li>1 Nigiri Crevette</li>
+                            <li>1 Nigiri Omelette</li>
                             <li>4 California Rolls Saumon Avocat</li>
                             <li>4 Maki Thon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">13,90€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/plateaux.png" alt="plateaux nigigri"></div>
-                    <p class="itemType flex">
-                        <span>Nigiri Assortiment</span>
+                    <div class="itemImg flex plateaux"><img src="image/plateaux.png" alt="plateaux nigigri"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Nigiri Assortiment</p>
+                    </div>
+                    <p class="prix ">20,50€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
-                            <li>2 Nigiri Saumon, 2 Nigiri Thon</li>
-                            <li>2 Nigiri Crevette, 2 Nigiri Omelette</li>
+                            <li>2 Nigiri Saumon</li>
+                            <li>2 Nigiri Thon</li>
+                            <li>2 Nigiri Crevette</li>
+                            <li>2 Nigiri Omelette</li>
                             <li>2 Nigiri Daurade Royale</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">20,50€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/plateaux3.png" alt="plateaux saumon"></div>
-                    <p class="itemType flex">
-                        <span>Eventail de Saumon</span>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Eventail de Saumon</p>
+                    </div>
+                    <p class="prix">14,50€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
-                            <li>2 nigiri Saumon, 4 Maki Saumon</li>
+                            <li>2 nigiri Saumon</li>
+                            <li>4 Maki Saumon</li>
                             <li>6 California Rolls Saumon Avocat</li>
                             <li>6 Sashimi Saumon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">14,50€</p>
+                    </div>
+
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/plateaux.png" alt="plateaux Thon"></div>
-                    <p class="itemType flex">
-                        <span>Eventail de Thon</span>
+                    <div class="itemImg flex plateaux"><img src="image/plateaux.png" alt="plateaux Thon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Eventail de Thon</p>
+                    </div>
+                    <p class="prix">15,80€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
-                            <li>2 nigiri Thon, 4 Maki Thon</li>
+                            <li>2 nigiri Thon</li>
+                            <li>4 Maki Thon</li>
                             <li>6 California Rolls Thon Avocat</li>
                             <li>6 Sashimi Thon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">15,80€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/plateaux3.png" alt="plateaux nigiri saumon"></div>
-                    <p class="itemType flex">
-                        <span>Nigiri Saumon</span>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Nigiri Saumon</p>
+                    </div>
+                    <p class="prix">15,00€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
                             <li>8 nigiri Saumon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">15,00€</p>
+
+                    </div>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/plateaux.png" alt="plateaux nigiri thon"></div>
-                    <p class="itemType flex">
-                        <span>Nigiri Thon</span>
+                    <div class="itemImg flex plateaux"><img src="image/plateaux.png" alt="plateaux nigiri thon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Nigiri Thon</p>
+                    </div>
+                    <p class="prix">16,50€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
                             <li>8 nigiri Thon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">16,50€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/plateaux.png" alt="plateaux Nigiri Duo"></div>
-                    <p class="itemType flex">
-                        <span>Nigiri Duo</span>
+                    <div class="itemImg flex plateaux"><img src="image/plateaux.png" alt="plateaux Nigiri Duo"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">Nigiri Duo</p>
+                    </div>
+                    <p class="prix">15,80€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
                             <li>4 nigiri Saumon</li>
                             <li>4 nigiri Thon</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">15,80€</p>
+                    </div>
                 </div>
 
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/plateaux3.png" alt="plateaux California"></div>
-                    <p class="itemType flex">
-                        <span>California</span>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">California</p>
+                    </div>
+                    <p class="prix">11,00€</p>
+
+                    <div class="plateauContent ">
+                        <p class="marginCenter">contenu <span>&#x25BD;</span></p>
                         <ul class="plus">
                             <li>4 California Saumon Avocat</li>
                             <li>4 California Thon Avocat</li>
                             <li>4 California Crabe Avocat</li>
                             <li>4 California Poulet</li>
                         </ul>
-                    </p>
-                    <p class="prix flex">11,00€</p>
+                    </div>
                 </div>
             </article>
 
             <article class="tab-content" id="chef">
 
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/chef20.png" alt="temaki saumon"></div>
-                    <p class="itemType flex">20 Pièces <br> Sélectionner par le Chef</p>
+                    <div class="itemImg flex chefS"><img src="image/chef20.png" alt="temaki saumon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">20 Pièces <br> Sélectionner par le Chef</p>
+                    </div>
                     <p class="prix flex">20,00€</p>
                 </div>
                 <div class="flex item">
-                    <div class="itemImg flex"><img src="image/chef40.png" alt="temaki saumon"></div>
-                    <p class="itemType flex">40 Pièces <br> Sélectionner par le Chef</p>
+                    <div class="itemImg flex chefS"><img src="image/chef40.png" alt="temaki saumon"></div>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">40 Pièces <br> Sélectionner par le Chef</p>
+                    </div>
                     <p class="prix flex">40,00€</p>
                 </div>
                 <div class="flex item">
                     <div class="itemImg flex"><img src="image/chef60.png" alt="temaki saumon"></div>
-                    <p class="itemType flex">60 Pièces <br> Sélectionner par le Chef</p>
+                    <div class="typePrice flex">
+                        <p class="itemType flex">60 Pièces <br> Sélectionner par le Chef</p>
+                    </div>
                     <p class="prix flex">60,00€</p>
                 </div>
             </article>
@@ -176,31 +226,43 @@
 
     </section>
 
+    <div id="roundNav">
+        <div class="btnContainer flex">
+            <p class="menuBtn">+</p>
+        </div>
 
-
-
-    <div class="barNav">
-        <nav>
+        <div class="menu marginCenter">
             <ul class="flex">
-                <li>
-                    <a href="../actualites/actualite.html"><img src="../image/other/actu.png" alt="logo_actualite"></a>
-                </li>
 
-                <li>
-                    <a href="../carte/carte.html"><img src="../image/other/carte1.png" alt="logo_carte"></a>
+                <li id="actuLink">
+                    <a href="../actualites/actualite.html" class="curentPage">
+                        <img class="noCurent" src="../image/other/newsR.png" alt="logo_actualite">
+                        <img class="curent" src="../image/other/newsW.png" alt="logo_actualite">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../restaurant/home.html"><img src="../image/other/restau.png" alt="logo_restaurant"> </a>
+                <li id="carteLink">
+                    <a href="../carte/carte.html">
+                        <img class="noCurent" src="../image/other/sushiR.png" alt="logo_carte">
+                        <img class="curent" src="../image/other/sushiW.png" alt="logo_carte">
+                    </a>
                 </li>
-
-                <li>
-                    <a href="../infos/infos.html"><img src="../image/other/contact.png" alt="logo_contact"></a>
+                <li id="restoLink">
+                    <a href="../restaurant/home.html">
+                        <img class="noCurent" src="../image/other/homeR.png" alt="logo_restaurant">
+                        <img class="curent" src="../image/other/homeW.png" alt="logo_restaurant">
+                    </a>
+                </li>
+                <li id="infosLink">
+                    <a href="../infos/infos.html">
+                        <img class="noCurent" src="../image/other/infoR.png" alt="logo_contact">
+                        <img class="curent" src="../image/other/infoW.png" alt="logo_contact">
+                    </a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
 
+    <script src="../general.js"></script>
     <script src="sousMenu.js"></script>
 </body>
 

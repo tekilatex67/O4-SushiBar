@@ -1,19 +1,20 @@
 /* ----------- GENERAL -------------  */
 
  :root {
-    --main-theme-color: rgb(240, 63, 115);
+    --main-theme-color: #f03f73;
     --main-bg-color: linear-gradient(150deg, hsl(0, 0%, 0%), #434343, #000000);
     --overlayTheme: linear-gradient(45deg, rgba(240, 63, 115, 0.5), rgba(0, 0, 0, 0.7));
     --overlayBlack: rgba(0, 0, 0, 0.7);
     --overlayBlue: linear-gradient(45deg, rgba(0, 65, 106, 0.5), rgba(228, 229, 230, 0.5));
     --overlayBlackGradient: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    --line-calc: calc(var(--font-size)*1.5);
     /*font*/
     --color-font-black: #444;
     --write-size: 13px;
     --normal-font: 'Syncopate', 'Julius Sans One', 'Krub', 'Noto Sans', 'Montserrat Alternates', 'Raleway Dots', sans-serif;
     --special-font: 'Lobster Two', 'Playball', 'Lobster', cursive;
     --hand-font: 'Fredericka the Great', 'Vast Shadow', 'Nanum Brush Script', cursive;
-    --modern-font: 'Audiowide', 'Megrim', cursive;
+    --modern-font: 'Megrim', 'Audiowide', cursive;
     --defil-font: 'Codystar';
 }
 
@@ -27,17 +28,12 @@
 }
 
 html {
-    background: var(--main-bg-color);
-}
-
-section {
-    padding-bottom: 50px;
-    /*Pour la barre Nav */
+    background: black;
 }
 
 h1 {
     font-size: 5rem;
-    font-family: var(--special-font);
+    font-family: var(--normal-font);
 }
 
 a {
@@ -57,10 +53,8 @@ ul {
     margin: 0 auto;
 }
 
-.line {
-    height: 1px;
-    background-color: var(--main-theme-color);
-    width: 25%;
+.rotate img {
+    transform: rotate(30deg);
 }
 
 .themeColor {
@@ -100,6 +94,10 @@ ul {
     background: rgba(240, 63, 115, 0.5);
 }
 
+.borderBottom {
+    border-bottom: 1px solid rgb(240, 63, 115);
+}
+
 #shark img {
     animation-name: ronde;
     animation-duration: 30s;
@@ -126,7 +124,9 @@ ul {
 }
 
 
-/* NAV */
+/*
+
+ NAV 
 
 nav ul {
     background: rgba(255, 255, 255, 0.7);
@@ -152,41 +152,269 @@ nav img {
 }
 
 
-/* FOOTER */
+*/
+
+
+/*NAV ROUND */
+
+#roundNav {
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    transition: height 0s 1s;
+    z-index: 1000;
+}
+
+#roundNav.opMenu {
+    height: 125px;
+    transition: height 0s 0s;
+}
+
+
+/*BOUTON*/
+
+.btnContainer {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100vw;
+    justify-content: center;
+}
+
+.menuBtn {
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    box-shadow: -2px -2px 7px rgba(240, 63, 115, 0.3), 2px 2px 7px rgba(240, 63, 115, 0.3);
+    color: rgb(240, 63, 115);
+    background-color: #181818;
+    border-radius: 50px;
+    font-size: 3rem;
+    transform: rotate(0deg);
+    z-index: 1000;
+    transition: transform .3s .2s;
+}
+
+.menuBtn.opMenu {
+    transform: rotate(45deg) scale(0.8);
+    box-shadow: -2px -2px 7px #fff, 2px 2px 7px #fff;
+    color: #fff;
+    transition: transform .3s;
+}
+
+.menu {
+    position: relative;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: center 30%;
+    transition: transform .3s cubic-bezier(.14, -0.26, .94, -0.32);
+}
+
+.menu.opMenu {
+    transform: scale(1);
+    transition: transform .7s cubic-bezier(0.13, 1.74, 0.18, 0.89);
+}
+
+.menu ul {
+    height: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu li {
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.menu img {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    padding: 5%;
+    border-radius: 50px;
+    background-color: #181818;
+    opacity: 0.7;
+    transition: transform .7s;
+}
+
+.menu li:nth-child(1) img {
+    bottom: 20%;
+    right: 15%;
+    transform: rotate(-45deg);
+}
+
+.menu li:nth-child(2) img {
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(45deg);
+}
+
+.menu li:nth-child(3) img {
+    bottom: 25%;
+    left: 15%;
+    transform: rotate(-45deg);
+}
+
+.menu li:nth-child(4) img {
+    bottom: 25%;
+    right: 15%;
+    transform: rotate(45deg);
+}
+
+.menu.opMenu li:nth-child(1) img,
+.menu.opMenu li:nth-child(2) img,
+.menu.opMenu li:nth-child(3) img,
+.menu.opMenu li:nth-child(4) img {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+.noCurent {
+    z-index: 5;
+    box-shadow: 0px 0px 6px 3px rgba(240, 63, 115, 0.7);
+}
+
+.noCurent.curentI {
+    z-index: -1;
+    box-shadow: 0px 0px 7px 0px #fff;
+}
+
+
+/* ----------------------------------------  FOOTER ---------------------------------------------- */
 
 footer {
-    background-color: rgb(240, 63, 115);
-    border-top: 2px solid #fff;
+    position: relative;
+    padding: 80px 0;
 }
 
-footer #overlayFooter {
-    height: 100%;
+#home footer {
+    background-image: linear-gradient(445deg, #2d3436 20%, #000000 74%);
+}
+
+#footerBackground {
+    background: url(image/other/shark2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
-    background: var(--overlayTheme);
+    height: 80%;
+    opacity: .3;
+    position: absolute;
+}
+
+footer h1 {
+    width: 100%;
+    top: 40%;
+    font-size: 3rem;
+    position: absolute;
+    text-align: center;
+    opacity: .3;
+}
+
+.footConteneur {
     flex-direction: column;
-    padding-bottom: 70px;
+    /* align-content: space-between;*/
 }
 
-footer #services {
+.footConteneur * {
+    z-index: 1000;
+}
+
+.logosSociaux {
+    justify-content: space-around;
+}
+
+.footConteneur img {
+    width: 20%;
+    opacity: .6;
+}
+
+
+/*SUSHI LOVER ANIME*/
+
+.wordslider {
+    width: 100%;
+    margin: 10% 0;
+}
+
+.wordslider * {
     text-align: center;
-    margin: 2% 0;
 }
 
-footer #sociaux {
+.fancyHeader {
+    height: 20px;
+    line-height: 20px;
+}
+
+.carousel {
+    height: 30px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin: 3% 0;
+}
+
+.changeInner {
+    display: flex;
+    flex-direction: column;
+    animation: slide 13s ease-in-out infinite;
+}
+
+.itemSlide {
+    line-height: 30px;
+    font-family: var(--modern-font);
+    color: #f03f73;
+    font-size: 2rem;
+}
+
+@keyframes slide {
+    0%,
+    10% {
+        transform: translateY(0);
+    }
+    16%,
+    26% {
+        transform: translateY(-30px);
+    }
+    32%,
+    42% {
+        transform: translateY(-60px);
+    }
+    48%,
+    58% {
+        transform: translateY(-90px);
+    }
+    64%,
+    74% {
+        transform: translateY(-120px);
+    }
+    80%,
+    90% {
+        transform: translateY(-150px);
+    }
+    96%,
+    100% {
+        transform: translateY(-180px);
+    }
+}
+
+
+/* MENTIONS */
+
+#mentions {
+    width: 100%;
+    font-size: 0.5rem;
     text-align: center;
-    opacity: 0.8;
+    bottom: 10%;
 }
 
-footer #sociaux img {
-    width: 10%;
-    margin: 4%;
-}
-
-#mentions,
-#mentions * {
-    font-size: 0.8rem;
-    font-family: 'Krub';
-    text-align: center;
+#mentions a {
+    font-size: 0.5rem;
 }
 
 
@@ -210,5 +438,64 @@ footer #sociaux img {
     }
     #acceuil #title p {
         width: 40%;
+    }
+    /* CARTE */
+    figure img {
+        width: 5%;
+    }
+    .active figure img {
+        width: 40%;
+    }
+    .active .minWidth {
+        width: 30%;
+    }
+    /*SOUS MENU*/
+    .item {
+        min-height: 80vh;
+    }
+    .rollstype {
+        min-height: 40vw;
+    }
+    .rollstype li.index>span {
+        transform: translateY(-600%);
+    }
+    /* ETABLISSEMENT*/
+    #home header {
+        width: 100vw;
+        flex-direction: row;
+        padding: 1%;
+        justify-content: center;
+    }
+    #home header img {
+        width: 25%;
+        margin: 0%;
+    }
+    #adresse .conteneur {
+        background-image: url(restaurant/image/devant.jpg);
+    }
+    #salle .conteneur {
+        background-image: url(restaurant/image/sallepays.jpeg);
+    }
+    #cuisine .conteneur {
+        background-image: url(restaurant/image/fun.jpeg);
+    }
+    /*INFORMATIONS*/
+    #infos .titre {
+        height: 100vh;
+    }
+    #infos .titre h2 {
+        font-size: 4rem;
+    }
+    .option p {
+        font-size: 1.5rem;
+    }
+    #infos h3 span {
+        font-size: 3rem;
+    }
+    .open #horaire {
+        height: auto;
+    }
+    .open #map {
+        min-height: 100vh;
     }
 }

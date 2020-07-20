@@ -1,8 +1,17 @@
 section.pages {
-    flex-direction: column;
+    background-image: linear-gradient(445deg, #2d3436 20%, #000000 74%);
     width: 100vw;
-    min-height: 1040px;
+    flex-direction: column;
     overflow: hidden;
+    min-height: 100vh;
+    opacity: 0.5;
+    transition: min-height .2s, opacity .3s;
+}
+
+section.pages.open {
+    min-height: 1240px;
+    opacity: 1;
+    margin-top: 0;
 }
 
 article.page {
@@ -10,7 +19,7 @@ article.page {
     background-position: center;
     flex: 1;
     position: relative;
-    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.5s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+    transition: flex .4s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
 }
 
 div.contain {
@@ -34,11 +43,17 @@ div.contain {
 
 .page h3 {
     position: absolute;
-    top: 10%;
+    font-family: var(--modern-font);
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .exemples {
     display: none;
+    overflow: hidden;
 }
 
 .exemples>* {
@@ -53,7 +68,7 @@ figure.fromLeft {
 }
 
 figure.fromBottom {
-    transform: translateY(200%);
+    transform: translateY(250%);
 }
 
 figure.fromRight {
@@ -61,13 +76,34 @@ figure.fromRight {
 }
 
 figure img {
+    width: 30%;
+}
+
+.active figure img {
     width: 80%;
     opacity: 0.8;
 }
 
+.active .widthMin {
+    width: 65%;
+}
+
+.active .minWidth {
+    width: 55%;
+}
+
 figcaption {
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .3s;
+    margin: 5%;
+}
+
+.widthMini {
+    width: 55%;
+}
+
+.minWidth {
+    width: 45%;
 }
 
 
@@ -105,13 +141,26 @@ figcaption {
     background-image: url(image/perles-de-coco.jpg);
 }
 
+.page9 {
+    background-image: url(image/bonap.jpg);
+}
+
 
 /* LIEN VOIRE CARTE */
 
 div.lienCarte {
-    transform: scale(0);
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
+    overflow: hidden;
+}
+
+div.lienCarte {
+    width: 0%;
+    transition: width 0.3s linear;
+}
+
+div.lienCarte {
+    white-space: nowrap;
 }
 
 
@@ -121,18 +170,18 @@ div.lienCarte {
     flex: 3;
 }
 
-.open .exemples {
+article.open .exemples {
     position: absolute;
     display: flex;
 }
 
 .open figcaption {
     opacity: 1;
-    transition: all 1s 1s;
+    transition: all .3s 0.7s;
 }
 
 .page.active h3 {
-    margin-bottom: 10%;
+    opacity: 0;
 }
 
 
@@ -141,15 +190,29 @@ div.lienCarte {
 .page.active .fromLeft,
 .page.active .fromRight {
     transform: translateX(0);
-    transition: transform 0.3s 0.3s;
+    transition: all .3s .1s;
 }
 
 .page.active .fromBottom {
     transform: translateY(0);
-    transition: transform 0.3s 0.3s;
+    transition: all .3s .1s;
 }
 
 .page.active .lienCarte {
-    transform: scale(1);
-    transition: transform 1s 1s;
+    padding: 2% 2%;
+}
+
+.page.active div.lienCarte {
+    width: 35%;
+}
+
+.page.page.active .lienCarte a {
+    font-family: var(--modern-font);
+    width: 100%;
+    padding: 2%;
+    color: #ffff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-radius: 50px;
+    background: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
 }

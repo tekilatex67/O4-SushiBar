@@ -1,7 +1,9 @@
  /* ----------- ACTU -------------  */
  
  #actualites {
-     background-color: black;
+     background-color: #2d3436;
+     background-image: linear-gradient(445deg, #2d3436 20%, #000000 74%);
+     overflow: hidden;
  }
  /* HEADER */
  
@@ -33,11 +35,26 @@
  }
  
  .mosaique {
+     flex-wrap: nowrap;
+     margin-left: -25%;
+     transition: all .5s;
+ }
+ 
+ .open .mosaique {
      flex-wrap: wrap;
+     margin-left: 0;
  }
  
  .mosaique img {
      width: 33%;
+     margin: 5%;
+     opacity: 0.5;
+     transition: all .5s;
+ }
+ 
+ .open .mosaique img {
+     margin: 0;
+     opacity: 1;
  }
  /*defile */
  
@@ -83,7 +100,12 @@
  /* ARTICLE */
  
  #actualites .actu {
-     margin-bottom: 40%;
+     padding-bottom: 40%;
+     opacity: 0;
+ }
+ 
+ #actualites.open .actu {
+     opacity: 1;
  }
  
  #actualites .actu img {

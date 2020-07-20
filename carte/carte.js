@@ -1,3 +1,4 @@
+let menuP = document.querySelector('.pages');
 let pages = document.querySelectorAll('.page');
 
 function toggleOpen() {
@@ -24,3 +25,9 @@ function toggleActive(e) {
 
 pages.forEach(page => page.addEventListener('click', toggleOpen));
 pages.forEach(page => page.addEventListener('transitionend', toggleActive));
+
+//ANIMATION ONLOAD
+
+setTimeout(function() {
+    menuP.classList.add('open');
+}, 0001);
