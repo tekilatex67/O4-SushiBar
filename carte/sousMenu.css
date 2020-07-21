@@ -321,8 +321,6 @@ header.selection {
     padding: 2%;
     border-radius: 20px;
     text-align: center;
-    background: linear-gradient(45deg, #252323 50%, #302c2c 50%);
-    box-shadow: 0 0 20px rgb(240, 63, 115);
     z-index: 3330;
     transition: all linear .2s;
 }

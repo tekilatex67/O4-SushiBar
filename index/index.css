@@ -32,6 +32,11 @@
     font-weight: normal;
 }
 
+#index h1 span {
+    color: #f03f73;
+    font-family: 'Arizonia';
+}
+
 .border {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
