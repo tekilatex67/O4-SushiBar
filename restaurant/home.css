@@ -12,20 +12,22 @@
     background-position: top center;
 }
 
-#home .overlay {
-    border-bottom: 2px solid rgb(240, 63, 115);
-    border-top: 2px solid rgb(240, 63, 115);
-}
-
 .overlay,
 .clearOverlay {
     position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
-.conteneur>div {
+#adresse .conteneur>div,
+#salle .conteneur>div,
+#cuisine .conteneur>div {
     flex-direction: column;
     justify-content: center;
 }
+
+
+/* TITRE H3 MIRROR */
 
 #home h3 p {
     font-size: 2rem;
@@ -79,10 +81,6 @@
     width: 80%;
     text-align: center;
     left: 10%;
-}
-
-#home .line {
-    margin: 5% auto;
 }
 
 #cuisine p,
@@ -165,7 +163,7 @@
 }
 
 
-/*SALLE*/
+/* ---------------------------------------------------- SALLE ----------------------------------------------------  */
 
 #salle .conteneur {
     background-image: url(image/sallePortrait.jpg);
@@ -183,7 +181,7 @@
 /* ---------------------------------------------------- ARTICLE Cuisine ------------------------------------------------------ */
 
 #cuisine .conteneur {
-    background-image: url(image/chef5.jpg);
+    background-image: url(image/chef.jpg);
 }
 
 #cuisine .over {
@@ -194,57 +192,23 @@
     top: 65%;
 }
 
+.salleEtCuisine {
+    flex-direction: column;
+}
+
 
 /* ---------------------------------------------------- ENGAGEMENT ---------------------------------------------------- */
-
-#engagement h3:after,
-#satisfaction h3:after {
-    content: "";
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 0%;
-    height: 0%;
-    border-bottom: 1px solid rgb(240, 63, 115);
-    border-left: 1px solid rgb(240, 63, 115);
-    opacity: 0;
-    transition: all 0.7s .5s;
-}
-
-#engagement h3.actif:after,
-#satisfaction h3.actif:after,
-#engagement h3.actif:before,
-#satisfaction h3.actif:before {
-    width: 50%;
-    height: 50%;
-    opacity: 1;
-}
-
-#engagement h3:before,
-#satisfaction h3:before {
-    content: "";
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 0%;
-    height: 0%;
-    border-top: 1px solid rgb(240, 63, 115);
-    border-right: 1px solid rgb(240, 63, 115);
-    opacity: 0;
-    transition: all 0.7s .5s;
-}
 
 #engagement h3,
 #satisfaction h3 {
     font-family: var(--modern-font);
     font-size: 2rem;
     text-transform: uppercase;
-    text-shadow: 4px 3px 3px grey;
+    /*text-shadow: 4px 3px 3px grey;*/
     position: relative;
     padding: 5% 0;
 }
 
-#engagement *,
 #satisfaction *,
 #engagement h3,
 #satisfaction h3 {
@@ -254,7 +218,7 @@
 
 #engagement .conteneur,
 #satisfaction .conteneur {
-    height: 100%;
+    height: 90%;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -266,23 +230,26 @@
     transition: transform 0.7s, opacity .9s;
 }
 
-#engagement p.actif {
+#engagement .actif p {
     transform: translateX(0);
     opacity: 1;
 }
 
-.line {
-    height: 1px;
-    background-color: var(--main-theme-color);
-    width: 40%;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform .7s, opacity .9s;
+
+/*Pourcentage*/
+
+.number,
+.unit {
+    font-size: 2rem;
 }
 
-.line.actif {
-    transform: translateX(0);
-    opacity: 1;
+#engagement .percent h4 {
+    color: #f03f73;
+    text-transform: uppercase;
+}
+
+.imagePercent img {
+    width: 0;
 }
 
 
@@ -347,11 +314,6 @@
     font-size: 0.8rem;
 }
 
-.autheur span {
-    color: #fff;
-    font-size: 0.8;
-}
-
 .autheur {
     width: 90%;
     height: 20%;
@@ -363,6 +325,7 @@
 .autheur.actif {
     transform: rotate(7deg);
     width: 70%;
+    height: auto;
 }
 
 .autheur img {
@@ -381,6 +344,10 @@
 .commentaire.actif {
     transform: rotate(-4deg) scale(1) translate(0);
     transition: all 1s;
+}
+
+.avisBox {
+    flex-direction: column;
 }
 
 
@@ -631,5 +598,370 @@
     100% {
         bottom: 0%;
         right: 30%;
+    }
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 800px) {
+    /* ----------- HEADER ------------ */
+    #home header {
+        flex-direction: row;
+        padding: 1%;
+        justify-content: center;
+    }
+    #home header img {
+        width: 20%;
+        margin: 0 2%;
+    }
+    #home h2,
+    #home h2 span {
+        font-size: 5rem;
+    }
+    /*----------- GENERAL ----------- */
+    #home h3 p {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    #cuisine p,
+    #salle p,
+    #adresse p,
+    #engagement p {
+        font-size: 1rem;
+    }
+    #adresse .conteneur {
+        background-image: url(../restaurant/image/street.jpg);
+    }
+    #salle .conteneur {
+        background-image: url(../restaurant/image/sallePortrait.jpg);
+        background-position: left top;
+        background-size: 50vw;
+    }
+    #cuisine .conteneur {
+        background-image: url(../restaurant/image/chef4.jpg);
+        background-position: right;
+        background-size: 50vw;
+    }
+    /* ----------- PROPOS ------------ */
+    #propos {
+        overflow: hidden;
+    }
+    #propos .reveal {
+        position: relative;
+        color: #444;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: .5s;
+        transition-delay: .5s;
+    }
+    #propos .reveal.active {
+        transform: scaleX(1);
+        transition-delay: 0s;
+    }
+    #propos .reveal:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f03f73;
+        transform-origin: right;
+        transition: .5s;
+        transition-delay: 0s;
+    }
+    #propos .reveal.active:before {
+        transform: scaleX(0);
+        transition-delay: .5s;
+    }
+    .panoramique,
+    .portrait {
+        margin: 10% 0;
+    }
+    .panoramique {
+        justify-content: flex-end;
+    }
+    /*IMG*/
+    #propos img {
+        position: relative;
+        opacity: 0;
+        transition: .5s;
+    }
+    #propos img.active {
+        opacity: 1;
+        left: 0;
+    }
+    .panoramique img {
+        width: 45%;
+        left: 100px;
+    }
+    .portrait img {
+        width: 25%;
+        left: -100px;
+    }
+    .text {
+        width: 40%;
+        margin: 0 5%;
+    }
+    #propos h4:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -25%;
+        width: 50%;
+        height: 1px;
+        background: #f03f73;
+    }
+    #propos .portrait h4:before {
+        left: -25%;
+    }
+    #propos h4 {
+        position: relative;
+        font-size: 2.5rem;
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+    }
+    #propos p {
+        line-height: 3rem;
+    }
+    /* ------------ SALLE ET CUISINE  ------------- */
+    .salleEtCuisine {
+        flex-direction: row;
+    }
+    #salle .conteneur,
+    #cuisine .conteneur {
+        height: 70vh;
+        width: 50vw;
+        overflow: hidden;
+    }
+    #salle .overlay,
+    #cuisine .overlay,
+    #salle .overlay,
+    #cuisine.clearOverlay {
+        width: 50vw;
+        height: 70vh;
+        transition: transform .5s;
+    }
+    #salle:hover .clearOverlay,
+    #cuisine:hover .clearOverlay {
+        transform: translateY(-100%);
+    }
+    #salle:hover .overlay,
+    #cuisine:hover .overlay {
+        transform: translateY(-100%);
+    }
+    /* ----------- ENGAGEMENT ------------ */
+    #engagement .conteneur {
+        flex-direction: row;
+    }
+    #engagement h3,
+    #satisfaction h3 {
+        font-size: 0rem;
+        padding: 0;
+        margin: 5% 0;
+    }
+    #engagement h3 span {
+        color: #f03f73;
+        font-size: 1em;
+    }
+    #engagement .percent {
+        margin: 5% 0;
+        text-align: center;
+    }
+    #engagement .percent span {
+        color: #444;
+    }
+    #engagement .percent h4 {
+        font-size: 1.5rem;
+    }
+    .percentBlock {
+        flex: 1;
+        margin: 2%;
+    }
+    /*IMG & HOVER*/
+    .imgBox {
+        font-size: 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        /*Pour l espace blanc sous l img*/
+    }
+    .imagePercent img {
+        width: 100%;
+    }
+    #engagement .imgBox h5 {
+        position: absolute;
+        width: 100%;
+        max-height: 500px;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size: 1.5rem;
+        padding: 5% 0;
+        text-align: center;
+        transform: translateY(-100%);
+        transition: transform .2s;
+        font-family: var(--modern-font);
+        border-top: 2px solid #f03f73;
+        border-bottom: 2px solid #f03f73;
+    }
+    #engagement .imagePercent:hover .imgBox h5 {
+        transform: translateY(0);
+    }
+    #engagement .imagePercent p {
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size: .8rem;
+        line-height: 1.5rem;
+        padding: 5%;
+        transform: translateY(-100%);
+        transition: transform .2s;
+    }
+    #engagement .imagePercent:hover p {
+        transform: translateY(0%);
+    }
+    /* ----------- SLIDE ------------ */
+    .slides img {
+        width: 5%;
+    }
+    /* ----------- AVIS -------------- */
+    #satisfaction {
+        font-size: 1.5rem;
+    }
+    .avisContent {
+        width: 50%;
+        margin: 0;
+    }
+    .avis p,
+    .avis a {
+        font-size: 1.5rem;
+    }
+    .avisBox {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    /* SHARK ANIM */
+    #sharkRound {
+        justify-content: center;
+        position: relative;
+        overflow: visible;
+    }
+    .contentShark {
+        background-color: #444;
+        overflow: visible;
+        width: 70%;
+    }
+    .contentShark img {
+        width: 90%;
+        transform: rotate(80deg);
+    }
+    #sharkRound .textCercle {
+        z-index: 5;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .textCercle img {
+        transform-origin: top;
+        background-color: #fff;
+    }
+    #sharkRound .shark,
+    #sharkRound .textCercle {
+        height: 50%;
+    }
+    #home .line {
+        position: relative;
+        z-index: 600;
+        box-shadow: 3px 3px 11px 4px #444;
+    }
+    /*SUSHI PARALLAX */
+    .imgPara {
+        width: 30%;
+        position: absolute;
+        z-index: 3000;
+    }
+    #s2 {
+        top: 85%;
+        left: 15%;
+    }
+    #c1 {
+        top: 35%;
+        right: 5%;
+    }
+    #c2 {
+        top: 65%;
+        right: 10%;
+    }
+    #t1 {
+        width: 30%;
+        top: 40%;
+    }
+    #g1 {
+        width: 35%;
+        top: 90%;
+        left: 45%;
+    }
+    /* ANIMATION BOX*/
+    #box {
+        height: 40vh;
+    }
+    #box img {
+        width: 5%;
+    }
+    /* FOOTER */
+    footer .footConteneur img {
+        width: 10%;
+    }
+    footer .wordslider {
+        margin: 2% 0;
+    }
+    .mots {
+        font-size: 1.8rem;
+    }
+    .itemSlide {
+        font-size: 3rem;
+    }
+    footer #mentions {
+        font-size: .8rem;
+    }
+}
+
+
+/* OVER 1200px */
+
+@media (min-width: 1300px) {
+    #salle .conteneur {
+        background-image: url(../restaurant/image/salle2.jpg);
+    }
+    #cuisine .conteneur {
+        background-image: url(../restaurant/image/chef.jpg);
+    }
+    #satisfaction .conteneur {
+        width: 80%;
+    }
+    .contentShark {
+        width: 50%;
+    }
+    .imgPara {
+        width: 20%;
+    }
+    #s2 {
+        top: 85%;
+        left: 15%;
+    }
+    #c1 {
+        top: 35%;
+        right: 5%;
+    }
+    #c2 {
+        top: 65%;
+        right: 10%;
+    }
+    #t1 {
+        width: 20%;
+        top: 40%;
+    }
+    #g1 {
+        width: 25%;
+        top: 90%;
+        left: 45%;
     }
 }

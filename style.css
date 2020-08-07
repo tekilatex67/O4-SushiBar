@@ -14,7 +14,6 @@
     --normal-font: 'Syncopate', 'Julius Sans One', 'Krub', 'Noto Sans', 'Montserrat Alternates', 'Raleway Dots', sans-serif;
     --special-font: 'Lobster Two', 'Playball', 'Lobster', cursive;
     --hand-font: 'Nanum Brush Script', cursive;
-    --sb-font: 'Arizonia', 'Clicker Script', 'Dancing Script', 'Grand Hotel', 'Liu Jian Mao Cao', 'Mr De Haviland', 'Rochester', 'Rouge Script', 'Shadows Into Light', 'Zeyada';
     --modern-font: 'Megrim', 'Audiowide', cursive;
     --defil-font: 'Codystar';
 }
@@ -55,7 +54,7 @@ ul {
 }
 
 .wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -113,19 +112,19 @@ ul {
 
 @keyframes ronde {
     0% {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
     25% {
-        transform: rotate(270deg);
+        transform: rotate(90deg);
     }
     50% {
         transform: rotate(180%deg);
     }
     75% {
-        transform: rotate(90deg);
+        transform: rotate(270deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -522,19 +521,4 @@ footer h1 {
 }
 
 
-/* MEDIA QUERIES --- DESKTOP --- */
-
-@media (min-width: 800px) {
-    /*INDEX*/
-    #o4 {
-        width: 30%;
-    }
-    #title h1 {
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-    }
-    #sushibar {
-        position: absolute;
-        right: 15%;
-    }
-}
+*/

@@ -1,5 +1,9 @@
 /* ------ ACCEUIL ----- */
 
+#index * {
+    text-align: center;
+}
+
 #index {
     background-image: url(image/salle1.jpg);
     background-position: center;
@@ -21,9 +25,22 @@
     width: 80%;
 }
 
+#o4 {
+    justify-content: space-around;
+}
+
 #o4 img {
-    width: 50%;
+    width: 45%;
     height: auto;
+}
+
+#sushibar {
+    width: 100%;
+}
+
+#title h1 {
+    width: 100%;
+    letter-spacing: .5rem;
 }
 
 #title h1,
@@ -34,7 +51,7 @@
 
 #index h1 span {
     color: #f03f73;
-    font-family: 'Arizonia';
+    font-family: var(--modern-font);
 }
 
 .border {
@@ -54,9 +71,12 @@
     margin-top: 0;
 }
 
+
+/**/
+
 #shark {
     animation-name: ronde;
-    animation-duration: 60s;
+    animation-duration: 120s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -80,45 +100,95 @@
 }
 
 
+/* BTN ENTRER */
+
+#btnEnter {
+    position: absolute;
+    width: 25%;
+    top: 75%;
+    right: 37.5%;
+    padding: 2%;
+    border: 1px solid #fff;
+}
+
+#btnEnter a {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    background-color: rgba(240, 63, 115, .6);
+    font-family: var(--modern-font);
+}
+
+
 /* COORDONEES */
 
 #coordonees p {
-    text-align: center;
-    padding: 2%;
+    padding: 2% 0;
+    line-height: 2rem;
     letter-spacing: 0.1rem;
 }
 
 #coordonees :first-child {
     font-size: 1.8rem;
-    line-height: 2rem;
     font-family: 'Audiowide';
 }
 
 #coordonees :last-child {
     font-size: 1.2rem;
-    line-height: 2rem;
 }
 
 
 /*   OPTION */
 
-.option p {
-    text-align: center;
+#option p {
     opacity: 0.8;
     line-height: 2rem;
 }
 
 
-/* ENTRER */
+/* MEDIA QUERYS */
 
-#entrer a {
-    display: block;
-    text-align: center;
-    border-radius: 5px;
-    color: rgb(240, 63, 115);
-}
-
-#entrer img {
-    width: 10%;
-    opacity: .7;
+@media (min-width: 800px) {
+    #index * {
+        text-align: start;
+    }
+    #index {
+        background-image: url(image/fond1.jpg);
+    }
+    #title {
+        width: 25%;
+        margin: 5%;
+    }
+    #o4 {
+        justify-content: space-around;
+    }
+    #o4 img {
+        width: 40%;
+    }
+    #sushibar {
+        width: 100%;
+        border: none;
+    }
+    #sushibar h1 {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 2rem;
+    }
+    #coordonees,
+    #option {
+        margin: 0 10%;
+    }
+    #btnEnter {
+        top: 50%;
+        width: 15%;
+        right: 20%;
+        padding: 1%;
+    }
+    #btnEnter a {
+        font-size: 2rem;
+    }
+    #option p {
+        font-size: 1.5rem;
+    }
 }
