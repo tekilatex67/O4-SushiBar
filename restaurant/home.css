@@ -58,7 +58,7 @@
     transform: scaleX(1);
 }
 
-#home h3.actif p {
+#home .actif h3 p {
     transform: translateY(0);
 }
 
@@ -85,7 +85,6 @@
 
 #cuisine p,
 #salle p,
-#adresse p,
 #engagement p {
     line-height: 2rem;
     font-size: 0.8rem;
@@ -119,6 +118,9 @@
     align-items: center;
     padding: 5%;
     z-index: 1;
+}
+
+#home header .blocTitre {
     text-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
     color: #00FFFC;
 }
@@ -147,19 +149,213 @@
 /* ---------------------------------------------------- ARTICLE ADRESSE ----------------------------------------------------*/
 
 #adresse .conteneur {
-    background-image: url(image/vitrine1.JPG);
+    background-image: url(image/street1.jpg);
 }
 
-#adresse .over {
-    top: 30%;
+
+/* ---------------------------------------------------- SERVICE ---------------------------------------------------  */
+
+#services .conteneur {
+    flex-direction: column;
+    box-shadow: -2px 2px 14px 2px #444;
+    border-top: 1px solid #f03f73;
+    border-bottom: 2px solid #f03f73;
 }
 
-#adresse .under {
-    top: 70%;
+#services .conteneur .box {
+    height: 30vh;
+    background-size: cover;
+    position: relative;
 }
 
-#adresse .over img {
-    width: 20%;
+#services .surPlace {
+    background-image: url(image/surPlace.jpg);
+}
+
+#services .emporter {
+    background-image: url(image/emporter.jpg);
+}
+
+#services .traiteur {
+    background-image: url(image/traiteur.jpg);
+}
+
+#services .box .service {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.filtre {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+
+/*anime box:hover*/
+
+#services .box .service,
+#services .box .line {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .5s;
+}
+
+#services .box:hover .service,
+#services .box:hover .line {
+    transform: translateY(-30%);
+    opacity: 0;
+}
+
+#services .box:hover .filtre {
+    opacity: 0;
+}
+
+
+/*contenu service*/
+
+#services .box .service h5 {
+    position: absolute;
+    text-align: center;
+    font-family: var(--modern-font);
+    font-size: 2rem;
+    height: 20%;
+    width: 100%;
+    top: 40%;
+}
+
+#services .box .service p {
+    position: absolute;
+    bottom: 5%;
+    font-size: .8rem;
+    text-align: center;
+    padding: 3%;
+}
+
+#services .box .line {
+    position: absolute;
+    height: 30%;
+    width: 1px;
+    left: 50%;
+    top: 5%;
+    background-color: #f03f73;
+    z-index: 5;
+}
+
+
+/* ---------------------------------------------------- PROPOS ---------------------------------------------------  */
+
+#propos {
+    overflow: hidden;
+}
+
+#propos .reveal {
+    position: relative;
+    color: #444;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+#propos .reveal.active {
+    transform: scaleX(1);
+    transition-delay: 0s;
+}
+
+#propos .reveal:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f03f73;
+    transform-origin: right;
+    transition: .5s;
+    transition-delay: 0s;
+}
+
+#propos .reveal.active:before {
+    transform: scaleX(0);
+    transition-delay: .5s;
+}
+
+.panoramique,
+.portrait {
+    margin: 10% 0;
+    align-items: center;
+}
+
+.portrait {
+    flex-direction: column;
+}
+
+.panoramique {
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+}
+
+
+/*IMG*/
+
+#propos img {
+    position: relative;
+    opacity: 0;
+    transition: .5s;
+    margin: 5% auto;
+}
+
+#propos img.active {
+    opacity: 1;
+    left: 0;
+}
+
+.panoramique img {
+    width: 65%;
+    left: 10%;
+}
+
+.portrait img {
+    width: 35%;
+    left: -100px;
+}
+
+.text {
+    width: 70%;
+    margin: 0 5%;
+}
+
+#propos h4:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+    width: 50%;
+    height: 1px;
+    background: #f03f73;
+}
+
+#propos .portrait h4:before {
+    left: -25%;
+}
+
+#propos h4 {
+    position: relative;
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+#propos p {
+    line-height: 1.5rem;
 }
 
 
@@ -204,8 +400,7 @@
     font-family: var(--modern-font);
     font-size: 2rem;
     text-transform: uppercase;
-    /*text-shadow: 4px 3px 3px grey;*/
-    position: relative;
+    /*position: relative;*/
     padding: 5% 0;
 }
 
@@ -218,7 +413,7 @@
 
 #engagement .conteneur,
 #satisfaction .conteneur {
-    height: 90%;
+    /*height: 90%;*/
     flex-direction: column;
     justify-content: space-around;
 }
@@ -235,8 +430,78 @@
     opacity: 1;
 }
 
+#engagement h3 span {
+    color: #f03f73;
+    font-size: 1em;
+}
+
+#engagement .percent {
+    margin: 5% 0;
+    text-align: center;
+}
+
+#engagement .percent h4 {
+    font-size: 1.5rem;
+}
+
+.percentBlock {
+    flex: 1;
+    margin: 2%;
+}
+
+
+/*IMG & HOVER*/
+
+.imgBox {
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    /*Pour l espace blanc sous l img*/
+}
+
+.imagePercent img {
+    width: 100%;
+}
+
+#engagement .imgBox h5 {
+    position: absolute;
+    width: 100%;
+    max-height: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    padding: 5% 0;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform .2s;
+    font-family: var(--modern-font);
+    border-top: 2px solid #f03f73;
+    border-bottom: 2px solid #f03f73;
+}
+
+#engagement .imagePercent:hover .imgBox h5 {
+    transform: translateY(0);
+}
+
+#engagement .imagePercent p {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: .8rem;
+    line-height: 1.5rem;
+    padding: 5%;
+    transform: translateY(-100%);
+    transition: transform .2s;
+}
+
+#engagement .imagePercent:hover p {
+    transform: translateY(0%);
+}
+
 
 /*Pourcentage*/
+
+#engagement .percent span {
+    color: #444;
+}
 
 .number,
 .unit {
@@ -248,14 +513,11 @@
     text-transform: uppercase;
 }
 
-.imagePercent img {
-    width: 0;
-}
-
 
 /* ---------------------------------------------------- SLIDES ---------------------------------------------------- */
 
 .slides {
+    position: absolute;
     width: 100vw;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -263,8 +525,8 @@
 
 .slides img {
     width: 10%;
-    margin: 3%;
-    opacity: 0.3;
+    margin: 5%;
+    opacity: 0.1;
 }
 
 .slideLeft {
@@ -272,7 +534,7 @@
 }
 
 
-/* AVIS */
+/* ----------------------------------------------------  AVIS ---------------------------------------------------- */
 
 #satisfaction h3 {
     margin: 10% 0;
@@ -348,6 +610,143 @@
 
 .avisBox {
     flex-direction: column;
+}
+
+
+/*départ*/
+
+#satisfaction {
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.avisContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.avis p,
+.avis a {
+    font-size: 1.5rem;
+}
+
+.avisBox {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* SHARK ANIM */
+
+#sharkRound {
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    margin: 10% auto;
+}
+
+.contentShark {
+    background-color: #444;
+    overflow: visible;
+    width: 70%;
+}
+
+.contentShark img {
+    width: 90%;
+    transform: rotate(80deg);
+}
+
+#sharkRound .textCercle {
+    z-index: 5;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.textCercle img {
+    transform-origin: top;
+    background-color: #fff;
+}
+
+#sharkRound .shark,
+#sharkRound .textCercle {
+    height: 50%;
+}
+
+#home .line {
+    position: relative;
+    z-index: 600;
+    box-shadow: 3px 3px 11px 4px #444;
+}
+
+
+/*SUSHI PARALLAX */
+
+.imgPara {
+    width: 30%;
+    position: absolute;
+    z-index: 3000;
+}
+
+#s2 {
+    top: 85%;
+    left: 15%;
+}
+
+#c1 {
+    top: 35%;
+    right: 5%;
+}
+
+#c2 {
+    top: 65%;
+    right: 10%;
+}
+
+#t1 {
+    width: 30%;
+    top: 40%;
+}
+
+#g1 {
+    width: 35%;
+    top: 90%;
+    left: 45%;
+}
+
+
+/* ANIMATION BOX*/
+
+#box {
+    height: 40vh;
+}
+
+#box img {
+    width: 5%;
+}
+
+
+/* FOOTER */
+
+footer .footConteneur img {
+    width: 10%;
+}
+
+footer .wordslider {
+    margin: 2% 0;
+}
+
+.mots {
+    font-size: 1.8rem;
+}
+
+.itemSlide {
+    font-size: 3rem;
+}
+
+footer #mentions {
+    font-size: .8rem;
 }
 
 
@@ -602,22 +1001,92 @@
 }
 
 
-/* MEDIA QUERIES */
+/*------------------------------------------- MEDIA QUERIES ------------------------------------------- */
 
 @media (min-width: 800px) {
     /* ----------- HEADER ------------ */
     #home header {
-        flex-direction: row;
-        padding: 1%;
-        justify-content: center;
+        height: 100%;
+        justify-content: space-between;
     }
-    #home header img {
-        width: 20%;
+    /*TITRE*/
+    #home header .blocTitre {
+        flex-direction: column;
+        position: relative;
+    }
+    #home header .blocTitre:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        left: 33%;
+        background-color: #fff;
+        box-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
+    }
+    #home header img.logo {
+        width: 30%;
+        opacity: .9;
         margin: 0 2%;
+    }
+    #home h2 {
+        margin-left: 32%;
     }
     #home h2,
     #home h2 span {
-        font-size: 5rem;
+        font-size: 7rem;
+        text-align: left;
+    }
+    /*DIVERS*/
+    #home header .blocDivers {
+        justify-content: space-between;
+    }
+    #home header .blocSocial {
+        width: 30%;
+        align-self: flex-end;
+        position: relative;
+    }
+    #home header .blocSocial a {
+        display: inline-block;
+        width: 10%;
+        margin-right: 5%;
+    }
+    #home header .blocSocial a img {
+        width: 100%;
+        opacity: .7;
+    }
+    #home header .blocDivers .blocSocial .line {
+        position: absolute;
+        top: 50%;
+        width: 25%;
+        left: 30%;
+    }
+    /*TEXT*/
+    #home header .blocText {
+        align-self: flex-end;
+        width: 50%;
+    }
+    #home header .blocText h5,
+    #home header .blocText span {
+        font-size: 3rem;
+        font-family: var(--modern-font);
+        color: #f03f73;
+    }
+    #home header .blocText h5 {
+        position: relative;
+    }
+    #home header .blocDivers .line {
+        background-color: #fff;
+        box-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
+        height: 1px;
+    }
+    #home header .blocText .line {
+        width: 25%;
+        margin: 5% 0;
+    }
+    #home header .blocText p {
+        padding: 0 5%;
+        margin: 0 5%;
+        line-height: 2rem;
     }
     /*----------- GENERAL ----------- */
     #home h3 p {
@@ -631,7 +1100,7 @@
         font-size: 1rem;
     }
     #adresse .conteneur {
-        background-image: url(../restaurant/image/street.jpg);
+        background-image: url(../restaurant/image/street1.jpg);
     }
     #salle .conteneur {
         background-image: url(../restaurant/image/sallePortrait.jpg);
@@ -643,54 +1112,48 @@
         background-position: right;
         background-size: 50vw;
     }
+    /* ___________ SERVICES ____________*/
+    #services .conteneur {
+        flex-direction: row;
+    }
+    #services .conteneur .box {
+        flex: 1;
+        max-height: 40vh;
+    }
+    /*anime box:hover*/
+    #services .box .service,
+    #services .box .line {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all .5s;
+    }
+    #services .box:hover .service,
+    #services .box:hover .line {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    #services .box:hover .filtre {
+        opacity: 0;
+    }
+    /*contenu service*/
+    #services .box .service h5 {
+        font-size: 3rem;
+    }
     /* ----------- PROPOS ------------ */
-    #propos {
-        overflow: hidden;
-    }
-    #propos .reveal {
-        position: relative;
-        color: #444;
-        transform-origin: left;
-        transform: scaleX(0);
-        transition: .5s;
-        transition-delay: .5s;
-    }
-    #propos .reveal.active {
-        transform: scaleX(1);
-        transition-delay: 0s;
-    }
-    #propos .reveal:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #f03f73;
-        transform-origin: right;
-        transition: .5s;
-        transition-delay: 0s;
-    }
     #propos .reveal.active:before {
         transform: scaleX(0);
         transition-delay: .5s;
     }
     .panoramique,
     .portrait {
-        margin: 10% 0;
+        flex-direction: row;
     }
     .panoramique {
         justify-content: flex-end;
     }
     /*IMG*/
     #propos img {
-        position: relative;
-        opacity: 0;
-        transition: .5s;
-    }
-    #propos img.active {
-        opacity: 1;
-        left: 0;
+        margin: 0;
     }
     .panoramique img {
         width: 45%;
@@ -702,28 +1165,9 @@
     }
     .text {
         width: 40%;
-        margin: 0 5%;
-    }
-    #propos h4:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: -25%;
-        width: 50%;
-        height: 1px;
-        background: #f03f73;
-    }
-    #propos .portrait h4:before {
-        left: -25%;
     }
     #propos h4 {
-        position: relative;
         font-size: 2.5rem;
-        padding-bottom: 5%;
-        margin-bottom: 5%;
-    }
-    #propos p {
-        line-height: 3rem;
     }
     /* ------------ SALLE ET CUISINE  ------------- */
     .salleEtCuisine {
@@ -761,143 +1205,27 @@
         padding: 0;
         margin: 5% 0;
     }
-    #engagement h3 span {
-        color: #f03f73;
-        font-size: 1em;
-    }
-    #engagement .percent {
-        margin: 5% 0;
-        text-align: center;
-    }
-    #engagement .percent span {
-        color: #444;
-    }
-    #engagement .percent h4 {
-        font-size: 1.5rem;
-    }
-    .percentBlock {
-        flex: 1;
-        margin: 2%;
-    }
-    /*IMG & HOVER*/
-    .imgBox {
-        font-size: 0;
-        position: relative;
-        overflow: hidden;
-        z-index: 2;
-        /*Pour l espace blanc sous l img*/
-    }
-    .imagePercent img {
-        width: 100%;
-    }
-    #engagement .imgBox h5 {
-        position: absolute;
-        width: 100%;
-        max-height: 500px;
-        background-color: rgba(0, 0, 0, 0.7);
-        font-size: 1.5rem;
-        padding: 5% 0;
-        text-align: center;
-        transform: translateY(-100%);
-        transition: transform .2s;
-        font-family: var(--modern-font);
-        border-top: 2px solid #f03f73;
-        border-bottom: 2px solid #f03f73;
-    }
-    #engagement .imagePercent:hover .imgBox h5 {
-        transform: translateY(0);
-    }
-    #engagement .imagePercent p {
-        background-color: rgba(0, 0, 0, 0.7);
-        font-size: .8rem;
-        line-height: 1.5rem;
-        padding: 5%;
-        transform: translateY(-100%);
-        transition: transform .2s;
-    }
-    #engagement .imagePercent:hover p {
-        transform: translateY(0%);
-    }
     /* ----------- SLIDE ------------ */
+    .slides {
+        position: absolute;
+        top: 0;
+    }
     .slides img {
-        width: 5%;
+        width: 4%;
+        margin: 3% 5%;
+        opacity: .1;
     }
     /* ----------- AVIS -------------- */
-    #satisfaction {
-        font-size: 1.5rem;
-    }
     .avisContent {
         width: 50%;
         margin: 0;
     }
-    .avis p,
-    .avis a {
-        font-size: 1.5rem;
-    }
     .avisBox {
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
     }
     /* SHARK ANIM */
     #sharkRound {
-        justify-content: center;
-        position: relative;
-        overflow: visible;
-    }
-    .contentShark {
-        background-color: #444;
-        overflow: visible;
-        width: 70%;
-    }
-    .contentShark img {
-        width: 90%;
-        transform: rotate(80deg);
-    }
-    #sharkRound .textCercle {
-        z-index: 5;
-        overflow: hidden;
-        background-color: #fff;
-    }
-    .textCercle img {
-        transform-origin: top;
-        background-color: #fff;
-    }
-    #sharkRound .shark,
-    #sharkRound .textCercle {
-        height: 50%;
-    }
-    #home .line {
-        position: relative;
-        z-index: 600;
-        box-shadow: 3px 3px 11px 4px #444;
-    }
-    /*SUSHI PARALLAX */
-    .imgPara {
-        width: 30%;
-        position: absolute;
-        z-index: 3000;
-    }
-    #s2 {
-        top: 85%;
-        left: 15%;
-    }
-    #c1 {
-        top: 35%;
-        right: 5%;
-    }
-    #c2 {
-        top: 65%;
-        right: 10%;
-    }
-    #t1 {
-        width: 30%;
-        top: 40%;
-    }
-    #g1 {
-        width: 35%;
-        top: 90%;
-        left: 45%;
+        margin: 0 auto;
     }
     /* ANIMATION BOX*/
     #box {
@@ -928,6 +1256,19 @@
 /* OVER 1200px */
 
 @media (min-width: 1300px) {
+    /*HEADER*/
+    #home header img.logo {
+        width: 20%;
+    }
+    #home header .blocTitre:after {
+        left: 25%;
+    }
+    #home h2 {
+        margin-left: 28%;
+    }
+    #home header .blocSocial a {
+        width: 7%;
+    }
     #salle .conteneur {
         background-image: url(../restaurant/image/salle2.jpg);
     }
