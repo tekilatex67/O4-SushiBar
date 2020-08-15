@@ -112,7 +112,7 @@ if (window.innerWidth >= 800) {
 
 // ------- FADEIN MIRROR -------------------------
 
-const ratio = .8;
+const ratio = .2;
 
 const options = {
     root: null,
@@ -131,19 +131,22 @@ function handleIntersect(entries, observer) {
             let delta = Math.ceil((timer * 1000) / n);
             console.log(element);
 
-            /*Pourcentage*/
-            if (element.classList.contains('number')) {
-                function count() {
-                    element.innerHTML = cpt++;
-                    if (cpt <= n) {
-                        setTimeout(count, delta);
+            if (entry.intersectionRatio > ratio) {
+                /*Pourcentage*/
+                if (element.classList.contains('number')) {
+                    function count() {
+                        element.innerHTML = cpt++;
+                        if (cpt <= n) {
+                            setTimeout(count, delta);
+                        }
                     }
+                    setTimeout(count, delta);
+                } else {
+                    element.classList.add('actif');
+                    observer.unobserve(entry.target);
                 }
-                setTimeout(count, delta);
-            } else {
-                element.classList.add('actif');
-                //observer.unobserve(entry.target);
             }
+
         }
 
     );

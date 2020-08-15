@@ -58,7 +58,7 @@
     transform: scaleX(1);
 }
 
-#home .actif h3 p {
+#home h3.actif p {
     transform: translateY(0);
 }
 
@@ -93,19 +93,20 @@
 .topPage {
     position: fixed;
     z-index: 10000;
-    bottom: 10%;
+    bottom: 1%;
     transform: translateY(500%);
     transition: transform .5s;
     right: 5%;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(240, 63, 115, .5);
-    border-radius: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     border: 1px solid #fff;
 }
 
 .topPage img {
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -114,35 +115,117 @@
 #home header {
     position: absolute;
     width: 100vw;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
     padding: 5%;
     z-index: 1;
+    /**/
+    flex-direction: row;
+}
+
+#home header .blocTitre,
+#home header .blocDivers {
+    width: 50%;
 }
 
 #home header .blocTitre {
     text-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
     color: #00FFFC;
+    /**/
+    flex-direction: column;
 }
 
 #home header img {
-    width: 50%;
+    width: 100%;
     margin: 2%;
 }
 
 #home h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 2%;
     text-align: center;
+    /**/
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 
 #home h2 span {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 #home h2 span.light {
     color: #1C2827;
     text-shadow: 0 0 0 transparent;
+}
+
+
+/*DIVERS*/
+
+#home header .blocDivers {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#home header .blocSocial {
+    position: relative;
+    text-align: end;
+}
+
+#home header .blocSocial a {
+    display: inline-block;
+    width: 10%;
+    margin-left: 5%;
+}
+
+#home header .blocSocial a img {
+    width: 100%;
+    opacity: .7;
+}
+
+#home header .blocDivers .blocSocial .line {
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    left: 30%;
+}
+
+#home header .blocDivers .line {
+    background-color: #fff;
+    box-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
+    height: 1px;
+}
+
+
+/*TEXT*/
+
+#home header .blocText {
+    margin-bottom: 30%;
+}
+
+#home header .blocText h5,
+#home header .blocText span {
+    font-size: 2rem;
+    font-family: var(--modern-font);
+    color: #f03f73;
+}
+
+#home header .blocText h5 {
+    position: relative;
+}
+
+#home header .blocText .line {
+    width: 25%;
+    margin: 5% 0;
+}
+
+#home header .blocText p {
+    padding: 0 5%;
+    margin: 0 5%;
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+
+#home header .blocText p strong {
+    font-size: .8rem;
 }
 
 
@@ -1007,11 +1090,12 @@ footer #mentions {
     /* ----------- HEADER ------------ */
     #home header {
         height: 100%;
+        align-items: center;
         justify-content: space-between;
+        flex-direction: column;
     }
     /*TITRE*/
     #home header .blocTitre {
-        flex-direction: column;
         position: relative;
     }
     #home header .blocTitre:after {
@@ -1030,6 +1114,8 @@ footer #mentions {
     }
     #home h2 {
         margin-left: 32%;
+        writing-mode: initial;
+        text-orientation: initial;
     }
     #home h2,
     #home h2 span {
@@ -1038,6 +1124,7 @@ footer #mentions {
     }
     /*DIVERS*/
     #home header .blocDivers {
+        flex-direction: row;
         justify-content: space-between;
     }
     #home header .blocSocial {
@@ -1046,13 +1133,7 @@ footer #mentions {
         position: relative;
     }
     #home header .blocSocial a {
-        display: inline-block;
-        width: 10%;
         margin-right: 5%;
-    }
-    #home header .blocSocial a img {
-        width: 100%;
-        opacity: .7;
     }
     #home header .blocDivers .blocSocial .line {
         position: absolute;
@@ -1064,20 +1145,11 @@ footer #mentions {
     #home header .blocText {
         align-self: flex-end;
         width: 50%;
+        margin-bottom: 0;
     }
     #home header .blocText h5,
     #home header .blocText span {
         font-size: 3rem;
-        font-family: var(--modern-font);
-        color: #f03f73;
-    }
-    #home header .blocText h5 {
-        position: relative;
-    }
-    #home header .blocDivers .line {
-        background-color: #fff;
-        box-shadow: 0 0 2px #00FFFC, 0 0 30px #00FFFC, 0px 0px 5px #00FFFC, 0 0 150px #00FFFC;
-        height: 1px;
     }
     #home header .blocText .line {
         width: 25%;
@@ -1265,9 +1337,6 @@ footer #mentions {
     }
     #home h2 {
         margin-left: 28%;
-    }
-    #home header .blocSocial a {
-        width: 7%;
     }
     #salle .conteneur {
         background-image: url(../restaurant/image/salle2.jpg);
