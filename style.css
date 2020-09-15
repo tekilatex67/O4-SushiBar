@@ -7,6 +7,7 @@
     --overlayBlack: rgba(0, 0, 0, 0.7);
     --overlayBlue: linear-gradient(45deg, rgba(0, 65, 106, 0.5), rgba(228, 229, 230, 0.5));
     --overlayBlackGradient: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    --gradientClar: linear-gradient(130deg, rgb(39, 42, 47), rgb(28, 31, 35));
     --line-calc: calc(var(--font-size)*1.5);
     /*font*/
     --color-font-black: #444;
@@ -14,7 +15,7 @@
     --normal-font: 'Syncopate', 'Julius Sans One', 'Krub', 'Noto Sans', 'Montserrat Alternates', 'Raleway Dots', sans-serif;
     --special-font: 'Lobster Two', 'Playball', 'Lobster', cursive;
     --hand-font: 'Nanum Brush Script', cursive;
-    --modern-font: 'Megrim', 'Audiowide', cursive;
+    --modern-font: 'Megrim', 'Audiowide', 'Poiret One', cursive;
     --defil-font: 'Codystar';
 }
 
@@ -127,37 +128,6 @@ ul {
         transform: rotate(360deg);
     }
 }
-
-
-/*
-
- NAV 
-
-nav ul {
-    background: rgba(255, 255, 255, 0.7);
-    justify-content: space-around;
-    list-style: none;
-    padding: 0.5rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 50px;
-    box-shadow: inset 1px 1px 13px 0 black, 0 16px 8px 0 black;
-    z-index: 1000;
-}
-
-nav a {
-    display: block;
-    text-align: center;
-}
-
-nav img {
-    width: 50%;
-    height: auto;
-}
-
-
-*/
 
 
 /*NAV ROUND */
@@ -423,102 +393,21 @@ footer h1 {
 
 /* -------------------------- MEDIA QUERIES -------------------------- */
 
-
-/*
-@media (orientation: landscape) {
-    /* ---------- ACCEUIL --------- */
-
-
-/*
-    #acceuil #title {
-        flex-wrap: nowrap;
-        width: 90%;
-        justify-content: center;
+@media (min-width: 800px) {
+    /*FOOTER*/
+    footer .footConteneur img {
+        width: 10%;
     }
-    #title #o4 {
-        width: 40%;
-        justify-content: flex-end;
+    footer .wordslider {
+        margin: 2% 0;
     }
-    #title #o4 img {
-        min-width: 30%;
-        height: auto;
-        margin-top: 5%;
+    .mots {
+        font-size: 1.8rem;
     }
-    #acceuil #title p {
-        width: 40%;
-    }
-    /* CARTE */
-
-
-/*
-    figure img {
-        width: 5%;
-    }
-    .active figure img {
-        width: 40%;
-    }
-    .active .minWidth {
-        width: 30%;
-    }
-    /*SOUS MENU*/
-
-
-/*
-    .item {
-        min-height: 80vh;
-    }
-    .rollstype {
-        min-height: 40vw;
-    }
-    .rollstype li.index>span {
-        transform: translateY(-600%);
-    }
-    /* ETABLISSEMENT*/
-
-
-/*
-    #home header {
-        width: 100vw;
-        flex-direction: row;
-        padding: 1%;
-        justify-content: center;
-    }
-    #home header img {
-        width: 25%;
-        margin: 0%;
-    }
-    #adresse .conteneur {
-        background-image: url(restaurant/image/devant.jpg);
-    }
-    #salle .conteneur {
-        background-image: url(restaurant/image/sallepays.jpeg);
-    }
-    #cuisine .conteneur {
-        background-image: url(restaurant/image/fun.jpeg);
-    }
-    /*INFORMATIONS*/
-
-
-/*
-    #infos .titre {
-        height: 100vh;
-    }
-    #infos .titre h2 {
-        font-size: 4rem;
-    }
-    .option p {
-        font-size: 1.5rem;
-    }
-    #infos h3 span {
+    .itemSlide {
         font-size: 3rem;
     }
-    .open #horaire {
-        height: auto;
-    }
-    .open #map {
-        min-height: 100vh;
+    footer #mentions {
+        font-size: .8rem;
     }
 }
-
-
-*/

@@ -10,12 +10,13 @@
     <meta name="description" content="Le meilleur de la gastronomie japonaise composé de produits frais et de qualités, le O'4 sushi bar vous acceuil à Obernai dans un cadre authentique.">
     <meta name="keywords" content="sushi, maki, temaki, nigiri, plateaux, plats, dessert, boisson, bar, restaurant, Obernai, Alsace">
     <title>Actualités</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="../image/other/shark.jpg" />
     <link rel="stylesheet" href="actualite.css">
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Poiret+One&family=Vast+Shadow&display=swap" rel="stylesheet">
 
 
 </head>
@@ -25,142 +26,254 @@
     <section id="actualites">
 
         <header class="flex">
-            <img src="image/logo1.png" alt="A">
-            <h2 id="logoO4">ctualités</h2>
+            <div class="sociaux ">
+                <a href="https://www.facebook.com/O4-Sushi-Bar-289513441154965/" target="blank"><img src="image/facebook.png" alt="facebook"></a>
+                <a href="https://www.tripadvisor.fr/Restaurant_Review-g196497-d5800635-Reviews-O_4_Sushi_Bar-Obernai_Bas_Rhin_Grand_Est.html" target="blank"><img src="image/tripadvisor.png" alt="tripadvisor"></a>
+                <div class="line">
+                    <div class="colorBack"></div>
+                </div>
+            </div>
+            <div class="title flex">
+                <img src="image/logo1.png" alt="A">
+                <h2 id="logoO4">ctualités</h2>
+            </div>
+
+            <div class="boxDefile">
+
+                <ul class="btnDefile flex">
+                    <li data-name="event">Evènements<br>Festivités</li>
+                    <li data-name="recipes">Recettes<br>Saisonière</li>
+                    <li data-name="new" class="index">News<br>Actu</li>
+                    <li data-name="game">Jeux<br>Concours</li>
+                    <li data-name="job">Offre<br>D'emploi</li>
+                </ul>
+                <div class="togglePlay"></div>
+                <div class="contentDefil">
+                    <p class="textDefile event">
+                        Vous pouvez nous retrouver lors de nombreux évènements ou festivités, comme aux cinéma du trèfle pour la sortie du film 50 nuances de g<span>riz</span>, à "La cour du Honau" ou encore à l' "Egast Salon professionnel."
+                    </p>
+                    <p class="textDefile recipes">
+                        Ne ratez plus aucune recette du moment. Selon l'inspiration, l'arrivage, et les produits de saison, notre maitre sushi vous concoctera des recettes original et exotique a ne pas manquer.
+                    </p>
+                    <p class="textDefile new index">
+                        Comme tout nos produits, notre actualité est 100% fraîche et produite avec des infos local, de qualité, et responsable.
+                    </p>
+                    <p class="textDefile game">
+                        Tentez vous aussi votre chance à nos différents jeux-concours et gagnez de belles surprises. Pronostics footballistique, concours de sushivore et nommbreux autres jeux vous sont proposé toute l'année.
+                    </p>
+                    <p class="textDefile job">
+                        Vous êtes vous même devenu maître dans l'art de couper du poissson et faire cuire du riz, passionné par le service d'une salle bondée? Notre établissement est régulièrement à la recherche de personnel qualifié et motivé.
+                    </p>
+                </div>
+            </div>
         </header>
 
-        <article id="mosaique" class="flex">
 
-            <p class="defile">
-                Retrouver toute notre actualité, nos événements, nos recettes du moments, nos jeux concours, nos offres d'emploi et restez conecter avec votre Sushi Bar.
-            </p>
+        <section id="mosaique">
+            <div class="contain_images portrait ">
 
-            <div class=" mosaique">
-                <div class="flex">
-                    <img src="image/images.jpeg" alt="carte visite">
-                    <img src="image/pokesushi.jpg" alt="pokesushi" data-image="1" data-text="actualités" data-background="overlayTheme">
-                    <img src="image/salmonRolls.jpg" alt="salmonRolls" data-image="4" data-text="nouveauté" data-background="overlayBlue">
-                </div>
-                <div class="flex">
-                    <img src="image/trefle.jpg" alt="trefle" data-image="2" data-text="recrutement" data-background="overlayBlue">
-                    <img src="image/padThaicrevette.jpg" alt="padThaicrevette" data-image="6" data-text="recettes du moment" data-background="overlayBlue">
-                    <img src="image/autre.jpg" alt="autre" data-image="3" data-text="événements" data-background="overlayTheme">
-                </div>
-                <div class="flex">
-                    <img src="image/chef3.jpg" alt="intenable" data-image="5" data-text="jeux concours" data-background="overlayTheme">
-                    <img src="image/concour.jpg" alt="concour" data-image="7" data-text="infos" data-background="overlayTheme">
-                    <img src="image/promo.jpg" alt="promo">
-                </div>
-                <div class=" mosaiqueAnim flex">
+                <!-- Ligne haut-->
 
+                <a class="bloc_img" id="img1" href="image/Tartare-thon.jpg"></a>
+                <a class="bloc_img" id="img2" href="image/pokesushi.jpg" data-image="1" data-text="actualités " data-background="overlayTheme"></a>
+                <a class="bloc_img" id="img3" href="image/temaki-de-salmao.jpg" data-image="4" data-text="nouveauté " data-background="overlayBlue"></a>
+                <a class="bloc_img" id="img4" href="image/trefle.jpg"></a>
+                <a class="bloc_img" id="img5" href="image/fun.jpg " data-image="2" data-text="recrutement " data-background="overlayBlue "></a>
+                <!--Ligne Bas-->
+
+                <a class="bloc_img" id="img6" href="image/chef3.jpg " data-image="5" data-text="jeux concours " data-background="overlayTheme "></a>
+                <a class="bloc_img" id="img7" href="image/promo.jpg "></a>
+                <a class="bloc_img" id="img8" href="image/autre.jpg " data-image="3" data-text="événements " data-background="overlayTheme "></a>
+                <a class="bloc_img" id="img9" href="image/concour.jpg " data-image="7" data-text="infos " data-background="overlayTheme "></a>
+                <a class="bloc_img" id="img10" href="image/padThaiBeef.jpg " data-image="6" data-text="recettes du moment " data-background="overlayBlue "></a>
+
+                <div class=" mosaiqueAnim flex ">
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="mosaiqueMobile" class="flex ">
+            <div class="mosaique flex">
+
+                <img src="image/pokesushi.jpg " alt="pokesushi" data-image="1" data-text="actualités " data-background="overlayTheme">
+                <img src="image/trefle.jpg " alt="trefle" data-image="4" data-text="nouveauté " data-background="overlayBlue">
+                <img src="image/fun.jpg " alt="boss" data-image="2" data-text="recrutement" data-background="overlayBlue ">
+                <img src="image/promo.jpg " alt="promo">
+                <img src="image/autre.jpg " alt="autre " data-image="3" data-text="événements" data-background="overlayTheme ">
+                <img src="image/chef3.jpg " alt="intenable " data-image="5" data-text="jeux concours" data-background="overlayTheme ">
+                <img src="image/concour.jpg " alt="concour " data-image="7" data-text="infos" data-background="overlayTheme ">
+                <img src="image/padThaiBeef.jpg " alt="padThaicrevette " data-image="6" data-text="recettes du moment " data-background="overlayBlue ">
+
+                <div class=" mosaiqueAnimMobile flex ">
                     <p></p>
                 </div>
             </div>
 
-        </article>
+        </div>
 
-        <article class="actu">
+        <div class="boxArticle flex ">
 
-            <div class="conteneurImg">
-                <img src="image/salleNeuve.jpg" alt="decoration salle">
-            </div>
+            <article class="actu ">
 
-            <div class="article">
-                <div class="flex blocTitre">
-                    <h3>Le <span class="themeColor">O</span>'4 sushi bar <br>fait peau neuve.</h3>
-                    <p class="lire openClose">lire</p>
-                    <p class="fermer openClose">fermer</p>
-
+                <div class="conteneurImg ">
+                    <img src="image/thuna.jpg " alt="thon rouge">
                 </div>
 
-                <div class="blocParagraphe toggle">
-                    <p>
-                        Après plus de 7 ans de présence et suite à un confinement de plus de 2 mois, nous en avons profiter pour crée une nouvelle ambiance au sein de notre salle.<br> <br>En effet le décor et le mobilier on été totalement changer afin
-                        de vous faire voyager.<br><br> Nous sommes impatient de pouvoir vous y acceuillir pour déguster nos sushi.
-                    </p>
+                <div class="article ">
+                    <div class="flex blocTitre openClose ">
+                        <h3>40 kg de bonheur</h3>
+                        <p class="lire ">lire</p>
+                    </div>
+
+                    <div class="blocParagraphe toggle ">
+                        <div class="line">
+                            <div class="colorBack"></div>
+                        </div>
+                        <p>
+                            Arrivé directement de St Jean de Luz, ce magnifique thon rouge pêché à la ligne de manière raisonnable est tout simplement un délice.
+                        </p>
+
+                        <div class="photo flex">
+                            <img src="image/camera3.png" alt="photo">
+                        </div>
+
+                        <div class="sliderImg overlayBlackGradient flex">
+                            <div class="principalPhoto flex">
+                                <img src="image/thuna1.jpg" alt="photo">
+                            </div>
+                            <div class="miniPhoto flex">
+                                <img src="image/thuna.jpg " alt="thon rouge" data-img="1">
+                                <a href="image/thuna1.jpg"><img src="image/thuna1.jpg" alt="thon" data-img="2"></a>
+                                <a href="image/thuna2.jpg"><img src="image/thuna2.jpg" alt="thon" data-img="3"></a>
+                                <a href="image/thuna3.jpg"><img src="image/thuna3.jpg" alt="thon" data-img="4"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+            <article class="actu ">
+
+                <div class="conteneurImg ">
+                    <img src="image/salleNeuve.jpg" alt="photo">
                 </div>
 
-            </div>
-        </article>
+                <div class="article ">
+                    <div class="flex blocTitre openClose ">
+                        <h3>Le <span class="themeColor ">O</span>'4 sushi bar <br>fait peau neuve.</h3>
+                        <p class="lire ">lire</p>
+                    </div>
 
-        <article class="actu">
+                    <div class="blocParagraphe toggle ">
+                        <div class="line">
+                            <div class="colorBack"></div>
+                        </div>
+                        <p>
+                            Après plus de 7 ans de présence et suite à un confinement de plus de 2 mois, nous en avons profiter pour crée une nouvelle ambiance au sein de notre salle.<br> <br>En effet le décor et le mobilier on été totalement changer
+                            afin de vous faire voyager.<br><br> Nous sommes impatient de pouvoir vous y acceuillir pour déguster nos sushi.
+                        </p>
 
-            <div class="conteneurImg">
-                <img src="image/sushiValentine.jpg" alt="St-valentin">
-            </div>
+                        <div class="photo flex">
+                            <img src="image/camera3.png" alt="photo">
+                        </div>
+                        <div class="sliderImg overlayBlack">
+                            <div class="principalPhoto flex">
+                                <img src="image/salleNeuve.jpg " alt="decoration salle ">
+                            </div>
+                            <div class="miniPhoto flex">
+                                <img src="image/salleNeuve.jpg" alt="photo" data-img="1">
+                                <a href="image/salle1.jpg"><img src="image/salle1.jpg" alt="salle" data-img="2"></a>
+                                <a href="image/salle2.jpg"><img src="image/salle2.jpg" alt="salle" data-img="3"></a>
+                                <a href="image/salleTotal.jpg"><img src="image/salleTotal.jpg" alt="salle" data-img="4"></a>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="article">
+                </div>
+            </article>
 
-                <div class="flex blocTitre">
-                    <h3>Menu <br>saint Valentin.</h3>
-                    <p class="lire openClose">lire</p>
-                    <p class="fermer openClose">fermer</p>
+            <article class="actu ">
+
+                <div class="conteneurImg ">
+                    <img src="image/sushiValentine.jpg " alt="St-valentin ">
                 </div>
 
-                <div class="toggle blocParagraphe">
-                    <p>
-                        Pour 2 personnes, spécial amoureux a partager :
-                    </p>
-                    <ul>
-                        <li class="themeColor">--</li>
-                        <li>Nigiri : -saumon x2 -crevette x2 -omelette x2</li>
-                        <li class="themeColor">--</li>
-                        <li>Maki : -concombre cheese x6 -thon x6 </li>
-                        <li class="themeColor">--</li>
-                        <li>California : -saumon avocat x6</li>
-                        <li class="themeColor">--</li>
-                        <li>Spring : -poulet caeser x6</li>
-                        <li class="themeColor">--</li>
-                        <li>Gyosa : -poulet x4</li>
-                        <li class="themeColor">--</li>
-                        <li>1 Bouteille de Champagne Veuve Pelletier & Fils 37,5cl</li>
-                        <li class="themeColor">--</li>
-                        <li> Dessert : <br>-Jardin des Amoureux <br>(crée par Macarons et Inspirations® )<br>
-                            <span>-base de biscuit macaron <br>-ganache â la vanille <br>-chantilly à la pure pâte de pistache <br>-framboises et groseilles <br>-pistaches fraîches</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </article>
+                <div class="article ">
 
-        <article class="actu">
+                    <div class="flex blocTitre openClose ">
+                        <h3>Menu <br>saint Valentin.</h3>
+                        <p class="lire ">lire</p>
+                    </div>
 
-            <div class="conteneurImg">
-                <img src="image/grey.jpg" alt="50 nuance de sushi">
-            </div>
+                    <div class="toggle blocParagraphe ">
+                        <p>
+                            Pour 2 personnes, spécial amoureux a partager :
+                        </p>
+                        <ul>
+                            <li class="themeColor ">--</li>
+                            <li>Nigiri : -saumon x2 -crevette x2 -omelette x2</li>
+                            <li class="themeColor ">--</li>
+                            <li>Maki : -concombre cheese x6 -thon x6 </li>
+                            <li class="themeColor ">--</li>
+                            <li>California : -saumon avocat x6</li>
+                            <li class="themeColor ">--</li>
+                            <li>Spring : -poulet caeser x6</li>
+                            <li class="themeColor ">--</li>
+                            <li>Gyosa : -poulet x4</li>
+                            <li class="themeColor ">--</li>
+                            <li>1 Bouteille de Champagne Veuve Pelletier & Fils 37,5cl</li>
+                            <li class="themeColor ">--</li>
+                            <li> Dessert : <br>-Jardin des Amoureux <br><a target="blank" class="special" href="http://www.elisabeth-biscarrat.com/ ">(Macarons et Inspirations® )</a></li>
 
-            <div class="article">
-                <div class="flex blocTitre">
-                    <h3><span class="themeColor">O</span>'4 <br>nuances de g<span class="themeColor">riz</span></h3>
-                    <p class="lire openClose">lire</p>
-                    <p class="fermer openClose">fermer</p>
+                        </ul>
+                    </div>
                 </div>
-                <div class="blocParagraphe toggle">
-                    <p>
-                        A l'occasion de la sortie du dernier épisode de la saga "50 nuances", nous serons présent au cinéma du trèfle de molsheim pour vous faire découvrir nos nuances de riz.
-                    </p>
+            </article>
+
+            <article class="actu ">
+
+                <div class="conteneurImg ">
+                    <img src="image/grey.jpg " alt="50 nuance de sushi ">
                 </div>
-            </div>
-        </article>
+
+                <div class="article ">
+                    <div class="flex blocTitre openClose ">
+                        <h3><span class="themeColor ">O</span>'4 <br>nuances de g<span class="themeColor ">riz</span></h3>
+                        <p class="lire ">lire</p>
+                    </div>
+                    <div class="blocParagraphe toggle ">
+                        <div class="line">
+                            <div class="colorBack"></div>
+                        </div>
+                        <p>
+                            A l'occasion de la sortie du dernier épisode de la saga "50 nuances ", nous serons présent au cinéma du trèfle de molsheim pour vous faire découvrir nos nuances de riz.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
         <!--
         <footer>
-            <div id="overlayFooter" class="flex">
-                <p id="services">
+            <div id="overlayFooter " class="flex ">
+                <p id="services ">
                     Sur place | A emporter | Traiteur
                 </p>
 
-                <div id="sociaux">
-                    <a href="https://www.facebook.com/pages/category/Sushi-Restaurant/O4-Sushi-Bar-289513441154965/"><img src="../image/other/facebook.png" alt="facebook"></a>
-                    <a href="https://www.tripadvisor.fr/Restaurant_Review-g196497-d5800635-Reviews-O_4_Sushi_Bar-Obernai_Bas_Rhin_Grand_Est.html"><img src="../image/other/tripad.png" alt="tripAdvisor"></a>
+                <div id="sociaux ">
+                    <a href="https://www.facebook.com/pages/category/Sushi-Restaurant/O4-Sushi-Bar-289513441154965/ "><img src="../image/other/facebook.png " alt="facebook "></a>
+                    <a href="https://www.tripadvisor.fr/Restaurant_Review-g196497-d5800635-Reviews-O_4_Sushi_Bar-Obernai_Bas_Rhin_Grand_Est.html "><img src="../image/other/tripad.png " alt="tripAdvisor "></a>
                 </div>
 
-                <p id="mentions">
-                    Copyright © 2014 O'4 Sushi Bar - Tous droits réservés<br> <a href="#">Mentions légales</a><br> Site développé par <strong>Splinter prog</strong>
+                <p id="mentions ">
+                    Copyright © 2014 O'4 Sushi Bar - Tous droits réservés<br> <a href="# ">Mentions légales</a><br> Site développé par <strong>Splinter prog</strong>
                 </p>
                 </a>
         </footer>
         -->
-
         <footer>
 
             <div id="footerBackground">
@@ -175,7 +288,7 @@
 
                 <div class="wordslider ">
                     <div class='frame '>
-                        <div class='fancyHeader '>Les meilleurs</div>
+                        <div class='fancyHeader mots'>Les meilleurs</div>
                         <div class='carousel'>
                             <div class='changeInner'>
                                 <span class="itemSlide">Sushi</span>
@@ -188,49 +301,47 @@
                             </div>
                         </div>
                     </div>
-                    <div>d'Obernai</div>
+                    <div class="mots">d'Obernai</div>
                 </div>
 
                 <p id="mentions">
-                    <a href="#">Mentions légales</a><br>Site développé par Splinter prog<br> Copyright © 2014 O'4 Sushi Bar - Tous droits réservés
+                    <a href="#">Mentions légales</a><br>Site développé par Ed Nygma Prog<br> Copyright © 2014 O'4 Sushi Bar - Tous droits réservés
                 </p>
             </div>
-
-
 
         </footer>
     </section>
 
     <div id="roundNav">
-        <div class="btnContainer flex">
-            <p class="menuBtn bouton">+</p>
+        <div class="btnContainer flex ">
+            <p class="menuBtn bouton ">+</p>
         </div>
 
-        <div class="menu marginCenter">
-            <ul class="flex">
+        <div class="menu marginCenter ">
+            <ul class="flex ">
 
-                <li id="actuLink">
-                    <a href="../actualites/actualite.html" class="curentPage">
-                        <img class="noCurent" src="../image/other/newsR.png" alt="logo_actualite">
-                        <img class="curent" src="../image/other/newsW.png" alt="logo_actualite">
+                <li id="actuLink ">
+                    <a href="../actualites/actualite.html " class="curentPage ">
+                        <img class="noCurent " src="../image/other/newsR.png " alt="logo_actualite ">
+                        <img class="curent " src="../image/other/newsW.png " alt="logo_actualite ">
                     </a>
                 </li>
-                <li id="carteLink">
-                    <a href="../carte/carte.html">
-                        <img class="noCurent" src="../image/other/sushiR.png" alt="logo_carte">
-                        <img class="curent" src="../image/other/sushiW.png" alt="logo_carte">
+                <li id="carteLink ">
+                    <a href="../carte/carte.html ">
+                        <img class="noCurent " src="../image/other/sushiR.png " alt="logo_carte ">
+                        <img class="curent " src="../image/other/sushiW.png " alt="logo_carte ">
                     </a>
                 </li>
-                <li id="restoLink">
-                    <a href="../restaurant/home.html">
-                        <img class="noCurent" src="../image/other/homeR.png" alt="logo_restaurant">
-                        <img class="curent" src="../image/other/homeW.png" alt="logo_restaurant">
+                <li id="restoLink ">
+                    <a href="../restaurant/home.html ">
+                        <img class="noCurent " src="../image/other/homeR.png " alt="logo_restaurant ">
+                        <img class="curent " src="../image/other/homeW.png " alt="logo_restaurant ">
                     </a>
                 </li>
-                <li id="infosLink">
-                    <a href="../infos/infos.html">
-                        <img class="noCurent" src="../image/other/infoR.png" alt="logo_contact">
-                        <img class="curent" src="../image/other/infoW.png" alt="logo_contact">
+                <li id="infosLink ">
+                    <a href="../infos/infos.html ">
+                        <img class="noCurent " src="../image/other/infoR.png " alt="logo_contact ">
+                        <img class="curent " src="../image/other/infoW.png " alt="logo_contact ">
                     </a>
                 </li>
             </ul>
@@ -239,8 +350,8 @@
 
 
 
-    <script src="../general.js"></script>
-    <script src="actualite.js"></script>
+    <script src="../general.js "></script>
+    <script src="actualite.js "></script>
 </body>
 
 </html>

@@ -129,7 +129,7 @@ function handleIntersect(entries, observer) {
             let timer = 1;
             let n = element.dataset.to;
             let delta = Math.ceil((timer * 1000) / n);
-            console.log(element);
+
 
             if (entry.intersectionRatio > ratio) {
                 /*Pourcentage*/

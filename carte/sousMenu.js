@@ -116,62 +116,88 @@ plateaux.forEach(plate => plate.addEventListener('click', toggleSuplements));
 //sticky
 function makeSticky(element) {
 
-
     let rec = element.getBoundingClientRect()
     let positionTop = rec.top + scrollY
     let offset = parseInt(element.getAttribute('data-offset'));
-
+    let page = element.parentNode;
+    if (page.classList.contains('liste-rolls')) {
+        page = page.parentNode;
+    }
     let gosthElement = document.createElement('div');
     gosthElement.style.height = rec.height + ('px');
     gosthElement.style.width = rec.width + ('px');
 
 
+    function noSticky() {
+
+        if (element.parentNode.contains(gosthElement)) {
+            element.parentNode.removeChild(gosthElement) //On retire le faux div
+        }
+        page.style.paddingLeft = '300px';
+
+        element.style.top = '30vh';
+        element.style.left = "0";
+        element.style.position = 'absolute';
+        element.style.width = '300px';
+    }
 
     function onScroll() {
 
+        if (window.innerWidth < 800) {
+            if (scrollY > positionTop - offset && element.style.position != 'fixed' && element.parentNode.classList.contains('active')) {
 
-        if (scrollY > positionTop - offset && element.style.position != 'fixed' && element.parentNode.classList.contains('active')) {
+                page.style.paddingLeft = '0px';
+                element.style.position = 'fixed';
+                element.style.top = offset + 'px';
+                element.style.left = '20%';
+                element.style.bottom = "auto";
+                element.style.width = '60%';
+                element.parentNode.insertBefore(gosthElement, element); // On insert le faux div
 
-            element.style.position = 'fixed';
-            element.style.top = offset + 'px';
-            element.style.bottom = "auto";
-            element.style.width = '60%';
-            element.parentNode.insertBefore(gosthElement, element); // On insert le faux div
-
-        } else if (scrollY < positionTop - offset && element.style.position != 'static' && element.parentNode.classList.contains('active')) {
-
-            element.style.position = 'static';
-            if (element.parentNode.contains(gosthElement)) {
-                element.parentNode.removeChild(gosthElement) //On retire le faux div
+            } else if (scrollY < positionTop - offset && element.style.position != 'static' && element.parentNode.classList.contains('active')) {
+                page.style.paddingLeft = '0px';
+                element.style.top = '0';
+                element.style.position = 'static';
+                if (element.parentNode.contains(gosthElement)) {
+                    element.parentNode.removeChild(gosthElement) //On retire le faux div
+                }
             }
+        } else {
+            noSticky();
         }
+
+
     }
 
     function onResize() {
 
-        element.style.width = "60%";
-        element.style.position = "static";
-        gosthElement.style.display = "none";
+        if (window.innerWidth < 800) {
+            page.style.paddingLeft = '0px';
+            element.style.width = "60%";
+            element.style.top = '10%';
+            element.style.position = "static";
+            gosthElement.style.display = "none";
 
-        //On re-calcule
-        rec = element.getBoundingClientRect();
-        positionTop = rec.top + scrollY;
-        gosthElement.style.height = rec.height + ('px');
-        gosthElement.style.width = rec.width + ('px');
-        gosthElement.style.display = "block";
-        onScroll();
+            //On re-calcule
+            rec = element.getBoundingClientRect();
+            positionTop = rec.top + scrollY;
+            gosthElement.style.height = rec.height + ('px');
+            gosthElement.style.width = rec.width + ('px');
+            gosthElement.style.display = "block";
+            onScroll();
+        } else {
+            noSticky();
+        }
+
 
     }
 
+    window.addEventListener('resize', onResize);
     window.addEventListener('scroll', onScroll);
     window.addEventListener("DOMContentLoaded", onScroll);
-    window.addEventListener('resize', onResize);
     window.addEventListener('hashchange', onResize);
 
 }
-
-
-
 
 for (let i = 0; i < sticky.length; i++) {
     makeSticky(sticky[i]);

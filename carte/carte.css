@@ -1,218 +1,333 @@
-section.pages {
-    background-image: linear-gradient(445deg, #2d3436 20%, #000000 74%);
-    width: 100vw;
-    flex-direction: column;
-    overflow: hidden;
-    min-height: 100vh;
-    opacity: 0.5;
-    transition: min-height .2s, opacity .3s;
-}
-
-section.pages.open {
-    min-height: 1240px;
-    opacity: 1;
-    margin-top: 0;
-}
-
-article.page {
-    background-size: cover;
-    background-position: center;
-    flex: 1;
-    position: relative;
-    transition: flex .4s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-}
-
-div.contain {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contain>* {
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    text-align: center;
-}
-
-
-/* PARTIE IMAGE */
-
-.page h3 {
-    position: absolute;
-    font-family: var(--modern-font);
-    font-size: 1.5rem;
-    opacity: 1;
-    transition: opacity 0.3s linear;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-}
-
-.exemples {
-    display: none;
-    overflow: hidden;
-}
-
-.exemples>* {
-    transition: transform 0.5s;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-}
-
-figure.fromLeft {
-    transform: translateX(-200%);
-}
-
-figure.fromBottom {
-    transform: translateY(250%);
-}
-
-figure.fromRight {
-    transform: translateX(200%);
-}
-
-figure img {
-    width: 30%;
-}
-
-.active figure img {
-    width: 80%;
-    opacity: 0.8;
-}
-
-.active .widthMin {
-    width: 65%;
-}
-
-.active .minWidth {
-    width: 55%;
-}
-
-figcaption {
-    opacity: 0;
-    transition: opacity .3s;
-    margin: 5%;
-}
-
-.widthMini {
-    width: 55%;
-}
-
-.minWidth {
-    width: 45%;
-}
-
-
-/* BACKGROUND IMG */
-
-.page1 {
-    background-image: url(image/yakitori1.jpg);
-}
-
-.page2 {
-    background-image: url(image/rollsNigiri1.jpg);
-}
-
-.page3 {
-    background-image: url(image/temaki-de-salmao.jpg);
-}
-
-.page4 {
-    background-image: url(image/chirasi2.jpg);
-}
-
-.page5 {
-    background-image: url(image/cantonais.jpg);
-}
-
-.page6 {
-    background-image: url(image/padTai.jpg);
-}
-
-.page7 {
-    background-image: url(image/plateaux2.jpg);
-}
-
-.page8 {
-    background-image: url(image/perles-de-coco.jpg);
-}
-
-.page9 {
-    background-image: url(image/bonap.jpg);
-}
-
-
-/* LIEN VOIRE CARTE */
-
-div.lienCarte {
-    position: absolute;
-    bottom: 5%;
-    overflow: hidden;
-}
-
-div.lienCarte {
-    width: 0%;
-    transition: width 0.3s linear;
-}
-
-div.lienCarte {
-    white-space: nowrap;
-}
-
-
-/* OPEN */
-
-.page.open {
-    flex: 3;
-}
-
-article.open .exemples {
-    position: absolute;
-    display: flex;
-}
-
-.open figcaption {
-    opacity: 1;
-    transition: all .3s 0.7s;
-}
-
-.page.active h3 {
-    opacity: 0;
-}
-
-
-/* OPEN ACTIVE */
-
-.page.active .fromLeft,
-.page.active .fromRight {
-    transform: translateX(0);
-    transition: all .3s .1s;
-}
-
-.page.active .fromBottom {
-    transform: translateY(0);
-    transition: all .3s .1s;
-}
-
-.page.active .lienCarte {
-    padding: 2% 2%;
-}
-
-.page.active div.lienCarte {
-    width: 35%;
-}
-
-.page.page.active .lienCarte a {
-    font-family: var(--modern-font);
-    width: 100%;
-    padding: 2%;
-    color: #ffff;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-radius: 50px;
-    background: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-}
+        section.pages {
+            background-image: linear-gradient(445deg, #2d3436 20%, #000000 74%);
+            width: 100vw;
+            flex-direction: column;
+            overflow: hidden;
+            min-height: 100vh;
+            opacity: 0.5;
+            transition: min-height .2s, opacity .3s;
+        }
+        
+        section.pages.open {
+            min-height: 1240px;
+            opacity: 1;
+            margin-top: 0;
+            position: relative;
+        }
+        
+        section div.fond {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            color: rgba(68, 68, 68, .9);
+            font-size: 4rem;
+            line-height: 4rem;
+            font-family: var(--modern-font), 'Poiret One';
+            text-align: center;
+            z-index: 55;
+        }
+        
+        section.pages.open div.fond span {
+            font-family: 'Poiret One';
+            font-size: 6rem;
+            line-height: 6rem;
+            color: rgba(68, 68, 68, .9);
+            /*color: rgba(240, 63, 115, .2);*/
+        }
+        
+        article.page {
+            background-size: cover;
+            background-position: center;
+            flex: 1;
+            position: relative;
+            transition: flex .4s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+        }
+        
+        div.contain {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .contain>* {
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+        }
+        /* PARTIE IMAGE */
+        
+        .page h3 {
+            position: absolute;
+            font-family: var(--modern-font);
+            font-size: 1.5rem;
+            opacity: 1;
+            transition: opacity 0.3s linear;
+            border-top: 1px solid #f03f73;
+            border-bottom: 1px solid #f03f73;
+        }
+        
+        .exemples {
+            display: none;
+            overflow: hidden;
+        }
+        
+        .exemples>* {
+            transition: transform 0.5s;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+        }
+        
+        figure.fromLeft {
+            transform: translateX(-200%);
+        }
+        
+        figure.fromBottom {
+            transform: translateY(850%);
+        }
+        
+        figure.fromRight {
+            transform: translateX(200%);
+        }
+        
+        figure img {
+            width: 30%;
+        }
+        
+        .active figure img {
+            width: 90%;
+            opacity: 0.8;
+        }
+        
+        .active .widthMin {
+            width: 65%;
+        }
+        
+        .active .minWidth {
+            width: 70%;
+        }
+        
+        figcaption {
+            opacity: 0;
+            transition: opacity .3s;
+            position: absolute;
+            top: 40%;
+            z-index: 5;
+            width: 75%;
+            background: var(--overlayBlack);
+            line-height: 2rem;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            font-family: var(--modern-font);
+            font-size: 1.3rem;
+        }
+        /* BACKGROUND IMG */
+        
+        .page1 {
+            background-image: url(image/yakitori1.jpg);
+        }
+        
+        .page2 {
+            background-image: url(image/rollsNigiri1.jpg);
+        }
+        
+        .page3 {
+            background-image: url(image/temaki-de-salmao.jpg);
+        }
+        
+        .page4 {
+            background-image: url(image/chirasi2.jpg);
+        }
+        
+        .page5 {
+            background-image: url(image/cantonais.jpg);
+        }
+        
+        .page6 {
+            background-image: url(image/padTai.jpg);
+        }
+        
+        .page7 {
+            background-image: url(image/plateaux2.jpg);
+        }
+        
+        .page8 {
+            background-image: url(image/perles-de-coco.jpg);
+        }
+        
+        .page9 {
+            background: var(--gradientClar);
+        }
+        /* LIEN VOIRE CARTE */
+        
+        div.lienCarte {
+            position: absolute;
+            bottom: 10%;
+            overflow: hidden;
+            width: 0%;
+            transition: width 0.4s linear;
+            white-space: nowrap;
+        }
+        
+        .page .lienCarte a img {
+            position: absolute;
+            height: 80%;
+            right: 5%;
+            top: 10%;
+            opacity: .7;
+        }
+        /* OPEN */
+        
+        .page.open {
+            flex: 3;
+        }
+        
+        article.open .exemples {
+            display: flex;
+        }
+        
+        .open figcaption {
+            opacity: 1;
+            transition: opacity .3s 0.7s;
+        }
+        
+        .page.active h3 {
+            opacity: 0;
+        }
+        /* OPEN ACTIVE */
+        
+        .page.active .fromLeft,
+        .page.active .fromRight {
+            transform: translateX(0);
+            transition: all .3s .1s;
+        }
+        
+        .page.active .fromBottom {
+            transform: translateY(0);
+            transition: all .3s .1s;
+        }
+        
+        .page.active div.lienCarte {
+            width: 100%;
+        }
+        
+        .page.active .lienCarte a {
+            width: 100%;
+            padding: 1%;
+            color: #ffff;
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffff;
+            font-family: var(--modern-font);
+            letter-spacing: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            background: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+        }
+        /* --------------------------------------------- MEDIA QUERIES ----------------------------------------------------*/
+        
+        @media (min-width: 800px) {
+            /* SECTION ET PAGES */
+            section.pages {
+                height: 100vh;
+                flex-wrap: wrap;
+                flex-direction: row;
+                padding: 60px 0;
+            }
+            section.pages.open {
+                min-height: 100vh;
+                position: relative;
+            }
+            section.pages.open div.fond {
+                top: 0;
+                color: rgba(68, 68, 68, .4);
+                /* color: rgba(240, 63, 115, .2);*/
+                font-size: 250px;
+                line-height: 250px;
+                z-index: 0;
+            }
+            section.pages.open div.fond span {
+                font-size: 600px;
+                line-height: 600px;
+                color: rgba(68, 68, 68, .4);
+                /*color: rgba(240, 63, 115, .2);*/
+            }
+            article.page {
+                flex: none;
+                width: 40%;
+                margin: 3% 5%;
+                transition: margin .5s;
+            }
+            article.page.open {
+                margin: 0 5%;
+                flex: none;
+            }
+            article.page9 {
+                display: none;
+            }
+            div.lienCarte {
+                bottom: -1%;
+            }
+            .page .lienCarte a {
+                color: transparent;
+            }
+            .page .lienCarte a img {
+                opacity: 0;
+            }
+            /* OPEN */
+            article:hover {
+                margin: 0 5%;
+                flex: none;
+            }
+            article:hover .exemples {
+                /*position: absolute;*/
+                display: flex;
+            }
+            article:hover figcaption {
+                opacity: 1;
+                transition: opacity .3s 0.7s;
+            }
+            article:hover h3 {
+                opacity: 0;
+            }
+            /* OPEN ACTIVE */
+            article:hover .fromLeft,
+            article:hover .fromRight {
+                transform: translateX(0);
+                transition: all .3s .1s;
+            }
+            article:hover .fromBottom {
+                transform: translateY(0);
+                transition: all .3s .1s;
+            }
+            article:hover div.lienCarte {
+                width: 100%;
+            }
+            article:hover .lienCarte a {
+                opacity: 1;
+                width: 100%;
+                padding: 1%;
+                color: #fff;
+                font-family: var(--modern-font);
+                letter-spacing: 1rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+                background: linear-gradient(70deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+                transition: color .1s;
+            }
+            article:hover figure img {
+                width: 50%;
+            }
+            article:hover .minWidth,
+            article:hover .widthMin {
+                width: 35%;
+            }
+            article:hover .lienCarte a img {
+                opacity: .7;
+                transition: opacity .1s;
+            }
+        }

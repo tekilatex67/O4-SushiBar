@@ -65,7 +65,7 @@
         display: block;
         font-family: var(--modern-font);
         font-size: 2rem;
-        transform: translateY(100%);
+        transform: translateY(110%);
         transition: transform .3s .6s;
     }
     
@@ -103,7 +103,7 @@
         border: none;
         border-radius: 5px;
         outline: none;
-        transform: translateX(-400%);
+        transform: translateX(-800%);
     }
     
     #coordonees :nth-child(2) button {
@@ -244,7 +244,7 @@
     
     #friends li a {
         display: inline-block;
-        transform: translateX(400%);
+        transform: translateX(1000%);
         border-bottom: 1px dashed #fff;
         color: #f03f73;
         transition: transform .5s .2s;
@@ -262,4 +262,119 @@
     #friends ul :nth-child(4) span,
     #friends ul :nth-child(4) a {
         transition: transform .5s .6s;
+    }
+    /* --------------------------------------------- MEDIA QUERIES ----------------------------------------------------*/
+    
+    @media (min-width: 800px) {
+        #infos {
+            background-image: var(--gradientClar);
+        }
+        /*HEADER*/
+        #infos .titre {
+            background-image: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: -6px 9px 10px #101114, inset -5px -6px 8px #333a40;
+        }
+        #infos .titre:before {
+            width: 0;
+            height: 0;
+        }
+        #infos .titre h2 {
+            position: relative;
+            top: 0;
+            font-size: 5rem;
+            font-family: var(--modern-font);
+            text-shadow: 4px 5px 0px #101114, -3px -4px 0px #333a40;
+        }
+        #infos .titre h2 img {
+            width: 10%;
+            margin-bottom: -3%;
+        }
+        /*ARTICLE */
+        .option p {
+            font-size: 1.5rem;
+        }
+        #coordonees {
+            position: relative;
+            padding: 0;
+            width: 70%;
+            margin: 0 auto;
+            border-bottom: 1px solid #f03f73;
+        }
+        #coordonees:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #f03f73;
+            box-shadow: 0px 3px 6px 2px #101114, -2px -2px 5px 2px #333a40;
+        }
+        #coordonees .name {
+            position: relative;
+            height: 100px;
+        }
+        #coordonees .name:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #f03f73;
+            transform: scale(0);
+            transform-origin: center;
+            transition: transform 1s;
+            box-shadow: 0px 3px 6px 2px #101114, -2px -2px 5px 2px #333a40;
+        }
+        #infos.load #coordonees .name:after {
+            transform: scale(1);
+        }
+        #infos h3 {
+            position: absolute;
+            margin: 0;
+            bottom: 0;
+            border: none;
+        }
+        #infos h3 span {
+            font-size: 3.5rem;
+            margin-bottom: 3%;
+        }
+        .coordContent {
+            margin: 2%;
+        }
+        #coordonees button {
+            width: 5%;
+            background: linear-gradient(145deg, #22272b, #1d2024);
+        }
+        .coordContent p {
+            padding: 1%;
+            border-radius: 5px;
+            background: linear-gradient(145deg, #22272b, #1d2024);
+            box-shadow: inset 2px 2px 3px #111214, inset -4px -5px 6px #2b2c32, 3px 2px 2px #101114, -2px -2px 4px #333a40;
+        }
+        /*horraire*/
+        .open #horaire {
+            height: 50vh;
+        }
+        #horaire ul {
+            justify-content: space-around;
+        }
+        #horaire li:nth-child(2n) {
+            padding-left: 5%;
+        }
+        #infos h4 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        #horaire li {
+            font-size: 2rem;
+            padding: 0;
+            font-family: 'Poiret One';
+        }
+        /*partenaire*/
+        .open #friends {
+            height: 45vh;
+        }
     }

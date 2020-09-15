@@ -5,8 +5,7 @@ body {
 
 section.Page_Menu {
     flex-direction: column;
-    min-height: 100vh;
-    /*background-image: url("../infos/images/background1.jpg");*/
+    /* min-height: 100vh;*/
     background-color: #2d3436;
     background-image: linear-gradient(400deg, #2d3436 20%, #000000 74%);
 }
@@ -142,7 +141,7 @@ header.selection {
 }
 
 .tabs li.active a.fleche_D {
-    top: 40;
+    top: 40%;
     right: 0;
 }
 
@@ -477,4 +476,228 @@ header.selection {
 .rolls-content.index.in span {
     box-shadow: 0px 0px 6px 1px #fff;
     transform: rotate(10deg) scale(0.9);
+}
+
+
+/* -------------------------------------------MADIA QUERIES -----------------------*/
+
+@media (min-width: 800px) {
+    section.Page_Menu {
+        background-image: var(--gradientClar);
+    }
+    header.selection {
+        height: 30vh;
+    }
+    .tab-content.active {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 30vh;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*header*/
+    .tabs {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .tabs li.active {
+        height: 50%;
+        width: 100%;
+    }
+    .tabs li.active a {
+        width: 10%;
+    }
+    /*------------------------------------------ ITEM */
+    .item {
+        width: 240px;
+        height: 360px;
+        background: #1c1e22;
+        box-shadow: inset 14px 14px 18px #101114, inset -14px -14px 18px #282b30, 5px 9px 13px #101114, -8px -6px 15px #333a40;
+        justify-content: space-between;
+        margin: 0 5% 5% 5%;
+        transform: scale(1);
+    }
+    .itemImg {
+        left: 0;
+        margin: 0 auto;
+        position: relative;
+    }
+    #nigiri .itemImg,
+    #meb .itemImg,
+    #plats .itemImg,
+    #temaki .itemImg {
+        width: 70%;
+        height: 60%;
+    }
+    #plateaux .itemImg,
+    #sashimi .itemImg,
+    #accompagnements .itemImg,
+    #chirashi .itemImg,
+    #tartare .itemImg {
+        width: 60%;
+    }
+    .chefS,
+    #yakitori .itemImg,
+    #gunkan .itemImg {
+        position: relative;
+        width: 40%;
+        height: 60%;
+        margin: 0 auto;
+    }
+    .typePrice {
+        justify-content: start;
+        padding: 5%;
+        box-shadow: inset 14px 14px 18px rgba(16, 17, 20, .4), inset -14px -14px 18px rgba(40, 43, 48, .4), 4px 5px 8px rgba(16, 17, 20, .5), -5px -5px 7px rgba(51, 58, 64, .5);
+        background: rgba(240, 63, 115, 0.5);
+        width: 90%;
+        margin: 0 auto;
+        transform: translateX(0);
+    }
+    .active.in .typePrice {
+        box-shadow: inset 14px 14px 18px rgba(16, 17, 20, .4), inset -14px -14px 18px rgba(40, 43, 48, .4), 4px 5px 8px rgba(16, 17, 20, .5), -5px -5px 7px rgba(51, 58, 64, .5);
+    }
+    .typePrice .itemType {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    .prix {
+        margin: 10%;
+    }
+    /*------------------------------------------ SUPPLEMENTS*/
+    .supplements {
+        top: 30vh;
+        left: 0;
+        position: absolute;
+        width: 300px;
+    }
+    .supplements,
+    .supplements.open {
+        max-height: 200vh;
+    }
+    .supplements.bouton {
+        background: linear-gradient(145deg, #22272b, #1d2024);
+        box-shadow: inset 2px 2px 3px #111214, inset -4px -5px 6px #2b2c32, 4px 2px 6px #101114, -5px -4px 11px #333a40;
+    }
+    .supStyle,
+    .open .supStyle {
+        display: block;
+        line-height: 2rem;
+        padding: 2% 1%;
+    }
+    .supplements p span {
+        display: none;
+    }
+    .supplements p,
+    .supplements.open p {
+        color: #fff;
+        font-size: 2rem;
+        font-family: var(--modern-font);
+        padding: 5%;
+        border-bottom: 1px solid rgb(240, 63, 115);
+    }
+    .supStyle li,
+    .open .supStyle li {
+        margin: 15% 0;
+        border-radius: 5px;
+        padding-top: 0%;
+        background: linear-gradient(145deg, #22272b, #1d2024);
+        box-shadow: inset 2px 2px 3px #111214, inset -4px -5px 6px #2b2c32, 4px 2px 6px #101114, -5px -4px 11px #333a40;
+        font-family: 'Poiret One';
+        font-size: 1.5rem;
+    }
+    .supStyle li.supPrice {
+        box-shadow: none;
+        background: none;
+        border-radius: 0px;
+        border-bottom: 1px solid #fff;
+    }
+    .supStyle li.supPrice span {
+        display: inline;
+        font-family: 'Poiret One';
+        font-size: 1.5rem;
+    }
+    .supStyle li span {
+        display: none;
+    }
+    /* Plateaux contenu */
+    .plateauContent {
+        padding: 2%;
+        bottom: 5%;
+        left: 10%;
+        width: 50%;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #22272b, #1d2024);
+        box-shadow: 3px 4px 4px #0d0e10, -4px -2px 6px 0px #333a40;
+    }
+    .plateauContent:hover {
+        cursor: pointer;
+    }
+    .plateauContent:active {
+        background: linear-gradient(145deg, #22272b, #1d2024);
+        box-shadow: inset 2px 2px 3px #111214, inset -4px -5px 6px #2b2c32, 4px 2px 6px #101114, -5px -4px 11px #333a40;
+    }
+    .plateauContent p span {
+        display: none;
+    }
+    /* SECTION ROLLS */
+    .tab-content.active#rolls {
+        flex-direction: column;
+    }
+    .tiret {
+        display: none;
+    }
+    .rollstype {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .rollstype li {
+        margin: 0 2%;
+        min-height: 15vh;
+        background-size: 60%;
+        border-radius: 15px;
+        box-shadow: 4px 5px 8px #131518, -5px -4px 9px #333a40;
+    }
+    .rollstype li.index {
+        box-shadow: inset 2px 2px 3px #111214, inset -4px -5px 6px #2b2c32, 4px 2px 6px #101114, -5px -4px 11px #333a40;
+        ;
+    }
+    .rollstype li:after {
+        border-radius: 15px;
+    }
+    .rollstype li>span {
+        top: 25%;
+    }
+    .tab-content.active#rolls {
+        display: block;
+    }
+    .rolls-content ul li {
+        margin: 5% 0;
+    }
+    .rolls-content ul li {
+        font-size: 1.8rem;
+        font-family: var(--modern-font);
+    }
+    .rolls-content ul li span {
+        font-size: 1.2rem;
+        font-family: 'Poiret One';
+        right: 10%;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        background: none;
+        box-shadow: none;
+    }
+    .rolls-content.index.in span {
+        background: linear-gradient(145deg, #1e2125, #191c20);
+        box-shadow: 6px 6px 12px #0e0f11, -6px -6px 12px #2a2f35;
+    }
+    .rolls-content ul li:after {
+        min-width: 70%;
+        border-bottom: 1px solid rgba(240, 63, 115, 0.5);
+        box-shadow: 1px 3px 4px 1px #111214, inset -8px -9px 5px 2px #2b2c32, -1px 7px 6px #101114, -4px -3px 6px 1px #333a40;
+    }
 }
